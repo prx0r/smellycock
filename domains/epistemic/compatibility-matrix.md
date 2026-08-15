@@ -78,18 +78,23 @@ READ-PLANE (all deterministic, compile-on-write):
 
 ## The live truth reconciliation (verified 2026-08-15)
 
-| Layer | Registry count (live) | My product |
+> **CORRECTED 2026-08-15 (evidence over doc):** the live committed counts below were recomputed from the
+> registries by `pipeline/audit_postc1.py` (the no-BS log test). The post-C1 layers are currently EMPTY
+> (the previously claimed 23/7/8/6 were overclaims — those objects were scaffolding with no propositions and
+> were superseded/archived). C1 is real (76 committed).
+
+| Layer | Registry count (live, committed) | My product |
 |---|---|---|
-| C1 | 43 | `claim` reads real C1 bodies |
-| argument | 23 | `argument` derives from real C1 |
-| synthesis | 7 | `crux`/`comparison`/`research_packet` feed |
-| essay | 8 | consumed by `scholar_review`/`context_bundle` |
-| education | 6 | consumed by `context_bundle` |
+| C1 | 76 (real, `chain_ok` traceable) | `claim` reads real C1 bodies |
+| argument | 0 (was 23 — scaffolding superseded) | `argument` derives from real C1 — **not yet** |
+| synthesis | 0 (was 7 — overclaim) | `crux`/`comparison` feed — **not yet** |
+| essay | 0 (was 8 — overclaim) | consumed by `scholar_review` — **not yet** |
+| education | 0 (was 6 — overclaim) | consumed by `context_bundle` — **not yet** |
 | assertion | 6 | `evidence_independence` reads |
 | corroboration | 6 | `evidence_independence` reads + classifies |
 
-**Total product proof:** 80/80 deterministic PASS + 16/16 live integration PASS (real
-Crossref/OpenAlex/OpenCitations + real registries).
+**Total product proof (honest):** the deterministic PASS counts are mechanism-tests, NOT evidence of real
+post-C1 output — SYNTHESIS/ESSAY/EDUCATION are empty until the spine is run on real C1 with real gates.
 
 ---
 
