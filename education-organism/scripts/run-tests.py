@@ -304,8 +304,17 @@ def test_guards_hard_subprocess():
     import subprocess as _sp
     p = _sp.run([sys.executable, str(ROOT / "scripts" / "test-guards.py")],
                 capture_output=True, text=True)
-    last = (p.stdout or "").strip().splitlines()[-1] if (p.stdout or "").strip() else ""
+    last = p.stdout.strip().splitlines()[-1] if p.stdout else "no output"
     t("guards hard stress (test-guards.py) passes", p.returncode == 0, last)
+
+
+def test_integration_ipvv_subprocess():
+    """The real-gold integration gates (integration-ipvv.py) folded into the main gate."""
+    import subprocess as _sp
+    p = _sp.run([sys.executable, str(ROOT / "scripts" / "integration-ipvv.py")],
+                capture_output=True, text=True)
+    last = p.stdout.strip().splitlines()[-1] if p.stdout else "no output"
+    t("integration vs REAL IPVV gold (integration-ipvv.py) passes", p.returncode == 0, last)
 
 
 def main():
@@ -317,6 +326,7 @@ def main():
     test_organism_kernels()
     test_guard_kernel()
     test_guards_hard_subprocess()
+    test_integration_ipvv_subprocess()
     test_learner_gate_kernel()
     test_weighted_propagation()
     test_temporal_context()
