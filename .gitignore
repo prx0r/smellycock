@@ -1,1 +1,33 @@
+# Pāṭala smellycock — the clean project .gitignore
+# Keep the repo to docs + source + golds only. Build artifacts, generated output,
+# and large vendored data stay LOCAL — never pushed.
+
+# Node / build
 node_modules/
+web/.astro/
+web/dist/
+web/static/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Generated / derived (regenerate, don't commit)
+web/static/
+openpatala/emitted/
+site/learning/
+runs/*/logs/
+
+# Local data (keep out of the docs repo)
+*.sqlite
+*.db
+*.jsonl
+data/corpus/registries/
+
+# Editor / OS
+.DS_Store
+*.swp
