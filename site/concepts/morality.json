@@ -1,0 +1,586 @@
+{
+ "entity": {
+  "id": "ip:concept:morality",
+  "label": "Morality",
+  "type": "concept",
+  "ceiling": "MACHINE_PROPOSED"
+ },
+ "canonical_url": "ip:concept:morality",
+ "content": {
+  "entity": {
+   "id": "ip:concept:morality",
+   "label": "Morality",
+   "type": "concept",
+   "ceiling": "MACHINE_PROPOSED"
+  },
+  "definition": "Morality \u2014 canonical concept node",
+  "positions": [],
+  "relations": [
+   {
+    "label": "Adams,",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Speranza",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "The Restoration of Man:",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Minds, Machines and G\u00f6del",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "About the Cover",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "390      Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "90   Great Problems in Philosophy and Physics - Solved?",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Great Problems",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "68       Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "248      Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "262      Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "204      Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "254        Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "78   Great Problems in Philosophy and Physics - Solved?",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Philosophy and Phenomenological Research",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "J. Social Biol. Struct. 1978 1, 117-125",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Dynamical Laws and Statistical Laws     57",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Understanding",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "On the Theory of Probabilities",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "INAUGURAL ARTICLE",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Free Will",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Determinism",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Indeterminism",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Causality",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Entropy",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Information",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Consciousness",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Quantum Mechanics",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Measurement",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Probability",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Chance",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Knowledge",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Mind",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Mind Body",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Agency",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Responsibility",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Second Law",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Information Theory",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Computation",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Life",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Evolution",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Value",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Randomness",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Belief",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Truth",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Compatibilism",
+    "rel": "co_occurs_with",
+    "type": "school"
+   },
+   {
+    "label": "Libertarianism",
+    "rel": "co_occurs_with",
+    "type": "school"
+   },
+   {
+    "label": "Incompatibilism",
+    "rel": "co_occurs_with",
+    "type": "school"
+   },
+   {
+    "label": "Wave Function",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Entanglement",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Superposition",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Arrow Of Time",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Measurement Problem",
+    "rel": "co_occurs_with",
+    "type": "problem"
+   },
+   {
+    "label": "Mind Body Problem",
+    "rel": "co_occurs_with",
+    "type": "problem"
+   },
+   {
+    "label": "Value",
+    "rel": "belongs_to",
+    "type": "theme"
+   }
+  ],
+  "primary_evidence": [],
+  "important_works": [],
+  "disagreements": [],
+  "neighbors": [
+   {
+    "label": "Adams,",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Speranza",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "The Restoration of Man:",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Minds, Machines and G\u00f6del",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "About the Cover",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "390      Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "90   Great Problems in Philosophy and Physics - Solved?",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Great Problems",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "68       Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "248      Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "262      Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "204      Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "254        Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "78   Great Problems in Philosophy and Physics - Solved?",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Philosophy and Phenomenological Research",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "J. Social Biol. Struct. 1978 1, 117-125",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Dynamical Laws and Statistical Laws     57",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Understanding",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "On the Theory of Probabilities",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "INAUGURAL ARTICLE",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Free Will",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Determinism",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Indeterminism",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Causality",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Entropy",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Information",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Consciousness",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Quantum Mechanics",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Measurement",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Probability",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Chance",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Knowledge",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Mind",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Mind Body",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Agency",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Responsibility",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Second Law",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Information Theory",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Computation",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Life",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Evolution",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Value",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Randomness",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Belief",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Truth",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Compatibilism",
+    "rel": "co_occurs_with",
+    "type": "school"
+   },
+   {
+    "label": "Libertarianism",
+    "rel": "co_occurs_with",
+    "type": "school"
+   },
+   {
+    "label": "Incompatibilism",
+    "rel": "co_occurs_with",
+    "type": "school"
+   },
+   {
+    "label": "Wave Function",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Entanglement",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Superposition",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Arrow Of Time",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Measurement Problem",
+    "rel": "co_occurs_with",
+    "type": "problem"
+   },
+   {
+    "label": "Mind Body Problem",
+    "rel": "co_occurs_with",
+    "type": "problem"
+   },
+   {
+    "label": "Value",
+    "rel": "belongs_to",
+    "type": "theme"
+   }
+  ],
+  "provenance": {
+   "source_hash": "3ed27767a5b199d3",
+   "graph_hash": "e93eb7b07e6e4e76"
+  }
+ },
+ "meta": {
+  "view": "context",
+  "budget": null,
+  "depth": 1,
+  "bundle_hash": "d2f51e6139370be6"
+ }
+}

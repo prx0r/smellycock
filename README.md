@@ -30,6 +30,9 @@ per-domain references — no research bloat.*
 | `domains/factory/` | the production translation factory |
 | `domains/read-plane/` | the compiled read plane |
 | `runs/` | the official logged + monitored autonomous runs |
+| `openpatala/` | the OpenAlex-of-Sanskrit API docs + OpenAPI spec |
+| `web/` | the Astro static-site source + build |
+| `site/` | the compiled read-plane (works/concepts/openpatala projections, search, sitemap) |
 
 ## The production state (as of the official runs)
 - The translation factory is **real and autonomous**: canonical T1 generator, live quality gate, state

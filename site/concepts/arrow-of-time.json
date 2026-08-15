@@ -1,0 +1,626 @@
+{
+ "entity": {
+  "id": "ip:concept:arrow_of_time",
+  "label": "Arrow Of Time",
+  "type": "concept",
+  "ceiling": "MACHINE_PROPOSED"
+ },
+ "canonical_url": "ip:concept:arrow_of_time",
+ "content": {
+  "entity": {
+   "id": "ip:concept:arrow_of_time",
+   "label": "Arrow Of Time",
+   "type": "concept",
+   "ceiling": "MACHINE_PROPOSED"
+  },
+  "definition": "Arrow Of Time \u2014 canonical concept node",
+  "positions": [],
+  "relations": [
+   {
+    "label": "Chapter 16",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "276   Great Problems in Philosophy and Physics - Solved?",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "408   My God - He Plays Dice!",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "422   Great Problems in Philosophy and Physics - Solved?",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "272   My God, He Plays Dice!",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "My God,",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "About the Cover",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Great Problems",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "436             Great Problems in Philosophy and Physics - Solved?",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "330   Great Problems in Philosophy and Physics - Solved?",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "2   My God, He Plays Dice!",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "84   My God, He Plays Dice!",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "284   My God, He Plays Dice!",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "384      Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Why We are Free",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "420   My God, He Plays Dice!",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "THE ARROW OF TIME",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "COSMIC EVOLUTION",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Decoherence and the Transition",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "FREE WILL AS A SCIENTIFIC PROBLEM",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "197 6ApJ. . .206. .55 9L",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Journal of Human Thermodynamics 2012, 8(1):1\u2010120",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "2",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "OPEN ACCESS",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "entropy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Free Will",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Determinism",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Indeterminism",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Causality",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Entropy",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Information",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Consciousness",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Quantum Mechanics",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Measurement",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Probability",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Chance",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Knowledge",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Mind",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Mind Body",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Agency",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Responsibility",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Second Law",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Information Theory",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Computation",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Life",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Evolution",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Value",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Morality",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Randomness",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Belief",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Truth",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Compatibilism",
+    "rel": "co_occurs_with",
+    "type": "school"
+   },
+   {
+    "label": "Libertarianism",
+    "rel": "co_occurs_with",
+    "type": "school"
+   },
+   {
+    "label": "Incompatibilism",
+    "rel": "co_occurs_with",
+    "type": "school"
+   },
+   {
+    "label": "Entanglement",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Superposition",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Wave Function",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Mind Body Problem",
+    "rel": "co_occurs_with",
+    "type": "problem"
+   },
+   {
+    "label": "Measurement Problem",
+    "rel": "co_occurs_with",
+    "type": "problem"
+   }
+  ],
+  "primary_evidence": [],
+  "important_works": [],
+  "disagreements": [],
+  "neighbors": [
+   {
+    "label": "Chapter 16",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "276   Great Problems in Philosophy and Physics - Solved?",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "408   My God - He Plays Dice!",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "422   Great Problems in Philosophy and Physics - Solved?",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "272   My God, He Plays Dice!",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "My God,",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "About the Cover",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Great Problems",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "436             Great Problems in Philosophy and Physics - Solved?",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "330   Great Problems in Philosophy and Physics - Solved?",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "2   My God, He Plays Dice!",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "84   My God, He Plays Dice!",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "284   My God, He Plays Dice!",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "384      Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Why We are Free",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "420   My God, He Plays Dice!",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "THE ARROW OF TIME",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "COSMIC EVOLUTION",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Decoherence and the Transition",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "FREE WILL AS A SCIENTIFIC PROBLEM",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "197 6ApJ. . .206. .55 9L",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Journal of Human Thermodynamics 2012, 8(1):1\u2010120",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "2",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "OPEN ACCESS",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "entropy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Free Will",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Determinism",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Indeterminism",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Causality",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Entropy",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Information",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Consciousness",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Quantum Mechanics",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Measurement",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Probability",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Chance",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Knowledge",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Mind",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Mind Body",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Agency",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Responsibility",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Second Law",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Information Theory",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Computation",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Life",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Evolution",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Value",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Morality",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Randomness",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Belief",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Truth",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Compatibilism",
+    "rel": "co_occurs_with",
+    "type": "school"
+   },
+   {
+    "label": "Libertarianism",
+    "rel": "co_occurs_with",
+    "type": "school"
+   },
+   {
+    "label": "Incompatibilism",
+    "rel": "co_occurs_with",
+    "type": "school"
+   },
+   {
+    "label": "Entanglement",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Superposition",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Wave Function",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Mind Body Problem",
+    "rel": "co_occurs_with",
+    "type": "problem"
+   },
+   {
+    "label": "Measurement Problem",
+    "rel": "co_occurs_with",
+    "type": "problem"
+   }
+  ],
+  "provenance": {
+   "source_hash": "1122f5ef80a67b6b",
+   "graph_hash": "e93eb7b07e6e4e76"
+  }
+ },
+ "meta": {
+  "view": "context",
+  "budget": null,
+  "depth": 1,
+  "bundle_hash": "7400280ecc9b313a"
+ }
+}

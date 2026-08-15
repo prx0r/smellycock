@@ -1,0 +1,471 @@
+openapi: 3.1.0
+info:
+  title: Pāṭala Atlas — OpenAlex-grammar API over the Sanskrit record
+  version: "1.0"
+  description: |
+    The OpenAlex-grammar read API for the Pāṭala Atlas — the open Sanskrit research graph
+    ("OpenAlex for Sanskrit"). Serves the canonical works/editions/persons registry with the
+    OpenAlex query grammar: filter / search / sort (multi-key) / group_by / select / cursor /
+    autocomplete, plus external-identifier crosswalks and CTS citation URNs.
+
+    THREES TRUTHS:
+      - Postgres = entity truth · R2 = artifact truth (SHA-256) · event log = history truth.
+      - Everything else is a rebuildable projection. Compute on write, read from bytes.
+    AUTHORITY:
+      - A crosswalk (external_identifier) is identity MAPPING, never external corroboration.
+      - Every external-ID row is MACHINE_PROPOSED and never promotes authority by itself.
+      - "No complete English translation located", never "Untranslated".
+    PERFORMANCE:
+      - Cached p95 < 50ms · DB p95 < 200ms. Every endpoint emits ETag + immutable Cache-Control
+        and honors If-None-Match -> 304.
+servers:
+  - url: http://localhost:8000
+    description: local atlas API (uvicorn patala_core.atlas.api:app)
+paths:
+  /health:
+    get:
+      summary: Health
+      description: Backend in use (postgres|legacy) + number of works served.
+      operationId: health
+      responses:
+        "200":
+          description: health
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  backend: { type: string, enum: [postgres, legacy] }
+                  works: { type: integer }
+  /works:
+    get:
+      summary: List Works
+      description: |
+        The works registry with the OpenAlex grammar. filter= narrows (field:value, comma-AND, ! negate,
+        < > numeric on date fields). search= does diacritic/case-insensitive substring title search.
+        sort= is multi-key (comma-separated, per-key :desc or leading -). group_by= aggregates counts.
+        select= limits returned fields. cursor= is opaque base64 offset pagination (never ?page=N).
+      operationId: list_works
+      parameters:
+        - { $ref: "#/components/parameters/filter" }
+        - { $ref: "#/components/parameters/search" }
+        - { $ref: "#/components/parameters/sort" }
+        - { $ref: "#/components/parameters/select" }
+        - { $ref: "#/components/parameters/cursor" }
+        - { $ref: "#/components/parameters/per_page" }
+        - { $ref: "#/components/parameters/group_by" }
+      responses:
+        "200":
+          description: paginated works (or group_by counts)
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/WorksList"
+                  - $ref: "#/components/schemas/GroupByResult"
+        "400":
+          description: invalid cursor or filter
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ErrorBody" }
+  /works/{work_id}:
+    get:
+      summary: Get Work
+      description: One work's full record (native PTW id). select= limits fields.
+      operationId: get_work
+      parameters:
+        - { name: work_id, in: path, required: true, schema: { type: string } }
+        - { $ref: "#/components/parameters/select" }
+      responses:
+        "200":
+          description: the work record
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    description: the Work record (or selected fields)
+                  provenance: { $ref: "#/components/schemas/Provenance" }
+        "404":
+          description: OBJECT_NOT_FOUND
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ErrorBody" }
+  /works/{work_id}/identifiers:
+    get:
+      summary: Work External-Identifier Crosswalk
+      description: |
+        The external_identifier crosswalk for a work: PANDIT/GRETIL/SARIT/MUKTABODHA/CTS ids Pāṭala
+        holds for it, each with its license. Identity MAPPING only — never external corroboration;
+        all rows MACHINE_PROPOSED.
+      operationId: work_identifiers
+      parameters:
+        - { name: work_id, in: path, required: true, schema: { type: string } }
+      responses:
+        "200":
+          description: identifiers
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      work_id: { type: string }
+                      identifiers:
+                        type: array
+                        items: { $ref: "#/components/schemas/ExternalIdentifier" }
+                  provenance: { $ref: "#/components/schemas/Provenance" }
+  /persons/{person_id}:
+    get:
+      summary: Get Person
+      description: A person's identity surface — native PTP id + external-ID crosswalk (VIAF/Wikidata).
+      operationId: get_person
+      parameters:
+        - { name: person_id, in: path, required: true, schema: { type: string } }
+      responses:
+        "200":
+          description: person identity + identifiers
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      person_id: { type: string }
+                      identifiers:
+                        type: array
+                        items: { $ref: "#/components/schemas/ExternalIdentifier" }
+                  provenance: { $ref: "#/components/schemas/Provenance" }
+  /institutions:
+    get:
+      summary: List Institutions
+      description: All institutions (native id + name + crosswalk schemes). Identity surface.
+      operationId: list_institutions
+      responses:
+        "200":
+          description: institutions
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count: { type: integer }
+                  institutions:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id: { type: string }
+                        title: { type: string }
+                        crosswalk: { type: array, items: { type: object } }
+  /institutions/{institution_id}:
+    get:
+      summary: Get Institution
+      description: One institution's identity surface — native id + external-ID crosswalk (ROR where the org is a real ROR entity).
+      operationId: get_institution
+      parameters:
+        - { name: institution_id, in: path, required: true, schema: { type: string } }
+      responses:
+        "200":
+          description: institution identity + identifiers
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      institution_id: { type: string }
+                      identifiers:
+                        type: array
+                        items: { $ref: "#/components/schemas/ExternalIdentifier" }
+                  provenance: { $ref: "#/components/schemas/Provenance" }
+  /editions:
+    get:
+      summary: List Editions
+      description: The editions of the bibliography (work -> textSources with tier + coverage).
+      operationId: list_editions
+      parameters:
+        - { name: filter, in: query, required: false, schema: { type: string }, description: work:WORKID } 
+      responses:
+        "200":
+          description: editions
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count: { type: integer }
+                  editions: { type: array, items: { type: object } }
+                  provenance: { $ref: "#/components/schemas/Provenance" }
+  /search:
+    get:
+      summary: Search Works
+      description: Alias over /works?search=. Diacritic/case-insensitive substring title search.
+      operationId: search_works
+      parameters:
+        - { name: q, in: query, required: true, schema: { type: string } }
+        - { $ref: "#/components/parameters/select" }
+      responses:
+        "200":
+          description: matching works
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count: { type: integer }
+                  total: { type: integer }
+                  works: { type: array, items: { type: object } }
+                  provenance: { $ref: "#/components/schemas/Provenance" }
+  /autocomplete:
+    get:
+      summary: Work Title Autocomplete
+      description: Prefix-over-substring title type-ahead (case/diacritic-insensitive).
+      operationId: autocomplete
+      parameters:
+        - { name: q, in: query, required: true, schema: { type: string } }
+        - { name: limit, in: query, required: false, schema: { type: integer, default: 10 } }
+      responses:
+        "200":
+          description: suggestions
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  suggestions:
+                    type: array
+                    items: { type: string }
+  /openpatala:
+    get:
+      summary: OpenPatala Layer Summary
+      description: Per-layer counts of the compiled OpenPatala projections (object_registry layers).
+      operationId: openpatala_summary
+      responses:
+        "200":
+          description: layer counts + immutable root hash
+          content:
+            application/json:
+              schema:
+                type: object
+  /openpatala/{layer}:
+    get:
+      summary: OpenPatala Layer
+      description: A single compiled OpenPatala layer's objects.
+      operationId: openpatala_layer
+      parameters:
+        - { name: layer, in: path, required: true, schema: { type: string } }
+      responses:
+        "200":
+          description: layer objects
+          content:
+            application/json:
+              schema:
+                type: object
+  /openpatala/{layer}/latest:
+    get:
+      summary: OpenPatala Layer — Latest Pointer
+      description: |
+        The current (short-TTL) pointer to a layer's immutable content-addressed projection.
+        Returns the frozen bytes plus the immutable versioned URL. Perf doctrine §6: this `latest`
+        pointer flips on rebuild; the versioned URL is cached immutable forever.
+      operationId: openpatala_layer_latest
+      parameters:
+        - { name: layer, in: path, required: true, schema: { type: string } }
+        - { $ref: "#/components/parameters/select" }
+      responses:
+        "200":
+          description: layer bytes + latest_url
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data: { type: object }
+                  latest_url: { type: [string, "null"] }
+                  provenance: { type: object }
+  /openpatala/{layer}/{sha}:
+    get:
+      summary: OpenPatala Layer — Immutable Version
+      description: |
+        The content-addressed immutable projection (perf doctrine §6/§32). This URL never changes once
+        published and is served `Cache-Control: immutable`. A stale sha is served with an
+        `X-Superseded-By` header (never 404s a real artifact).
+      operationId: openpatala_layer_versioned
+      parameters:
+        - { name: layer, in: path, required: true, schema: { type: string } }
+        - { name: sha, in: path, required: true, schema: { type: string }, description: content-address from the registry manifest }
+        - { $ref: "#/components/parameters/select" }
+      responses:
+        "200":
+          description: frozen layer bytes
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data: { type: object }
+                  sha256: { type: string }
+                  provenance: { type: object }
+  /works/{work_id}/bundle:
+    get:
+      summary: Work Bundle — one-request projection
+      description: |
+        The bounded epistemic neighborhood of a work in a single request (perf law 3: one agent
+        question = one network request). `depth` is bounded 0-2 (0=work only, 1=+editions/identifiers/
+        related, 2=+scholarship/translations/traditions) to prevent graph explosion (§31).
+      operationId: work_bundle
+      parameters:
+        - { name: work_id, in: path, required: true, schema: { type: string } }
+        - { name: depth, in: query, required: false, schema: { type: integer, minimum: 0, maximum: 2, default: 1 } }
+      responses:
+        "200":
+          description: the work bundle
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data: { type: object }
+                  depth: { type: integer }
+                  provenance: { type: object }
+  /openpatala/search-index:
+    get:
+      summary: Search Index
+      description: The compiled concept search index (memoized, read-from-bytes).
+      operationId: openpatala_search_index
+      responses:
+        "200":
+          description: index
+          content:
+            application/json:
+              schema:
+                type: object
+  /resolve:
+    get:
+      summary: Resolve a work to its canonical identity
+      description: >-
+        CP4 — the identity crosswalk ("who/what is this"). Resolve a work title against the
+        modern scholarship graph (OpenAlex / Crossref), crosswalk-aware. Returns
+        RESOLVED / NOT_FOUND / UNAVAILABLE. A crosswalk hit is identity EVIDENCE, never the
+        canonical work.
+      operationId: resolve
+      parameters:
+        - { name: title, in: query, required: true, schema: { type: string }, description: "work title" }
+        - { name: author, in: query, required: false, schema: { type: string }, description: "author name" }
+        - { name: provider, in: query, required: false, schema: { type: string, enum: [openalex, crossref], default: openalex } }
+      responses:
+        "200":
+          description: resolution
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      status: { type: string, enum: [RESOLVED, NOT_FOUND, UNAVAILABLE] }
+                      provider: { type: string }
+                  provenance:
+                    type: object
+                    properties:
+                      surface: { type: string }
+                      live: { type: boolean }
+components:
+  parameters:
+    filter:
+      name: filter
+      in: query
+      required: false
+      schema: { type: string }
+      description: comma-separated field:value clauses (AND); prefix ! to negate; < > for date fields
+    search:
+      name: search
+      in: query
+      required: false
+      schema: { type: string }
+      description: diacritic/case-insensitive substring title search
+    sort:
+      name: sort
+      in: query
+      required: false
+      schema: { type: string, default: id }
+      description: comma-separated multi-key; per-key :desc or leading - for descending
+    select:
+      name: select
+      in: query
+      required: false
+      schema: { type: string }
+      description: comma-separated fields to return
+    cursor:
+      name: cursor
+      in: query
+      required: false
+      schema: { type: string }
+      description: opaque base64 offset cursor from a prior response
+    per_page:
+      name: per_page
+      in: query
+      required: false
+      schema: { type: integer, minimum: 1, maximum: 500, default: 50 }
+    group_by:
+      name: group_by
+      in: query
+      required: false
+      schema: { type: string }
+      description: aggregate counts by a field, e.g. translation_status
+  schemas:
+    Provenance:
+      type: object
+      properties:
+        api_version: { type: string }
+        backend: { type: string, enum: [postgres, legacy] }
+        surface: { type: string }
+        note: { type: string }
+    ExternalIdentifier:
+      type: object
+      properties:
+        scheme: { type: string, enum: [PANDIT, GRETIL, SARIT, MUKTABODHA, CTS, VIAF, WIKIDATA, LEGACY_ATLAS_ID] }
+        value: { type: string }
+        url: { type: [string, "null"] }
+        license: { type: [string, "null"] }
+    WorksList:
+      type: object
+      properties:
+        count: { type: integer, description: works on this page }
+        total: { type: integer, description: works after filter/search }
+        next_cursor: { type: [string, "null"] }
+        works: { type: array, items: { type: object } }
+        provenance: { $ref: "#/components/schemas/Provenance" }
+    GroupByResult:
+      type: object
+      properties:
+        count: { type: integer }
+        total: { type: integer }
+        group_by:
+          type: array
+          items:
+            type: object
+            properties:
+              key: { type: string }
+              count: { type: integer }
+        provenance: { $ref: "#/components/schemas/Provenance" }
+    ErrorBody:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code: { type: string, example: OBJECT_NOT_FOUND }
+            message: { type: string }
+            suggestion: { type: string }
+            retryable: { type: boolean }

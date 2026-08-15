@@ -1,0 +1,1088 @@
+{
+ "generated": true,
+ "count": 112,
+ "surface": "translation-status",
+ "works": [
+  {
+   "work_id": "FIX-K",
+   "t1": "UNKNOWN",
+   "l2": "UNKNOWN",
+   "c1": "UNKNOWN",
+   "next_action": "BUILD_C1",
+   "eligible_for_agent3": true,
+   "committed": {
+    "L200": 1
+   }
+  },
+  {
+   "work_id": "aghorasiva_ashtaprakarana_corpus",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "aghorasiva_tattvaprakasika",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "aghorasiva_tattvasamgrahalaghutika",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "aghorasivas_ullekhini_on_ratnatraya",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "ajadapramatrsiddhi",
+   "t1": "NOT_STARTED",
+   "l2": "LEGACY_PRESENT",
+   "c1": "LEGACY_PRESENT",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "akulavira",
+   "t1": "LEGACY_PRESENT",
+   "l2": "PARTIAL",
+   "c1": "LEGACY_PRESENT",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "anonymous_ratnatrayapariksavyakhya",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "atharvasiraupanisad",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "bhagavadgita_sarvatobhadra",
+   "t1": "MODERN_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_ARGMAP",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 5,
+    "L0": 5
+   }
+  },
+  {
+   "work_id": "bhavopahara",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "brahmayamala",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_ARGMAP",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 9,
+    "L0": 99
+   }
+  },
+  {
+   "work_id": "cidgagana",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_ARGMAP",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 9,
+    "L0": 100
+   }
+  },
+  {
+   "work_id": "cidgaganacandrika",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "LEGACY_PRESENT",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "devikalottaragama",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_ARGMAP",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 2,
+    "L0": 2
+   }
+  },
+  {
+   "work_id": "dvisatikalottara",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 2
+   }
+  },
+  {
+   "work_id": "ganakarika",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 2
+   }
+  },
+  {
+   "work_id": "ipvv",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L2",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 1,
+    "ARGMAP": 49,
+    "L0": 1,
+    "L200": 63,
+    "C1": 63
+   }
+  },
+  {
+   "work_id": "isanasivagurudevapaddhati",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 2
+   }
+  },
+  {
+   "work_id": "janmamaranavicara",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 2
+   }
+  },
+  {
+   "work_id": "jnanakarika",
+   "t1": "LEGACY_PRESENT",
+   "l2": "LEGACY_PRESENT",
+   "c1": "LEGACY_PRESENT",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "jnanaratnavali",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 2
+   }
+  },
+  {
+   "work_id": "kaivalyaupanisad",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 2
+   }
+  },
+  {
+   "work_id": "kakacandeshvarimata",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "LEGACY_PRESENT",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "kalanalatantra",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "kalikapurana",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 2
+   }
+  },
+  {
+   "work_id": "kalikarahasya",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "LEGACY_PRESENT",
+   "next_action": "BUILD_L0",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 2
+   }
+  },
+  {
+   "work_id": "kaula",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "kaularahasya",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "kaularcanadipika",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "kausitakibrahmana",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "kiranatantra",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "kjn",
+   "t1": "LEGACY_PRESENT",
+   "l2": "LEGACY_PRESENT",
+   "c1": "LEGACY_PRESENT",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "kramasadbhava",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "LEGACY_PRESENT",
+   "next_action": "BUILD_L0",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 248,
+    "ARGMAP": 6,
+    "L0": 213,
+    "L2": 8,
+    "L200": 8,
+    "C1": 8
+   }
+  },
+  {
+   "work_id": "kriyakramadyotika",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 1
+   }
+  },
+  {
+   "work_id": "kubjika",
+   "t1": "LEGACY_PRESENT",
+   "l2": "LEGACY_PRESENT",
+   "c1": "LEGACY_PRESENT",
+   "next_action": "BUILD_ARGMAP",
+   "eligible_for_agent3": true,
+   "committed": {
+    "L0": 5
+   }
+  },
+  {
+   "work_id": "kubjikaguhyesvaripuja",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "kubjikagurumandalapuja",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "kubjikamata",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_ARGMAP",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 7,
+    "L0": 12
+   }
+  },
+  {
+   "work_id": "kubjikapuja",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "kuladipika",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "kulalashastra",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "kulananda",
+   "t1": "LEGACY_PRESENT",
+   "l2": "LEGACY_PRESENT",
+   "c1": "LEGACY_PRESENT",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "kulapradipa",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "kulasara",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "LEGACY_PRESENT",
+   "next_action": "BUILD_ARGMAP",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 5,
+    "L0": 97
+   }
+  },
+  {
+   "work_id": "kurmapurana",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "lingapurana",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "mahaguhyakalividhana",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "LEGACY_PRESENT",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "mahanayaprakasha",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "LEGACY_PRESENT",
+   "next_action": "BUILD_ARGMAP",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 7,
+    "L0": 94
+   }
+  },
+  {
+   "work_id": "maharahasyasampradaya",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "maharthamanjari",
+   "t1": "LEGACY_PRESENT",
+   "l2": "PARTIAL",
+   "c1": "LEGACY_PRESENT",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "maitrayanisamhita",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "makutottara",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "malinivijayottara",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_ARGMAP",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 4,
+    "L0": 100
+   }
+  },
+  {
+   "work_id": "matangaparamesvara",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "matrkabhedatantra",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "mohacudottara",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "moksakarika",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "mrgendratantra",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "mukuta_makutagama",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "nadakarika",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "naresvarapariksa",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "netratantra",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_ARGMAP",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 7,
+    "L0": 88
+   }
+  },
+  {
+   "work_id": "netratantroddyota",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "nitya",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "LEGACY_PRESENT",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "nityakaulatantra",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "pancarthabhasya_kaundinya",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "pancavimsabrahmana",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "pascimamnaya",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "pauskaraparamesvara",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "pingalamata",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "pratisThakriyadipika",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "pratisThalaksanasara",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "pratisThaparamesvara",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "pratisthalaksanasarasamuccaya",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "prayascittasamuccaya_hridayasiva",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "ramakantha_matangavrtti",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "ramakantha_moksakarikavrtti",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "ratnatrayapariksa_srikantha",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "ratnatrayapariksa_vyakhya",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "sankhayanaaranyaka",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "sardhatrisatikalottara",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "sarvajnanottara",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "satsahasrakalottara",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "siddhantadipika_ramanatha",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "siddhantasara",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "siddhantasarapaddhati",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "siddhantasaravali",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "siraupanisad",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "sivadharmasastra",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "sivadharmottara",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "sivadrsti",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 3
+   }
+  },
+  {
+   "work_id": "sivasutra",
+   "t1": "LEGACY_PRESENT",
+   "l2": "LEGACY_PRESENT",
+   "c1": "LEGACY_PRESENT",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "sivaupanisad",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "spanda",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "spandakarika",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_ARGMAP",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 2,
+    "L0": 5
+   }
+  },
+  {
+   "work_id": "spandapradipika",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "suksmasvayambhuva",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "svacchandatantra",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_ARGMAP",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 7,
+    "L0": 90
+   }
+  },
+  {
+   "work_id": "svacchandodyota",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "tantraloka",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0",
+   "eligible_for_agent3": true,
+   "committed": {
+    "T1": 264,
+    "L0": 1
+   }
+  },
+  {
+   "work_id": "tararahasya",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "LEGACY_PRESENT",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "tarkasamgraha",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "tattvaprakasa_bhojadeva",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "tattvasamgraha_sadyojyotis",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "tattvatrayanirnaya",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "ten",
+   "t1": "LEGACY_PRESENT",
+   "l2": "LEGACY_PRESENT",
+   "c1": "LEGACY_PRESENT",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "timirodghatana",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "LEGACY_PRESENT",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "vatulanathasutra",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "vimalavati",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "visvaksenasamhita",
+   "t1": "NOT_STARTED",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "BUILD_L0_SOURCE_MODE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  },
+  {
+   "work_id": "yogini",
+   "t1": "LEGACY_PRESENT",
+   "l2": "NOT_STARTED",
+   "c1": "NOT_STARTED",
+   "next_action": "ACQUIRE_SOURCE",
+   "eligible_for_agent3": false,
+   "committed": {}
+  }
+ ]
+}

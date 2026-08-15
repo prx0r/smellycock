@@ -1,0 +1,976 @@
+{
+ "entity": {
+  "id": "ip:concept:agency",
+  "label": "Agency",
+  "type": "concept",
+  "ceiling": "MACHINE_PROPOSED"
+ },
+ "canonical_url": "ip:concept:agency",
+ "content": {
+  "entity": {
+   "id": "ip:concept:agency",
+   "label": "Agency",
+   "type": "concept",
+   "ceiling": "MACHINE_PROPOSED"
+  },
+  "definition": "Agency \u2014 canonical concept node",
+  "positions": [],
+  "relations": [
+   {
+    "label": "Adams,",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Speranza",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Free_Will_The_Scandal_in_Philos\u0000\u0000\u0000\u0000\u0000M*WM*W\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000BOOKMOBI\u0000\u0000\u0003\u0000\u0000\u0000\u0000\u0003\u0000\u0000\u001f@\u0000\u0000\u0000\u0000\u0000\u0000A\u0000\u0000\u0000\u0002\u0000\u0000G}\u0000\u0000\u0000\u0004\u0000\u0000M\u0000\u0000\u0000\u0006\u0000\u0000U\b\u0000\u0000\u0000\b\u0000\u0000[\u0002\u0000\u0000\u0000",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "A",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "The Two-Step Process That Creates Information Structures in the Universe Also",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Chapter 16",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "422   Great Problems in Philosophy and Physics - Solved?",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "10   My God - He Plays DIce!",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "216   Great Problems in Philosophy and Physics - Solved?",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "My God,",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "102   Great Problems in Philosophy and Physics - Solved?",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "238   My God, He Plays Dice!",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "62   Great Problems in Philosophy and Physics - Solved?",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "About the Cover",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Great Problems",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "68       Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "278        Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "338   My God, He Plays Dice!",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "294      Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "152      Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "336      Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "262      Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "204      Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "254        Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "26       Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "160      Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "78   Great Problems in Philosophy and Physics - Solved?",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Why We are Free",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "The Two-Step Process That Creates Information Structures in the Universe Also",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Philosophy and Phenomenological Research",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Uwe Meixner",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Uwe Meixner",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Found Phys",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "^r%,oi",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "7",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Submitted to                                             LBL-Z07Z",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "580                          Supplement to \" Nature,\" April 14, 1928",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Who Invented the \u201cCopenhagen Interpretation\u201d? A Study in Mythology",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Reprinted f r o m Physics Today, V o l . 23, No. 9 (September 1970).",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "OPEN ACCESS",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "The transition from constraint to regulation at the origin of life",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Terrence W. Deacon",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Shannon - Boltzmann - Darwin: Redefining",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "T E R R E N C E W. D E A C O N",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "\u201cThe fundamental problem of communication is that of",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Dynamical Laws and Statistical Laws     57",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Early",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Einstein and",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Early",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "APPENDIX",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "PRESIDENTIAL ADDRESSES OF",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "An Introduction to QBism",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "SIMPLE DETERMINISTIC FREE WILL",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "A Turing test for free will",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "\u00a9 G. Strawson 2004, USA.",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "INAUGURAL ARTICLE",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "The Many-Worlds Interpretation",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Free Will",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Determinism",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Indeterminism",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Causality",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Entropy",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Information",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Consciousness",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Quantum Mechanics",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Measurement",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Probability",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Chance",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Knowledge",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Mind",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Mind Body",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Responsibility",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Second Law",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Information Theory",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Computation",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Life",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Evolution",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Value",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Morality",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Randomness",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Belief",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Truth",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Compatibilism",
+    "rel": "co_occurs_with",
+    "type": "school"
+   },
+   {
+    "label": "Libertarianism",
+    "rel": "co_occurs_with",
+    "type": "school"
+   },
+   {
+    "label": "Incompatibilism",
+    "rel": "co_occurs_with",
+    "type": "school"
+   },
+   {
+    "label": "Entanglement",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Superposition",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Wave Function",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Mind Body Problem",
+    "rel": "co_occurs_with",
+    "type": "problem"
+   },
+   {
+    "label": "Arrow Of Time",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Measurement Problem",
+    "rel": "co_occurs_with",
+    "type": "problem"
+   },
+   {
+    "label": "Qualia",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Free Will",
+    "rel": "belongs_to",
+    "type": "theme"
+   },
+   {
+    "label": "Mind",
+    "rel": "belongs_to",
+    "type": "theme"
+   }
+  ],
+  "primary_evidence": [],
+  "important_works": [],
+  "disagreements": [],
+  "neighbors": [
+   {
+    "label": "Adams,",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Speranza",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Free_Will_The_Scandal_in_Philos\u0000\u0000\u0000\u0000\u0000M*WM*W\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000BOOKMOBI\u0000\u0000\u0003\u0000\u0000\u0000\u0000\u0003\u0000\u0000\u001f@\u0000\u0000\u0000\u0000\u0000\u0000A\u0000\u0000\u0000\u0002\u0000\u0000G}\u0000\u0000\u0000\u0004\u0000\u0000M\u0000\u0000\u0000\u0006\u0000\u0000U\b\u0000\u0000\u0000\b\u0000\u0000[\u0002\u0000\u0000\u0000",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "A",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "The Two-Step Process That Creates Information Structures in the Universe Also",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Chapter 16",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "422   Great Problems in Philosophy and Physics - Solved?",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "10   My God - He Plays DIce!",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "216   Great Problems in Philosophy and Physics - Solved?",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "My God,",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "102   Great Problems in Philosophy and Physics - Solved?",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "238   My God, He Plays Dice!",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "62   Great Problems in Philosophy and Physics - Solved?",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "About the Cover",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Great Problems",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "68       Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "278        Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "338   My God, He Plays Dice!",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "294      Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "152      Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "336      Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "262      Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "204      Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "254        Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "26       Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "160      Free Will: The Scandal in Philosophy",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "78   Great Problems in Philosophy and Physics - Solved?",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Why We are Free",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "The Two-Step Process That Creates Information Structures in the Universe Also",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Philosophy and Phenomenological Research",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Uwe Meixner",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Uwe Meixner",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Found Phys",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "^r%,oi",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "7",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Submitted to                                             LBL-Z07Z",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "580                          Supplement to \" Nature,\" April 14, 1928",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Who Invented the \u201cCopenhagen Interpretation\u201d? A Study in Mythology",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Reprinted f r o m Physics Today, V o l . 23, No. 9 (September 1970).",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "OPEN ACCESS",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "The transition from constraint to regulation at the origin of life",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Terrence W. Deacon",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Shannon - Boltzmann - Darwin: Redefining",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "T E R R E N C E W. D E A C O N",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "\u201cThe fundamental problem of communication is that of",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Dynamical Laws and Statistical Laws     57",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Early",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Einstein and",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Early",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "APPENDIX",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "PRESIDENTIAL ADDRESSES OF",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "An Introduction to QBism",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "SIMPLE DETERMINISTIC FREE WILL",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "A Turing test for free will",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "\u00a9 G. Strawson 2004, USA.",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "INAUGURAL ARTICLE",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "The Many-Worlds Interpretation",
+    "rel": "discusses",
+    "type": "work"
+   },
+   {
+    "label": "Free Will",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Determinism",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Indeterminism",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Causality",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Entropy",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Information",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Consciousness",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Quantum Mechanics",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Measurement",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Probability",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Chance",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Knowledge",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Mind",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Mind Body",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Responsibility",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Second Law",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Information Theory",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Computation",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Life",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Evolution",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Value",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Morality",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Randomness",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Belief",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Truth",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Compatibilism",
+    "rel": "co_occurs_with",
+    "type": "school"
+   },
+   {
+    "label": "Libertarianism",
+    "rel": "co_occurs_with",
+    "type": "school"
+   },
+   {
+    "label": "Incompatibilism",
+    "rel": "co_occurs_with",
+    "type": "school"
+   },
+   {
+    "label": "Entanglement",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Superposition",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Wave Function",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Mind Body Problem",
+    "rel": "co_occurs_with",
+    "type": "problem"
+   },
+   {
+    "label": "Arrow Of Time",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Measurement Problem",
+    "rel": "co_occurs_with",
+    "type": "problem"
+   },
+   {
+    "label": "Qualia",
+    "rel": "co_occurs_with",
+    "type": "concept"
+   },
+   {
+    "label": "Free Will",
+    "rel": "belongs_to",
+    "type": "theme"
+   },
+   {
+    "label": "Mind",
+    "rel": "belongs_to",
+    "type": "theme"
+   }
+  ],
+  "provenance": {
+   "source_hash": "a0889588190e9a3f",
+   "graph_hash": "e93eb7b07e6e4e76"
+  }
+ },
+ "meta": {
+  "view": "context",
+  "budget": null,
+  "depth": 1,
+  "bundle_hash": "5eb5507a70881926"
+ }
+}

@@ -1,0 +1,48 @@
+---
+// bibliography/index.astro — the 254-work bibliography from the real patala data
+import Layout from '../../layouts/Layout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+const ROOT = process.env.PATALA_WEB_ROOT ?? '/root/projects/patala/web';
+const bib = JSON.parse(fs.readFileSync(path.join(ROOT, 'static', 'bibliography.json'), 'utf-8'));
+const works = bib.works.sort((a, b) => a.title.localeCompare(b.title));
+const verified = works.filter(w => w.verified);
+const byStatus = {
+  complete: works.filter(w => w.translation_status === 'complete'),
+  partial: works.filter(w => w.translation_status === 'partial'),
+  none: works.filter(w => w.translation_status === 'none'),
+};
+function periodLabel(p) {
+  if (!p) return null;
+  const { start, end, approximate } = p;
+  if (start == null && end == null) return null;
+  return `${start ?? '?'}–${end ?? '?'}${approximate ? ' (approx.)' : ''}`;
+}
+---
+<Layout title="Pāṭala — the 254-work bibliography" description="The canonical Sanskrit bibliography, 254 works." jsonLd={{ "@context":"https://schema.org","@type":"CollectionPage", name:"Pāṭala Bibliography" }}>
+  <h1>The Bibliography</h1>
+  <p><strong>{works.length}</strong> works, each with its translation status and tradition, honestly marked.</p>
+
+  <h2>Verified (gold)</h2>
+  <p>Human-adjudicated translation gold: <strong>{verified.length}</strong> works.</p>
+  <ul>
+    {verified.map(w => (
+      <li><a href={`/works/${w.id}/`}>{w.title}</a> <span class="ceiling">(verified)</span></li>
+    ))}
+  </ul>
+
+  <h2>By translation status</h2>
+  <p><strong>Complete:</strong> {byStatus.complete.length} · <strong>Partial:</strong> {byStatus.partial.length} · <strong>None:</strong> {byStatus.none.length}</p>
+
+  <h2>All works</h2>
+  <ul>
+    {works.map(w => (
+      <li>
+        <a href={`/works/${w.id}/`}>{w.title}</a>
+        {w.traditions.length ? <span class="ceiling"> — {w.traditions.join(', ')}</span> : ''}
+        {periodLabel(w.period) ? <span class="ceiling"> — {periodLabel(w.period)}</span> : ''}
+        {w.edition_count ? <span class="ceiling"> — {w.edition_count} edition{w.edition_count > 1 ? 's' : ''}</span> : ''}
+      </li>
+    ))}
+  </ul>
+</Layout>
