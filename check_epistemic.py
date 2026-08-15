@@ -41,6 +41,7 @@ PRODUCTS_LIST = [
     "manuscript_routing", "manuscript_ingest",
     "scholar_vertical",
     "scholar_publication",
+    "guard",
 ]
 
 BANNED = ["PROVED", "TRUTH", "CORRECT", "BEST", "WINS"]

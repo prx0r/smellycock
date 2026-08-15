@@ -56,9 +56,10 @@ from the real committed objects. The reference is the code at `/root/projects/pa
 | 23 | `manuscript_routing` | the manuscript-onboarding diagnostic (vision E3) | 7/7 |
 | 24 | `manuscript_ingest` | manuscript+OCR → labelled, quality-scored Pāṭala SOURCE | 8/8 |
 | 25 | `collation` | N witnesses → variant apparatus (Saktumiva critical-edition process) | 7/7 |
+| 26 | `guard` | the serve-time guard: verbatim-quote verifier + citation whitelist (FoJin port) — enforces UNANCHORED→reject | 8/8 |
 | | | | **54/54** |
 
-**Total: 134/134 PASS** (+ 16/16 live).
+**Total: 142/142 PASS** (+ 16/16 live).
 
 ---
 
@@ -84,7 +85,7 @@ python3 test_live_integrations.py                     # 16/16 live (real network
 for p in scholar_review translation_proof argument crux research_packet comparison evidence_independence \
          claim context_bundle passage benchmark passage_workbench terminology timeline \
          review_queue scholar_identity review_workbench scholar_profile review_policy tension_finder \
-         scholar_publication scholar_vertical manuscript_routing; do
+         scholar_publication scholar_vertical manuscript_routing collation guard; do
   echo "--- $p ---"; PYTHONPATH=pipeline python3 pipeline/products/$p/test.py | grep SUMMARY
 done
 ```
