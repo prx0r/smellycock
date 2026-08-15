@@ -594,6 +594,12 @@
       "owner": "agentgraph",
       "role": "full model data (context/pricing/per-verse tokens) + DYNAMIC 90%-context batch sizing (max_verses_per_call ~2993) for per-layer agents (no call-spam)",
       "validator": "pipeline/model_registry.py"
+    },
+    "pipeline/layer_agent.py": {
+      "id": "patala:layer:agent",
+      "owner": "agentgraph",
+      "role": "per-layer agent: independent worker that drains ONE layer's queue (90%-context batches), logs per-layer productivity \u2014 run one per layer for parallel agents",
+      "validator": "pipeline/layer_agent.py --layer L0 --work kramasadbhava"
     }
   },
   "performance": {
