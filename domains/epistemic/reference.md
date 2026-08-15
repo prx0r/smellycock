@@ -2,7 +2,7 @@
 
 *2026-08-15. The wire mechanics of the epistemic layer: the CLI entrypoints, the MCP tools, the API
 routes, and the gates. Semantics in `model.md`; how-to in `recipes.md`. Everything below reflects the
-current working implementation at `/root/patalacheckpoints/`.*
+current working implementation at `/root/projects/patala/`.*
 
 ---
 
@@ -11,7 +11,7 @@ current working implementation at `/root/patalacheckpoints/`.*
 Every product is a standalone module at `pipeline/products/<product>/engine.py` with a CLI:
 
 ```bash
-cd /root/patalacheckpoints
+cd /root/projects/patala
 PYTHONPATH=pipeline python3 pipeline/products/<product>/engine.py [args]
 ```
 

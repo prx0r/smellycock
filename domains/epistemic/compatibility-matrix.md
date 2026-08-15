@@ -1,7 +1,7 @@
 # COMPATIBILITY MATRIX — 14 product engines → canonical patalaorg model
 
 *2026-08-15 · the machine-resolvable mapping: each product engine (built + live-tested in
-`/root/patalacheckpoints/pipeline/products/`) → its canonical layer + PT* identity + authority +
+`/root/projects/patala/pipeline/products/`) → its canonical layer + PT* identity + authority +
 validator. This is the seam where my epistemic layer meets the production patalaorg DAG.*
 
 **Canonical source of truth:** `OBJECT-MODEL.md` (the DAG) + `AXIOMS.md` (naming, ladders, banned words)

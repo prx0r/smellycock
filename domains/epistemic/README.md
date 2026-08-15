@@ -3,7 +3,7 @@
 *2026-08-15. The clean canonical reference for the **epistemic layer** — the 14 deterministic product
 engines that sit ABOVE C1 and BELOW the upper spine (ARGUMENT → SYNTHESIS → ESSAY → LESSON). These are
 the validation kernels the production DAG consumes: they derive, gate, review, and measure scholarship
-from the real committed objects. The reference is the code at `/root/patalacheckpoints/pipeline/products/`
+from the real committed objects. The reference is the code at `/root/projects/patala/pipeline/products/`
 (works locally; the canonical deployment path is the working patala repo).*
 
 > **Why this domain exists:** `OBJECT-MODEL.md` names the DAG (`... → theme/argument → synthesis → essay →
@@ -79,7 +79,7 @@ from the real committed objects. The reference is the code at `/root/patalacheck
 ## The run everything command (the proof gate)
 
 ```bash
-cd /root/patalacheckpoints
+cd /root/projects/patala
 python3 test_live_integrations.py                     # 16/16 live (real network + real data)
 for p in scholar_review translation_proof argument crux research_packet comparison evidence_independence \
          claim context_bundle passage benchmark passage_workbench terminology timeline \

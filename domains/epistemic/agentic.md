@@ -68,7 +68,7 @@ patala_scholar_simulate → zero-write hypothetical impact
 ## 5. How an agent verifies a product is real
 
 ```bash
-cd /root/patalacheckpoints
+cd /root/projects/patala
 PYTHONPATH=pipeline python3 pipeline/products/<product>/test.py   # deterministic proof
 python3 test_live_integrations.py                                  # live integration proof
 ```

@@ -9,7 +9,7 @@ expected real result.*
 ## 1. Run the whole epistemic layer (the proof gate)
 
 ```bash
-cd /root/patalacheckpoints
+cd /root/projects/patala
 python3 test_live_integrations.py                     # 16/16 live (real network + real data)
 for p in scholar_review translation_proof argument crux research_packet comparison evidence_independence \
          claim context_bundle passage benchmark passage_workbench terminology timeline; do
