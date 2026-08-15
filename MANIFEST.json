@@ -1,0 +1,70 @@
+{
+  "schema": "patalaorg.manifest.v1",
+  "description": "The clean canonical reference for the Patala stack. Agent-readable pointer: every doc -> stable id + owner + validator + target repo.",
+  "date": "2026-08-15",
+  "repos": {
+    "patala": { "role": "PRODUCES - factory DAG, atlas surface, workers, registry", "path": "/root/projects/patala" },
+    "ip-graph": { "role": "VALIDATES + SERVES - read plane, organism, validation kernels", "path": "/mnt/HC_Volume_106427611/ip-graph" },
+    "patalaorg": { "role": "the clean canonical reference (this repo)", "path": "/root/projects/patalaorg" }
+  },
+  "docs": {
+    "AGENTS.md": { "id": "patalaorg:agents", "owner": "all", "role": "governing file (read first)", "validator": "check.py --refs" },
+    "README.md": { "id": "patalaorg:constitution", "owner": "all", "role": "the constitution + one rule", "validator": "check.py --refs" },
+    "AXIOMS.md": { "id": "patalaorg:axioms", "owner": "all", "role": "strict rules: naming, file org, axioms, ladders, banned words", "validator": "check.py --naming" },
+    "OBJECT-MODEL.md": { "id": "patalaorg:object-model", "owner": "all", "role": "the canonical DAG + object/registry contracts", "validator": "check.py --refs" },
+    "MANIFEST.json": { "id": "patalaorg:manifest", "owner": "all", "role": "this machine pointer", "validator": "check.py --manifest" },
+    "performance/README.md": { "id": "patalaorg:perf", "owner": "all", "role": "perf doctrine + budgets + references", "validator": "check.py --refs" },
+    "domains/translation/README.md": { "id": "patalaorg:domain:translation", "owner": "agentpatala", "role": "layer index + completion protocol + state", "validator": "pipeline/test_canonical_translate.py + test_factory_scheduler.py" },
+    "domains/translation/reference.md": { "id": "patalaorg:domain:translation:reference", "owner": "agentpatala", "role": "wire mechanics: factory CLI, generator CLI, API, MCP, env, gates", "validator": "check.py --refs" },
+    "domains/translation/model.md": { "id": "patalaorg:domain:translation:model", "owner": "agentpatala", "role": "semantics: DAG, object shapes, JSONL, registry, authority, tracking", "validator": "check.py --refs" },
+    "domains/translation/recipes.md": { "id": "patalaorg:domain:translation:recipes", "owner": "agentpatala", "role": "how-to: run, monitor, recover, validate, use API/MCP", "validator": "check.py --refs" },
+    "domains/translation/agentic.md": { "id": "patalaorg:domain:translation:agentic", "owner": "agentpatala", "role": "how agents drive it: Hermes calling, skills, JSONL, safety", "validator": "check.py --refs" },
+    "domains/translation/extension.md": { "id": "patalaorg:domain:translation:extension", "owner": "agentpatala", "role": "extensions + NOT-IMPLEMENTED roadmap + git-clone patterns to borrow", "validator": "check.py --refs" },
+    "domains/translation/DEV-PLAN.md": { "id": "patalaorg:domain:translation:devplan", "owner": "agentpatala", "role": "the build order (phases 0-3, each gated)", "validator": "check.py --refs" },
+    "domains/translation/ORCHESTRATION.md": { "id": "patalaorg:domain:translation:orchestration", "owner": "agentpatala", "role": "the agent runbook: see state, advance, stay safe, track (the one page agents read)", "validator": "check.py --refs" },
+    "domains/openpatala/README.md": { "id": "patalaorg:domain:openpatala", "owner": "agentpatala", "role": "the OpenAlex-of-Sanskrit surface index + integration seam", "validator": "check.py --refs" },
+    "domains/openpatala/api-reference.md": { "id": "patalaorg:domain:openpatala:api", "owner": "agentpatala", "role": "wire mechanics: OpenAlex query grammar + endpoints", "validator": "check.py --refs" },
+    "domains/openpatala/entity-model.md": { "id": "patalaorg:domain:openpatala:model", "owner": "agentpatala", "role": "semantics: PT* identity, crosswalks, rights", "validator": "check.py --refs" },
+    "domains/openpatala/errors.md": { "id": "patalaorg:domain:openpatala:errors", "owner": "agentpatala", "role": "failure modes + error JSON + retryability", "validator": "check.py --refs" },
+    "domains/openpatala/llm-guide.md": { "id": "patalaorg:domain:openpatala:llm", "owner": "agentpatala", "role": "one page for agents using the API", "validator": "check.py --refs" },
+    "domains/factory/README.md": { "id": "patalaorg:domain:factory", "owner": "agentpatala", "role": "the production translation factory reference", "validator": "check.py --refs" },
+    "domains/read-plane/README.md": { "id": "patalaorg:domain:readplane", "owner": "agentgraph", "role": "the compiled read plane reference", "validator": "check.py --refs" }
+  },
+  "implementation": {
+    "pipeline/translation_gate.py": { "id": "patala:translation:gate", "owner": "agentpatala", "role": "the live deterministic quality gate (verifiable reward; dgm/TranslationProof pattern)", "validator": "pipeline/test_translation_gate.py" },
+    "pipeline/patala_orchestration.py": { "id": "patala:translation:orchestration", "owner": "agentpatala", "role": "the deterministic agent-orchestration brain", "validator": "pipeline/test_patala_orchestration.py" },
+    "pipeline/translation_supervisor.py": { "id": "patala:translation:supervisor", "owner": "agentpatala", "role": "the self-driving autonomous loop (one command, PROPOSE-only)", "validator": "pipeline/test_patala_orchestration.py" },
+    "pipeline/translation_state.py": { "id": "patala:translation:state", "owner": "agentpatala", "role": "derived next_action + auto ledger/bibliography refresh (track everything, no duplication)", "validator": "pipeline/test_translation_state.py" },
+    "pipeline/build_plan.py": { "id": "patala:build:plan", "owner": "agentpatala", "role": "the checkpoint-DAG engine (structured graph operation with validated deterministic checkpoints)", "validator": "pipeline/test_build_plan.py" },
+    "pipeline/ops_status.py": { "id": "patala:ops:status", "owner": "agentpatala", "role": "the live status board (processes + layers + queue + plan + logs)", "validator": "pipeline/test_build_plan.py" },
+    "pipeline/trace_log.py": { "id": "patala:ops:trace", "owner": "agentpatala", "role": "the real observability trace layer (herdr/self-healing: per-op traces, failure-class mapping, recovery+verify, replay)", "validator": "pipeline/test_build_plan.py" },
+    "ip-graph/scripts/score-vs-gold.py": { "id": "patala:gold:score", "owner": "agentgraph", "role": "score committed T1/L2 vs karika-level gold (closes the anti-theatre loop)", "validator": "python3 /mnt/HC_Volume_106427611/ip-graph/scripts/score-vs-gold.py --work kramasadbhava" },
+    "pipeline/whole_chain.py": { "id": "patala:build1:wholechain", "owner": "agentpatala", "role": "Build-1 prototype: whole-chain single-pass (RAW->T1/L0/ARGMAP/L2/L200/C1 in one 1M-context call)", "validator": "pipeline/test_whole_chain.py" }
+  },
+  "performance": {
+    "doctrine": "performance/ip-graph-perf-doctrine.md",
+    "read_plane_decision": "performance/SPEC-49-read-plane-decision.md",
+    "atlas_performance": "performance/atlas-performance.md",
+    "edge_layer": "performance/atlas-cloudflare-edge-layer.md",
+    "agent_optimization": "performance/agent-optimization.md",
+    "staleness_perf": "performance/SPEC-13-staleness-performance.md",
+    "performanceagent": "performance/performanceagent.md",
+    "build_perfecting": "performance/BUILD-OPENPATALA-PERFECTING.md"
+  },
+  "axioms": {
+    "one_taxonomy": "patala/migration/v2/LAYERS.yaml",
+    "dag_manifest": "patala/contracts/CANONICAL-DAG.yaml",
+    "status_ladders": "MACHINE_PROPOSED->ENGINEERING_VALIDATED->SCHOLARLY_CORROBORATED->INDEPENDENT_REVIEWED->ADJUDICATED; GENERATED->ENGINEERING_VALIDATED->SPECIALIST_REVIEWED; DISCOVERED<PROTOTYPED<VALIDATED<INTEGRATED<PRODUCTION",
+    "authority_axes": ["generation", "evidence", "review", "publication"],
+    "banned_words": ["PROVED", "TRUTH", "CORRECT", "EDITOR APPROVED", "BEST", "WINS"]
+  },
+  "live_truth": {
+    "registry": "/root/projects/patala/data/corpus/registries",
+    "corpus_state_ledger": "/root/projects/patala/data/corpus/downloads/translation-state-ledger.json",
+    "event_ledger": "/root/projects/patala/data/corpus/registries/object-events.jsonl"
+  },
+  "proofs": {
+    "canonical_tests": "/root/projects/patala/pipeline/test_canonical_translate.py",
+    "scheduler_tests": "/root/projects/patala/pipeline/test_factory_scheduler.py"
+  }
+}

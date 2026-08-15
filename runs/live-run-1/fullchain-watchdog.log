@@ -1,0 +1,233 @@
+[2026-08-15T13:52:31] full-chain watchdog: work=kramasadbhava interval=30s
+[2026-08-15T13:52:31] kramasadbhava chain: {"T1": 248, "L0": 102, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T13:52:31]   a factory is already running (one owner) — waiting
+[2026-08-15T13:53:02] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T13:53:02]   a factory is already running (one owner) — waiting
+[2026-08-15T13:53:32] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T13:53:32]   a factory is already running (one owner) — waiting
+[2026-08-15T13:54:02] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T13:54:02]   a factory is already running (one owner) — waiting
+[2026-08-15T13:54:32] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T13:54:32]   a factory is already running (one owner) — waiting
+[2026-08-15T13:55:02] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T13:55:02]   a factory is already running (one owner) — waiting
+[2026-08-15T13:55:32] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T13:55:32]   a factory is already running (one owner) — waiting
+[2026-08-15T13:56:02] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T13:56:02]   a factory is already running (one owner) — waiting
+[2026-08-15T13:56:33] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T13:56:33]   a factory is already running (one owner) — waiting
+[2026-08-15T13:57:03] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T13:57:03]   a factory is already running (one owner) — waiting
+[2026-08-15T13:57:33] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T13:57:33]   a factory is already running (one owner) — waiting
+[2026-08-15T13:58:03] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T13:58:03]   a factory is already running (one owner) — waiting
+[2026-08-15T13:58:33] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T13:58:33]   a factory is already running (one owner) — waiting
+[2026-08-15T13:59:03] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T13:59:03]   a factory is already running (one owner) — waiting
+[2026-08-15T13:59:33] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T13:59:33]   a factory is already running (one owner) — waiting
+[2026-08-15T14:00:03] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:00:03]   a factory is already running (one owner) — waiting
+[2026-08-15T14:00:34] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:00:34]   a factory is already running (one owner) — waiting
+[2026-08-15T14:01:04] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:01:04]   a factory is already running (one owner) — waiting
+[2026-08-15T14:01:34] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:01:34]   a factory is already running (one owner) — waiting
+[2026-08-15T14:02:04] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:02:04]   a factory is already running (one owner) — waiting
+[2026-08-15T14:02:34] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:02:34]   a factory is already running (one owner) — waiting
+[2026-08-15T14:03:04] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:03:04]   a factory is already running (one owner) — waiting
+[2026-08-15T14:03:34] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:03:34]   a factory is already running (one owner) — waiting
+[2026-08-15T14:04:05] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:04:05]   a factory is already running (one owner) — waiting
+[2026-08-15T14:04:35] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:04:35]   a factory is already running (one owner) — waiting
+[2026-08-15T14:05:05] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:05:05]   a factory is already running (one owner) — waiting
+[2026-08-15T14:05:35] kramasadbhava chain: {"T1": 248, "L0": 108, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:05:35]   a factory is already running (one owner) — waiting
+[2026-08-15T14:06:05] kramasadbhava chain: {"T1": 248, "L0": 127, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:06:05]   launching a factory pass to build L0 (one owner)
+[2026-08-15T14:06:35] kramasadbhava chain: {"T1": 248, "L0": 127, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:06:35]   a factory is already running (one owner) — waiting
+[2026-08-15T14:07:05] kramasadbhava chain: {"T1": 248, "L0": 135, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:07:06]   a factory is already running (one owner) — waiting
+[2026-08-15T14:07:36] kramasadbhava chain: {"T1": 248, "L0": 135, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:07:36]   a factory is already running (one owner) — waiting
+[2026-08-15T14:08:06] kramasadbhava chain: {"T1": 248, "L0": 135, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:08:06]   a factory is already running (one owner) — waiting
+[2026-08-15T14:08:36] kramasadbhava chain: {"T1": 248, "L0": 135, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:08:36]   a factory is already running (one owner) — waiting
+[2026-08-15T14:09:06] kramasadbhava chain: {"T1": 248, "L0": 135, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:09:06]   a factory is already running (one owner) — waiting
+[2026-08-15T14:09:36] kramasadbhava chain: {"T1": 248, "L0": 135, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:09:36]   launching a factory pass to build L0 (one owner)
+[2026-08-15T14:10:06] kramasadbhava chain: {"T1": 248, "L0": 135, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:10:06]   launching a factory pass to build L0 (one owner)
+[2026-08-15T14:10:37] kramasadbhava chain: {"T1": 248, "L0": 135, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:10:37]   a factory is already running (one owner) — waiting
+[2026-08-15T14:11:07] kramasadbhava chain: {"T1": 248, "L0": 143, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:11:07]   a factory is already running (one owner) — waiting
+[2026-08-15T14:11:37] kramasadbhava chain: {"T1": 248, "L0": 143, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:11:37]   a factory is already running (one owner) — waiting
+[2026-08-15T14:12:07] kramasadbhava chain: {"T1": 248, "L0": 145, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:12:07]   a factory is already running (one owner) — waiting
+[2026-08-15T14:12:37] kramasadbhava chain: {"T1": 248, "L0": 146, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:12:37]   a factory is already running (one owner) — waiting
+[2026-08-15T14:13:07] kramasadbhava chain: {"T1": 248, "L0": 147, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:13:07]   a factory is already running (one owner) — waiting
+[2026-08-15T14:13:38] kramasadbhava chain: {"T1": 248, "L0": 149, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:13:38]   a factory is already running (one owner) — waiting
+[2026-08-15T14:14:08] kramasadbhava chain: {"T1": 248, "L0": 150, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:14:08]   a factory is already running (one owner) — waiting
+[2026-08-15T14:14:38] kramasadbhava chain: {"T1": 248, "L0": 152, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:14:38]   a factory is already running (one owner) — waiting
+[2026-08-15T14:15:08] kramasadbhava chain: {"T1": 248, "L0": 153, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:15:08]   a factory is already running (one owner) — waiting
+[2026-08-15T14:15:38] kramasadbhava chain: {"T1": 248, "L0": 154, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:15:38]   a factory is already running (one owner) — waiting
+[2026-08-15T14:16:08] kramasadbhava chain: {"T1": 248, "L0": 156, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:16:08]   a factory is already running (one owner) — waiting
+[2026-08-15T14:16:39] kramasadbhava chain: {"T1": 248, "L0": 157, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:16:39]   a factory is already running (one owner) — waiting
+[2026-08-15T14:17:09] kramasadbhava chain: {"T1": 248, "L0": 158, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:17:09]   a factory is already running (one owner) — waiting
+[2026-08-15T14:17:39] kramasadbhava chain: {"T1": 248, "L0": 160, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:17:39]   a factory is already running (one owner) — waiting
+[2026-08-15T14:18:09] kramasadbhava chain: {"T1": 248, "L0": 161, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:18:09]   launching a factory pass to build L0 (one owner)
+[2026-08-15T14:18:39] kramasadbhava chain: {"T1": 248, "L0": 161, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:18:39]   a factory is already running (one owner) — waiting
+[2026-08-15T14:19:09] kramasadbhava chain: {"T1": 248, "L0": 162, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:19:09]   a factory is already running (one owner) — waiting
+[2026-08-15T14:19:39] kramasadbhava chain: {"T1": 248, "L0": 163, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:19:39]   a factory is already running (one owner) — waiting
+[2026-08-15T14:20:10] kramasadbhava chain: {"T1": 248, "L0": 164, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:20:10]   a factory is already running (one owner) — waiting
+[2026-08-15T14:20:40] kramasadbhava chain: {"T1": 248, "L0": 165, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:20:40]   a factory is already running (one owner) — waiting
+[2026-08-15T14:21:10] kramasadbhava chain: {"T1": 248, "L0": 167, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:21:10]   a factory is already running (one owner) — waiting
+[2026-08-15T14:21:40] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:21:40]   a factory is already running (one owner) — waiting
+[2026-08-15T14:22:10] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:22:10]   a factory is already running (one owner) — waiting
+[2026-08-15T14:22:40] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:22:40]   a factory is already running (one owner) — waiting
+[2026-08-15T14:23:10] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:23:10]   a factory is already running (one owner) — waiting
+[2026-08-15T14:23:41] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:23:41]   a factory is already running (one owner) — waiting
+[2026-08-15T14:24:11] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:24:11]   a factory is already running (one owner) — waiting
+[2026-08-15T14:24:41] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:24:41]   a factory is already running (one owner) — waiting
+[2026-08-15T14:25:11] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:25:11]   a factory is already running (one owner) — waiting
+[2026-08-15T14:25:41] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:25:41]   a factory is already running (one owner) — waiting
+[2026-08-15T14:26:11] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:26:11]   a factory is already running (one owner) — waiting
+[2026-08-15T14:26:42] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:26:42]   a factory is already running (one owner) — waiting
+[2026-08-15T14:27:12] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:27:12]   a factory is already running (one owner) — waiting
+[2026-08-15T14:27:42] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:27:42]   a factory is already running (one owner) — waiting
+[2026-08-15T14:28:12] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:28:12]   a factory is already running (one owner) — waiting
+[2026-08-15T14:28:42] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:28:42]   a factory is already running (one owner) — waiting
+[2026-08-15T14:29:12] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:29:12]   a factory is already running (one owner) — waiting
+[2026-08-15T14:29:42] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:29:42]   a factory is already running (one owner) — waiting
+[2026-08-15T14:30:13] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:30:13]   a factory is already running (one owner) — waiting
+[2026-08-15T14:30:43] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:30:43]   a factory is already running (one owner) — waiting
+[2026-08-15T14:31:13] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:31:13]   a factory is already running (one owner) — waiting
+[2026-08-15T14:31:43] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:31:43]   a factory is already running (one owner) — waiting
+[2026-08-15T14:32:13] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:32:13]   a factory is already running (one owner) — waiting
+[2026-08-15T14:32:43] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:32:43]   a factory is already running (one owner) — waiting
+[2026-08-15T14:33:13] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:33:13]   a factory is already running (one owner) — waiting
+[2026-08-15T14:33:44] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:33:44]   a factory is already running (one owner) — waiting
+[2026-08-15T14:34:14] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:34:14]   a factory is already running (one owner) — waiting
+[2026-08-15T14:34:44] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:34:44]   a factory is already running (one owner) — waiting
+[2026-08-15T14:35:14] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:35:14]   a factory is already running (one owner) — waiting
+[2026-08-15T14:35:44] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:35:44]   a factory is already running (one owner) — waiting
+[2026-08-15T14:36:14] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:36:14]   a factory is already running (one owner) — waiting
+[2026-08-15T14:36:44] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:36:44]   a factory is already running (one owner) — waiting
+[2026-08-15T14:37:15] kramasadbhava chain: {"T1": 248, "L0": 168, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:37:15]   a factory is already running (one owner) — waiting
+[2026-08-15T14:37:45] kramasadbhava chain: {"T1": 248, "L0": 169, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:37:45]   a factory is already running (one owner) — waiting
+[2026-08-15T14:38:15] kramasadbhava chain: {"T1": 248, "L0": 169, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:38:15]   a factory is already running (one owner) — waiting
+[2026-08-15T14:38:45] kramasadbhava chain: {"T1": 248, "L0": 170, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:38:45]   a factory is already running (one owner) — waiting
+[2026-08-15T14:39:15] kramasadbhava chain: {"T1": 248, "L0": 172, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:39:15]   a factory is already running (one owner) — waiting
+[2026-08-15T14:39:45] kramasadbhava chain: {"T1": 248, "L0": 173, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:39:45]   a factory is already running (one owner) — waiting
+[2026-08-15T14:40:16] kramasadbhava chain: {"T1": 248, "L0": 175, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:40:16]   a factory is already running (one owner) — waiting
+[2026-08-15T14:40:46] kramasadbhava chain: {"T1": 248, "L0": 176, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:40:46]   a factory is already running (one owner) — waiting
+[2026-08-15T14:41:16] kramasadbhava chain: {"T1": 248, "L0": 177, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:41:16]   a factory is already running (one owner) — waiting
+[2026-08-15T14:41:46] kramasadbhava chain: {"T1": 248, "L0": 179, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:41:46]   a factory is already running (one owner) — waiting
+[2026-08-15T14:42:16] kramasadbhava chain: {"T1": 248, "L0": 180, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:42:16]   a factory is already running (one owner) — waiting
+[2026-08-15T14:42:46] kramasadbhava chain: {"T1": 248, "L0": 181, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:42:46]   a factory is already running (one owner) — waiting
+[2026-08-15T14:43:16] kramasadbhava chain: {"T1": 248, "L0": 182, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:43:16]   a factory is already running (one owner) — waiting
+[2026-08-15T14:43:47] kramasadbhava chain: {"T1": 248, "L0": 183, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:43:47]   a factory is already running (one owner) — waiting
+[2026-08-15T14:44:17] kramasadbhava chain: {"T1": 248, "L0": 184, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:44:17]   a factory is already running (one owner) — waiting
+[2026-08-15T14:44:47] kramasadbhava chain: {"T1": 248, "L0": 185, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:44:47]   launching a factory pass to build L0 (one owner)
+[2026-08-15T14:45:17] kramasadbhava chain: {"T1": 248, "L0": 185, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:45:17]   a factory is already running (one owner) — waiting
+[2026-08-15T14:45:47] kramasadbhava chain: {"T1": 248, "L0": 186, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:45:47]   a factory is already running (one owner) — waiting
+[2026-08-15T14:46:17] kramasadbhava chain: {"T1": 248, "L0": 187, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:46:17]   a factory is already running (one owner) — waiting
+[2026-08-15T14:46:48] kramasadbhava chain: {"T1": 248, "L0": 189, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:46:48]   a factory is already running (one owner) — waiting
+[2026-08-15T14:47:18] kramasadbhava chain: {"T1": 248, "L0": 189, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:47:18]   a factory is already running (one owner) — waiting
+[2026-08-15T14:47:48] kramasadbhava chain: {"T1": 248, "L0": 190, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:47:48]   a factory is already running (one owner) — waiting
+[2026-08-15T14:48:18] kramasadbhava chain: {"T1": 248, "L0": 192, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:48:18]   a factory is already running (one owner) — waiting
+[2026-08-15T14:48:48] kramasadbhava chain: {"T1": 248, "L0": 192, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:48:48]   a factory is already running (one owner) — waiting
+[2026-08-15T14:49:18] kramasadbhava chain: {"T1": 248, "L0": 192, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:49:18]   a factory is already running (one owner) — waiting
+[2026-08-15T14:49:48] kramasadbhava chain: {"T1": 248, "L0": 192, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:49:48]   a factory is already running (one owner) — waiting
+[2026-08-15T14:50:19] kramasadbhava chain: {"T1": 248, "L0": 192, "ARGMAP": 1, "L2": 3, "L200": 3, "C1": 3} | next layer to build: L0
+[2026-08-15T14:50:19]   a factory is already running (one owner) — waiting
