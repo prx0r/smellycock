@@ -1,0 +1,18 @@
+{
+  "schema": "serveragent3.manifest.v1",
+  "description": "The machine resolver for the serveragent3 POST-C1 spine. Every doc/script -> id + owner + validator.",
+  "date": "2026-08-15",
+  "docs": {
+    "AGENTS.md": { "id": "sa3:agents", "owner": "all", "role": "governing file (read first)", "validator": "scripts/check.py --refs" },
+    "contracts/CANONICAL-DAG.yaml": { "id": "sa3:dag", "owner": "all", "role": "the canonical layer dependency manifest", "validator": "kernels/object_registry.py" },
+    "domains/README.md": { "id": "sa3:domain:index", "owner": "all", "role": "the POST-C1 domain index", "validator": "scripts/check.py --refs" }
+  },
+  "implementation": {
+    "kernels/object_registry.py": { "id": "sa3:registry", "owner": "all", "role": "versioned registry + event ledger", "validator": "scripts/check.py --counts" },
+    "kernels/gates.py": { "id": "sa3:gates", "owner": "all", "role": "deterministic gates (nyaya/cite/quality/chain/blind)", "validator": "scripts/check.py --gates" },
+    "kernels/generation.py": { "id": "sa3:generation", "owner": "hermes", "role": "Hermes generation engine (deepseek-v4-flash/opencode-go)", "validator": "kernels/generation.py" },
+    "scripts/build-spine.py": { "id": "sa3:build", "owner": "hermes", "role": "Hermes-driven POST-C1 spine build (generate->gate->commit)", "validator": "scripts/check.py --gates" },
+    "scripts/run-tests.py": { "id": "sa3:tests", "owner": "all", "role": "the deterministic test suite", "validator": "python3 scripts/run-tests.py" }
+  },
+  "layers": ["C1", "THEME", "ARGUMENT", "SYNTHESIS", "ESSAY", "EDUCATION"]
+}

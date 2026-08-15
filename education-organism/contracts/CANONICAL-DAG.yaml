@@ -1,0 +1,22 @@
+# CANONICAL-DAG — the single source of truth for layer dependencies
+
+# The POST-C1 spine we build (ABOVE C1). 'requires' = every entry must be committed for a layer to be
+# eligible. A layer is ELIGIBLE when all its 'requires' are satisfied AND it has no current committed
+# object. Mirrors the production DAG (LAYERS.yaml clear names; legacy codes in parens).
+version: 1
+dependencies:
+  C1:
+    requires: [L200]                    # commentary above translation_proof
+  THEME:
+    requires: [C1]
+  ARGUMENT:
+    requires: [C1]
+  SYNTHESIS:
+    requires: [ARGUMENT, THEME]         # multi-parent: needs both
+  ESSAY:
+    requires: [SYNTHESIS]
+  EDUCATION:
+    requires: [ESSAY]
+
+# The authority invariant: authority(projection) <= authority(parent) on every edge.
+# A synthesis can never claim more authority than the argument+theme it was derived from.

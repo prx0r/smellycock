@@ -22,6 +22,25 @@ openpatala/emitted/
 site/learning/
 runs/*/logs/
 
+# Run logs + derived data (keep the run READMEs, ignore the generated logs/ledgers)
+*.log
+**/data/runs/*/check.log
+**/data/runs/*/ledger.log
+**/data/runs/*/registry.log
+**/data/runs/*/tests.log
+**/data/runs/*/monitor-snapshots.jsonl
+**/data/runs/*/audit-resolve.log
+**/data/runs/*/compile-education.log
+**/data/runs/*/e2e.log
+**/data/runs/*/gems.log
+**/data/runs/*/tutor-session.json
+**/data/runs/*/organism-loop.json
+**/data/runs/*/ingestion-organism.json
+**/data/learner/*.jsonl
+**/data/registries/*.jsonl
+**/data/.ledger-key
+**/data/learner/*.db
+
 # Local data (keep out of the docs repo)
 *.sqlite
 *.db

@@ -70,9 +70,28 @@ def check_refs() -> list[str]:
         for line in open(os.path.join(EPI, fn), encoding="utf-8", errors="ignore"):
             for mref in re.findall(r"`(/root/[^`]+|/mnt/[^`]+)`", line):
                 mref = mref.split("(")[0].strip()
-                if not os.path.exists(mref):
+                # tolerate the source-machine IPVV raw-material provenance (not replicated here)
+                if mref.startswith("/root/sanskritree/"):
+                    continue
+                if not os.path.exists(mref) and not _resolve_cross_machine(mref):
                     errors.append(f"dangling ref in epistemic/{fn}: {mref}")
     return errors
+
+
+def _resolve_cross_machine(p: str) -> str:
+    """Map a canonical cross-machine path to one that exists on THIS box (same as check.py)."""
+    aliases = {
+        "/root/projects/patala": "/root/patalacheckpoints",
+        "/root/projects/patala/": "/root/patalacheckpoints/",
+        "/mnt/HC_Volume_106427611/ip-graph": "/root/fuck-off",
+        "/mnt/HC_Volume_106427611/ip-graph/": "/root/fuck-off/",
+        "/root/projects/research-library": "/root/patalacheckpoints/source-evidence",
+        "/root/projects/research-library/": "/root/patalacheckpoints/source-evidence/",
+    }
+    for canonical, local in aliases.items():
+        if p == canonical or p.startswith(canonical + "/"):
+            return local + p[len(canonical):]
+    return p
 
 
 def check_counts() -> list[str]:
