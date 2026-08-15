@@ -316,6 +316,12 @@
       "owner": "agentgraph",
       "role": "the integration brainstorm + live-experiment plan: tool-to-layer mapping (guard->ESSAY/LESSON, GEM-C->L200, gold->T1/L2/C1), depth-first strategy, E1-E5 experiment queue",
       "validator": "check.py --refs"
+    },
+    "infra-deepdive/13-BENCHMARK-PROJECTOR-THESIS.md": {
+      "id": "patalaorg:benchmark:thesis",
+      "owner": "agentgraph",
+      "role": "the full thesis: translation projector (estimator) + the benchmark surface (model leaderboard, regression, cost/cache, quality, sourcing) \u2014 for the other agent",
+      "validator": "check.py --refs"
     }
   },
   "implementation": {
@@ -516,6 +522,12 @@
       "owner": "agentgraph",
       "role": "semantic quality axis (LLM-judge vs raw-material gold, reference-free fallback) for the model benchmark",
       "validator": "pipeline/quality_score.py"
+    },
+    "pipeline/project_translation.py": {
+      "id": "patala:benchmark:projector",
+      "owner": "agentgraph",
+      "role": "THE TRANSLATION PROJECTOR: load a stack of works + a model -> estimated cost + time + model calls, backed by the logged benchmark (use in openpatala + ingestion ROI)",
+      "validator": "pipeline/project_translation.py --work kramasadbhava"
     }
   },
   "performance": {
