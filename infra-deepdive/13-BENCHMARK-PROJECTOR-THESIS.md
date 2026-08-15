@@ -88,6 +88,18 @@ the acquisition/ingestion pipeline (the other agent's lane).
 - The DeepSeek pricing is a **documented reference** (the opencode-go provider may bill differently — noted).
 - Everything is **compute-on-write** → the dashboard is a static projection, ETag/304, 0-JS (perf doctrine).
 
+## 4b. THE ASSEMBLY-LINE FACTORY (the actual translation architecture — 2026-08-15)
+**The background driver is now the PRODUCTION `factory_scheduler`, not the 1-verse-at-a-time harness.**
+- Each layer (T1→L0→ARGMAP→L2→L200→C1) is an **assembly-line stage with its own queue** (the DAG backlog).
+- **Big chunks:** `chunk_size=50` (`factory_scheduler.py`) → **1 model call per ~50 verses** (context-saving,
+  the 1M-context win). Before, `translate_work` used `batch_size=1` → 5 calls/verse.
+- **Parallel:** `FACTORY_PARALLEL=4` → chunks run concurrently (`ThreadPoolExecutor`).
+- **Queue + stage telemetry:** `factory_status.py --layers` (committed vs pending per layer) +
+  the per-layer avg stage time in the `/benchmarks` projection.
+- **OOM fixed:** `factory_batch._source_objects` streams the SOURCE registry (was `R._load("SOURCE")` → 4.5GB).
+- The background loop: `factory_long.sh` → `factory_scheduler --retry --per-layer 2 --max-model-calls 6
+  --layers T1,ARGMAP,L0,L2,L200,C1` (chunk 50, parallel 4, NO intake flooding), logged to `log5long.log`.
+
 ## 5. BOTTOM LINE
 > **The projector turns the per-verse benchmark into a planning + product tool: "load a stack of
 > manuscripts → with this model, it costs this much and takes this long." And the benchmark itself is the
