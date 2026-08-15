@@ -1,0 +1,73 @@
+{
+  "object_id": "kramasadbhava:v4__arg__synth__essay__educ",
+  "version": "education-kramasadbhava:v4__arg__synth__essay__educ-v2",
+  "status": "ENGINEERING_VALIDATED",
+  "derived_from": "kramasadbhava:v4__arg__synth__essay__educ",
+  "input_refs": [
+    "kramasadbhava:v4__arg__synth__essay"
+  ],
+  "learning_claims": [
+    {
+      "claim_id": "lc-flashing-not-order",
+      "question": "What does the passage establish about the flashing (pratibhā) and the order?",
+      "expected": "The flashing is not the order itself; rather it has a local support that is order-less (akrama), the great Lord, and this support is required by the structure of ordered experience.",
+      "wrong_answer": "The flashing is the order itself and therefore needs no support.",
+      "maps_to": "the order as self-sufficient",
+      "depends_on": [
+        "kramasadbhava:v4__arg__synth__essay",
+        "kramasadbhava:v4__arg__synth",
+        "kramasadbhava:v4__arg"
+      ]
+    },
+    {
+      "claim_id": "lc-support-local",
+      "question": "How far does the essay's conclusion about the support of the powers extend?",
+      "expected": "It is deliberately delimited to the local support of the powers and does not extend to every claim about the universal Self, nor to an essay-level thesis or cross-traditional or modern application.",
+      "wrong_answer": "The essay establishes a general thesis about the universal Self that can be applied beyond the passage.",
+      "maps_to": "every claim about the universal Self",
+      "depends_on": [
+        "kramasadbhava:v4__arg__synth__essay",
+        "kramasadbhava:v4",
+        "kramasadbhava__theme_1"
+      ]
+    },
+    {
+      "claim_id": "lc-akrama-uncertain",
+      "question": "What status does the reading give to the term akrama ('order-less')?",
+      "expected": "Akrama is marked as uncertain: it remains unresolved whether the verse actually posits a separate ontological support for the flashing, or whether the apparent support is only a logical fiction introduced by the interpretation.",
+      "wrong_answer": "The reading definitively settles that the great Lord is a separate ontological support.",
+      "maps_to": "the great Lord as a settled ontological support",
+      "depends_on": [
+        "kramasadbhava:v4__arg__synth__essay",
+        "kramasadbhava:v4__arg__synth",
+        "kramasadbhava:v4__arg"
+      ]
+    },
+    {
+      "claim_id": "lc-load-bearing-assertion",
+      "question": "Which assertion carries the substantive content of the argument?",
+      "expected": "The load-bearing assertion is that the flashing is not the order itself but has an order-less support, the great Lord; the other premises only frame, motivate, or restrict this assertion.",
+      "wrong_answer": "The verse's introduction of the support is a marginal observation rather than the point from which the reasoning proceeds.",
+      "maps_to": "the introduction of the support as marginal",
+      "depends_on": [
+        "kramasadbhava:v4__arg__synth__essay",
+        "kramasadbhava:v4__arg",
+        "kramasadbhava:v4"
+      ]
+    },
+    {
+      "claim_id": "lc-ordered-experience-requires-support",
+      "question": "What does the passage say about ordered experience in relation to its support?",
+      "expected": "Ordered experience is not self-sufficient: it rests on a local support that is itself order-less, namely the great Lord, whose support the verse introduces through the claim about the powers.",
+      "wrong_answer": "Ordered experience is self-sufficient and needs no external or order-less support.",
+      "maps_to": "ordered experience as self-sufficient",
+      "depends_on": [
+        "kramasadbhava:v4__arg__synth__essay",
+        "kramasadbhava:v4__arg__synth",
+        "kramasadbhava:v4"
+      ]
+    }
+  ],
+  "epistemic_ceiling": "ENGINEERING_VALIDATED",
+  "source_chain_resolves": true
+}

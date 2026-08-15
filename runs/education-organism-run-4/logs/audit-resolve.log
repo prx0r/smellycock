@@ -1,0 +1,11 @@
+RESOLVE kramasadbhava:v1__arg__synth__essay__educ (EDUCATION) down to SOURCE:
+  upper ref reached C1 base: kramasadbhava:v1
+  C1       kramasadbhava:v1
+  L200     kramasadbhava:v1
+  L2       kramasadbhava:v1
+  L1       kramasadbhava:v1
+  L0       kramasadbhava:v1
+  T1       kramasadbhava:v1
+  SOURCE   kramasadbhava:v1
+
+  → RESOLVES TO SOURCE ✅ (full audit trail)

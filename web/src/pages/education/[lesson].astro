@@ -1,0 +1,33 @@
+---
+// education/[lesson].astro — one lesson: the LearningPacket (question/expected/wrong-answer/deps)
+import Layout from '../../layouts/Layout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+export async function getStaticPaths() {
+  const ED = process.env.PATALA_EDUCATION ?? '/root/smellycock/site/education';
+  const idx = JSON.parse(fs.readFileSync(path.join(ED, 'education-index.json'), 'utf-8'));
+  return (idx.lessons || []).map(l => ({
+    params: { lesson: l.object_id.replace(/[^a-zA-Z0-9_]/g, '_') },
+    props: { meta: l, file: path.join(ED, l.file) },
+  }));
+}
+const { lesson } = Astro.params;
+const { meta, file } = Astro.props;
+const data = JSON.parse(fs.readFileSync(file, 'utf-8'));
+const claims = data.learning_claims || [];
+---
+<Layout title={`Pāṭala — ${meta.object_id}`} description={`A lesson derived from the verified graph, auditable to source.`}>
+  <h1>{meta.object_id}</h1>
+  <p><strong>Status:</strong> {meta.status} · <strong>source-chain:</strong> {meta.source_chain_resolves ? '✅ verified' : '⚠️'}</p>
+  <h2>Learning Claims</h2>
+  <ol>
+    {claims.map(c => (
+      <li>
+        <p><strong>Q:</strong> {c.question}</p>
+        <p><em>Expected:</em> {c.expected}</p>
+        <p><em>Common wrong answer:</em> {c.wrong_answer}</p>
+        <p><em>Depends on:</em> {Array.isArray(c.depends_on) ? c.depends_on.join(', ') : '—'}</p>
+      </li>
+    ))}
+  </ol>
+</Layout>

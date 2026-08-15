@@ -10,7 +10,10 @@ per-domain references — no research bloat.*
 ## What this repo is
 - **The canonical reference** — `AGENTS.md` (read first), `AXIOMS.md` (strict rules), `OBJECT-MODEL.md`,
   `MANIFEST.json` (the machine resolver), `check.py` (the drift gate), `performance/`, and `domains/`
-  (translation · openpatala · factory · read-plane).
+  (translation · openpatala · factory · read-plane · **epistemic**).
+- **The epistemic product layer** — `domains/epistemic/` documents the **25 product engines** (proof,
+  scholar workflow, manuscript pipeline) whose code lives in `/root/patalacheckpoints`. **This is the
+  highest-value new build.** See the section below.
 - **The official runs** — `runs/` holds every logged, monitored autonomous run (Run 1, Run 2, the
   experiments, the 3-build comparison, the brainstorm) — the evidence that the system is real.
 - **The one rule:** nothing is real without a task + gold + a reproducible gate. The `check.py` gate
@@ -29,10 +32,36 @@ per-domain references — no research bloat.*
 | `domains/openpatala/` | the OpenAlex-of-Sanskrit surface |
 | `domains/factory/` | the production translation factory |
 | `domains/read-plane/` | the compiled read plane |
+| **`domains/epistemic/`** | **the epistemic product layer — 25 engines, Hermes-MCP, scholar workflow, manuscript pipeline** |
 | `runs/` | the official logged + monitored autonomous runs |
 | `openpatala/` | the OpenAlex-of-Sanskrit API docs + OpenAPI spec |
 | `web/` | the Astro static-site source + build |
 | `site/` | the compiled read-plane (works/concepts/openpatala projections, search, sitemap) |
+
+---
+
+## The epistemic product layer (the high-value build — read this)
+
+**The code lives in `/root/patalacheckpoints`** (the working repo, `prx0r/patalacheckpoints`); this
+repo documents it. The products are the **epistemic + scholar + manuscript engines** — the validation
+layer above the translation factory. Everything is **CPU-only, deterministic, 150/150 PASS**, exposed
+to **humans (UI)** and **agents (Hermes MCP, 61 tools)**.
+
+| Group | Products | What they give |
+|---|---|---|
+| **Epistemic substrate** (14) | translation_proof · claim · argument · crux · comparison · research_packet · evidence_independence · tension_finder · context_bundle · passage · passage_workbench · terminology · timeline · benchmark | proofs, propositions, arguments, cruxes, retrieval, tension surface |
+| **Scholar workflow** (8) | review_queue · scholar_identity · review_workbench · scholar_profile · review_policy · scholar_review · scholar_publication · scholar_vertical | "machines propose, scholars certify" — review, attestation, contribution ledger |
+| **Manuscript pipeline** (3) | manuscript_routing · manuscript_ingest · collation | manuscript → OCR (adopted) → quality → critical apparatus |
+
+**Full reference:** `domains/epistemic/README.md` (the 25-product index). **Verify:** `check_epistemic.py`.
+
+**How to use:** `./start.sh` in patalacheckpoints → the scholar UI at `localhost:3000`; the 61 MCP tools
+are callable by Hermes as `mcp__patala__<tool>`.
+
+**Dependencies:** `patalacheckpoints/DEPENDENCIES.md` — networkx + cryptography (Python), the MCP SDK
+(Node), the internal modules + data. All verified present.
+
+---
 
 ## The production state (as of the official runs)
 - The translation factory is **real and autonomous**: canonical T1 generator, live quality gate, state

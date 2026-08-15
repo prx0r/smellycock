@@ -1,0 +1,73 @@
+{
+  "object_id": "kramasadbhava:v3__arg__synth__essay__educ",
+  "version": "education-kramasadbhava:v3__arg__synth__essay__educ-v2",
+  "status": "ENGINEERING_VALIDATED",
+  "derived_from": "kramasadbhava:v3__arg__synth__essay__educ",
+  "input_refs": [
+    "kramasadbhava:v3__arg__synth__essay"
+  ],
+  "learning_claims": [
+    {
+      "claim_id": "lc-flashing-not-order",
+      "question": "What does the verse establish about the flashing’s (pratibhā’s) relation to the order of the powers?",
+      "expected": "The verse establishes that the flashing is not the order itself; it is distinguished from the ordered sequence of powers and is prepared for a positive identification of a distinct support.",
+      "wrong_answer": "The verse establishes that the flashing is the order itself.",
+      "maps_to": "the flashing as the order itself",
+      "depends_on": [
+        "kramasadbhava:v3__arg__synth__essay",
+        "kramasadbhava:v3",
+        "kramasadbhava:v3__arg"
+      ]
+    },
+    {
+      "claim_id": "lc-load-bearing-premise",
+      "question": "Which premise does the conclusion of the argument depend on most?",
+      "expected": "The load-bearing premise is that the flashing has an order-less support, the great Lord; if this premise fails, the other premises only describe the flashing’s relation to order and cannot establish the support of the powers.",
+      "wrong_answer": "The load-bearing premise is that the flashing is not the order itself.",
+      "maps_to": "the flashing is not the order itself",
+      "depends_on": [
+        "kramasadbhava:v3__arg__synth__essay",
+        "kramasadbhava:v3__arg",
+        "kramasadbhava:v3__arg__synth"
+      ]
+    },
+    {
+      "claim_id": "lc-akrama-uncertain",
+      "question": "What is the status of the term akrama in the essay?",
+      "expected": "The term akrama is flagged as uncertain: it may be read as characterizing the support as order-less, or it may be read as merely describing the flashing’s own order-less nature; the essay does not resolve this uncertainty.",
+      "wrong_answer": "The term akrama definitively characterizes the support as order-less.",
+      "maps_to": "akrama as characterizing the support as order-less",
+      "depends_on": [
+        "kramasadbhava:v3__arg__synth__essay",
+        "kramasadbhava:v3",
+        "kramasadbhava:v3__arg__synth"
+      ]
+    },
+    {
+      "claim_id": "lc-local-boundary",
+      "question": "What is the scope of the conclusion reached by the essay?",
+      "expected": "The conclusion is deliberately local: it establishes only the local support of the powers, not every claim about the universal Self, and it does not advance a general thesis or cross-traditional or modern applications.",
+      "wrong_answer": "The conclusion establishes a general thesis about every claim concerning the universal Self.",
+      "maps_to": "every claim about the universal Self",
+      "depends_on": [
+        "kramasadbhava:v3__arg__synth__essay",
+        "kramasadbhava:v3__arg",
+        "kramasadbhava__theme_1"
+      ]
+    },
+    {
+      "claim_id": "lc-structural-necessity",
+      "question": "Why does the verse introduce the order-less support, according to the essay?",
+      "expected": "The verse introduces the support as a structural necessity for the ordered powers: the very fact that experience is ordered demands a support that is not itself ordered, so the flashing is not left unsupported.",
+      "wrong_answer": "The verse merely describes the flashing’s own order-less nature and does not establish a distinct support for the powers.",
+      "maps_to": "akrama as a mere description of the flashing’s own order-less nature",
+      "depends_on": [
+        "kramasadbhava:v3__arg__synth__essay",
+        "kramasadbhava:v3",
+        "kramasadbhava:v4"
+      ]
+    }
+  ],
+  "epistemic_ceiling": "ENGINEERING_VALIDATED",
+  "source_chain_resolves": true
+}

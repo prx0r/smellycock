@@ -1,0 +1,59 @@
+{
+  "object_id": "kramasadbhava:v1__arg__synth__essay__educ",
+  "version": "education-kramasadbhava:v1__arg__synth__essay__educ-v2",
+  "status": "ENGINEERING_VALIDATED",
+  "derived_from": "kramasadbhava:v1__arg__synth__essay__educ",
+  "input_refs": [
+    "kramasadbhava:v1__arg__synth__essay"
+  ],
+  "learning_claims": [
+    {
+      "claim_id": "lc-support-identification-load-bearing",
+      "question": "Why, if at all, is the identification of the flashing's support as the great Lord load-bearing in the argument for the verse?",
+      "expected": "It is load-bearing because it is the only premise that supplies a determinate support of the powers; without that identification, the remaining premises provide only necessity and function, not the specific support that the verse is claimed to establish.",
+      "wrong_answer": "It is not load-bearing, because the remaining premises already supply necessity and function, and that is enough to establish that the flashing has some support.",
+      "maps_to": "the remaining premises as providing necessity and function",
+      "depends_on": [
+        "kramasadbhava:v1__arg__synth__essay",
+        "kramasadbhava:v1__arg",
+        "kramasadbhava:v1__arg__synth"
+      ]
+    },
+    {
+      "claim_id": "lc-akrama-uncertainty",
+      "question": "How does the unresolved rendering of akrama affect what the verse establishes about the support of the flashing?",
+      "expected": "If akrama, rendered here as 'order-less', is read differently, the specific conclusion that the support is order-less would not be secured, even though the general claim that the flashing has a support would remain.",
+      "wrong_answer": "Since akrama is merely an uncertain term, its rendering cannot affect the specific conclusion that the support is order-less.",
+      "maps_to": "the general claim that the flashing has a support",
+      "depends_on": [
+        "kramasadbhava:v1__arg__synth__essay",
+        "kramasadbhava:v1__arg__synth"
+      ]
+    },
+    {
+      "claim_id": "lc-boundary-local-support",
+      "question": "What is the scope of the point that the verse establishes about the flashing's support?",
+      "expected": "It establishes the local support of the powers, namely that the flashing has the great Lord as its support; it does not establish every claim about the universal Self, nor a broader essay-level thesis, cross-traditional comparison, or modern application.",
+      "wrong_answer": "It establishes the full doctrine that the universal Self is the support of all powers.",
+      "maps_to": "the flashing as having the great Lord as its support",
+      "depends_on": [
+        "kramasadbhava:v1__arg__synth__essay",
+        "kramasadbhava__theme_1"
+      ]
+    },
+    {
+      "claim_id": "lc-ordered-experience-grounding",
+      "question": "What does the verse establish about the relationship between the flashing and ordered experience?",
+      "expected": "It establishes that the flashing is not the order itself but is grounded in something beyond it, and that this grounding is required by the structure of ordered experience.",
+      "wrong_answer": "It establishes that ordered experience itself is the support of the flashing, so the flashing needs no support beyond the order.",
+      "maps_to": "ordered experience as demanding a support beyond itself",
+      "depends_on": [
+        "kramasadbhava:v1__arg__synth__essay",
+        "kramasadbhava:v3",
+        "kramasadbhava:v4"
+      ]
+    }
+  ],
+  "epistemic_ceiling": "ENGINEERING_VALIDATED",
+  "source_chain_resolves": true
+}

@@ -70,5 +70,47 @@ projection.
 
 ---
 
+## 9. DO / DON'T (borrowed from the OpenAlex LLM guide — the agent footguns)
+
+The OpenAlex API docs teach agents how NOT to misuse a scholarly-graph API. Pāṭala has the same grammar,
+so the same rules apply.
+
+### ❌ DON'T
+- **Don't** sample by random `page=` numbers (`?page=5&page=17` is NOT random and biases results).
+- **Don't** filter by entity *name* (`?filter=author_name:Abhinavagupta`) — names are ambiguous.
+- **Don't** loop sequential ID calls for a known list — slow.
+- **Don't** retry immediately on failure — makes rate-limit/500 worse.
+- **Don't** fetch all fields when you need two — wasteful.
+- **Don't** `group_by` multiple dimensions in one call.
+
+### ✅ DO
+- **Do** use a canonical ID (`PTW_...`), not a name — resolve first, then filter by ID (two-step).
+- **Do** batch ID lookups with the pipe `|` operator (`?filter=openalex_id:W123|W456`) — up to 50/request.
+- **Do** `per_page` to the max for bulk, `select=` only the fields you need.
+- **Do** implement exponential backoff on 429/500.
+- **Do** `group_by` one dimension per call; combine client-side for multi-dimensional.
+- **Do** respect `304` — a cached answer is free.
+
+### Two-step ID lookup (the identity genius)
+```text
+1. RESOLVE the name → canonical id:   /resolve?title=Tantraloka → PTW_...
+2. FILTER by the canonical id:        /works?filter=work_id:PTW_...
+```
+Never fuzzy-join on display names.
+
+### The 10 common mistakes (mirrors OpenAlex)
+1. Page-number sampling → use `select`/`filter`/`cursor`, not random pages.
+2. Name filtering → two-step ID lookup.
+3. Default page size → `per_page` max.
+4. Sequential ID calls → `|` batch.
+5. No error handling → retry with backoff.
+6. Ignoring rate limits in threads → global rate limiter.
+7. Multi-field `group_by` → one per call + combine.
+8. No `mailto`-style identity → include your agent id for polite access.
+9. Fetching all fields → `select=`.
+10. No timeouts → add request timeouts.
+
+---
+
 *Fast, deterministic, one-request answers. For the full grammar see `docs/api-reference.md`; for the
 meaning of entities `docs/entity-model.md`; for failures `docs/errors.md`.*

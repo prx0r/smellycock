@@ -1,0 +1,21 @@
+---
+// education/index.astro — the education lesson index (the learner's entry)
+import Layout from '../../layouts/Layout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+const ED = process.env.PATALA_EDUCATION ?? '/root/smellycock/site/education';
+const idx = JSON.parse(fs.readFileSync(path.join(ED, 'education-index.json'), 'utf-8'));
+const lessons = idx.lessons || [];
+---
+<Layout title="Pāṭala — Learn" description="Lessons derived from the verified scholarly graph. Every claim resolves to its source." jsonLd={{ "@context":"https://schema.org","@type":"LearningResource", name:"Pāṭala Lessons" }}>
+  <h1>Learn — from the verified graph</h1>
+  <p><strong>{lessons.length}</strong> lessons, each derived from a real scholarly object and auditable back to the Sanskrit source.</p>
+  <ul>
+    {lessons.map(l => (
+      <li>
+        <a href={`/education/${l.object_id.replace(/[^a-zA-Z0-9_]/g, '_')}/`}><strong>{l.object_id}</strong></a>
+        <span> · {l.n_claims} learning claims · {l.source_chain_resolves ? '✅ source-chain verified' : '⚠️ unresolved'}</span>
+      </li>
+    ))}
+  </ul>
+</Layout>

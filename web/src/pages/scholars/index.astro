@@ -1,0 +1,59 @@
+---
+// scholars/index.astro — the Pāṭala scholar publication surface (the public contribution ledger)
+// Reads the compiled JSON-LD scholar records emitted by products/scholar_publication (publish_all).
+// These are the immutable, citable contribution records the public site serves (compute on write, read
+// from CDN). If no records are emitted yet, the page degrades honestly to "no scholars published".
+import Layout from '../../layouts/Layout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const PUBLISHED = process.env.PATALA_SCHOLAR_PUBLISHED ?? '/root/patalacheckpoints/data/scholar/published';
+
+let scholarFiles = [];
+try {
+  scholarFiles = fs.readdirSync(PUBLISHED).filter((f) => f.startsWith('scholar-') && f.endsWith('.json'));
+} catch {
+  scholarFiles = [];
+}
+
+const scholars = scholarFiles.map((f) => {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(PUBLISHED, f), 'utf-8'));
+  } catch {
+    return null;
+  }
+}).filter(Boolean).sort((a, b) => (b.contributions?.reviews ?? 0) - (a.contributions?.reviews ?? 0));
+---
+<Layout
+  title="Pāṭala — Scholars"
+  description="The Pāṭala scholarly contribution ledger — the public record of scholar peer review + attestation."
+  jsonLd={{ "@context": "https://schema.org", "@type": "CollectionPage", name: "Pāṭala Scholars" }}
+>
+  <h1>Scholars</h1>
+  <p>The public record of scholarly contribution to Pāṭala. Each scholar's reviews and attestations are
+  append-only and citable. A contribution record is a map of <em>what kind of scholarship someone does</em>,
+  not a score.</p>
+
+  {scholars.length === 0 ? (
+    <p class="ceiling">No scholars have published contributions yet. Records appear here when a scholar's
+    review/attestation is emitted.</p>
+  ) : (
+    <ul>
+      {scholars.map((s) => (
+        <li>
+          <strong>{s.name}</strong>
+          <span class="ceiling">({s.identifier})</span>
+          <ul>
+            <li>reviews: {s.contributions?.reviews ?? 0}</li>
+            <li>attestations: {s.contributions?.attestations ?? 0}</li>
+            <li>
+              by decision: {Object.entries(s.contributions?.reviews_by_decision ?? {})
+                .map(([k, v]) => `${k} ${v}`).join(' · ') || '—'}
+            </li>
+            <li>cite: <span class="ceiling">{s.citeAs}</span></li>
+          </ul>
+        </li>
+      ))}
+    </ul>
+  )}
+</Layout>

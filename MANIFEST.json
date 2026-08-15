@@ -3,43 +3,358 @@
   "description": "The clean canonical reference for the Patala stack. Agent-readable pointer: every doc -> stable id + owner + validator + target repo.",
   "date": "2026-08-15",
   "repos": {
-    "patala": { "role": "PRODUCES - factory DAG, atlas surface, workers, registry", "path": "/root/projects/patala" },
-    "ip-graph": { "role": "VALIDATES + SERVES - read plane, organism, validation kernels", "path": "/mnt/HC_Volume_106427611/ip-graph" },
-    "patalaorg": { "role": "the clean canonical reference (this repo)", "path": "/root/projects/patalaorg" }
+    "patala": {
+      "role": "PRODUCES - factory DAG, atlas surface, workers, registry",
+      "path": "/root/projects/patala"
+    },
+    "ip-graph": {
+      "role": "VALIDATES + SERVES - read plane, organism, validation kernels",
+      "path": "/mnt/HC_Volume_106427611/ip-graph"
+    },
+    "patalaorg": {
+      "role": "the clean canonical reference (this repo)",
+      "path": "/root/projects/patalaorg"
+    }
   },
   "docs": {
-    "AGENTS.md": { "id": "patalaorg:agents", "owner": "all", "role": "governing file (read first)", "validator": "check.py --refs" },
-    "README.md": { "id": "patalaorg:constitution", "owner": "all", "role": "the constitution + one rule", "validator": "check.py --refs" },
-    "AXIOMS.md": { "id": "patalaorg:axioms", "owner": "all", "role": "strict rules: naming, file org, axioms, ladders, banned words", "validator": "check.py --naming" },
-    "OBJECT-MODEL.md": { "id": "patalaorg:object-model", "owner": "all", "role": "the canonical DAG + object/registry contracts", "validator": "check.py --refs" },
-    "MANIFEST.json": { "id": "patalaorg:manifest", "owner": "all", "role": "this machine pointer", "validator": "check.py --manifest" },
-    "performance/README.md": { "id": "patalaorg:perf", "owner": "all", "role": "perf doctrine + budgets + references", "validator": "check.py --refs" },
-    "domains/translation/README.md": { "id": "patalaorg:domain:translation", "owner": "agentpatala", "role": "layer index + completion protocol + state", "validator": "pipeline/test_canonical_translate.py + test_factory_scheduler.py" },
-    "domains/translation/reference.md": { "id": "patalaorg:domain:translation:reference", "owner": "agentpatala", "role": "wire mechanics: factory CLI, generator CLI, API, MCP, env, gates", "validator": "check.py --refs" },
-    "domains/translation/model.md": { "id": "patalaorg:domain:translation:model", "owner": "agentpatala", "role": "semantics: DAG, object shapes, JSONL, registry, authority, tracking", "validator": "check.py --refs" },
-    "domains/translation/recipes.md": { "id": "patalaorg:domain:translation:recipes", "owner": "agentpatala", "role": "how-to: run, monitor, recover, validate, use API/MCP", "validator": "check.py --refs" },
-    "domains/translation/agentic.md": { "id": "patalaorg:domain:translation:agentic", "owner": "agentpatala", "role": "how agents drive it: Hermes calling, skills, JSONL, safety", "validator": "check.py --refs" },
-    "domains/translation/extension.md": { "id": "patalaorg:domain:translation:extension", "owner": "agentpatala", "role": "extensions + NOT-IMPLEMENTED roadmap + git-clone patterns to borrow", "validator": "check.py --refs" },
-    "domains/translation/DEV-PLAN.md": { "id": "patalaorg:domain:translation:devplan", "owner": "agentpatala", "role": "the build order (phases 0-3, each gated)", "validator": "check.py --refs" },
-    "domains/translation/ORCHESTRATION.md": { "id": "patalaorg:domain:translation:orchestration", "owner": "agentpatala", "role": "the agent runbook: see state, advance, stay safe, track (the one page agents read)", "validator": "check.py --refs" },
-    "domains/openpatala/README.md": { "id": "patalaorg:domain:openpatala", "owner": "agentpatala", "role": "the OpenAlex-of-Sanskrit surface index + integration seam", "validator": "check.py --refs" },
-    "domains/openpatala/api-reference.md": { "id": "patalaorg:domain:openpatala:api", "owner": "agentpatala", "role": "wire mechanics: OpenAlex query grammar + endpoints", "validator": "check.py --refs" },
-    "domains/openpatala/entity-model.md": { "id": "patalaorg:domain:openpatala:model", "owner": "agentpatala", "role": "semantics: PT* identity, crosswalks, rights", "validator": "check.py --refs" },
-    "domains/openpatala/errors.md": { "id": "patalaorg:domain:openpatala:errors", "owner": "agentpatala", "role": "failure modes + error JSON + retryability", "validator": "check.py --refs" },
-    "domains/openpatala/llm-guide.md": { "id": "patalaorg:domain:openpatala:llm", "owner": "agentpatala", "role": "one page for agents using the API", "validator": "check.py --refs" },
-    "domains/factory/README.md": { "id": "patalaorg:domain:factory", "owner": "agentpatala", "role": "the production translation factory reference", "validator": "check.py --refs" },
-    "domains/read-plane/README.md": { "id": "patalaorg:domain:readplane", "owner": "agentgraph", "role": "the compiled read plane reference", "validator": "check.py --refs" }
+    "AGENTS.md": {
+      "id": "patalaorg:agents",
+      "owner": "all",
+      "role": "governing file (read first)",
+      "validator": "check.py --refs"
+    },
+    "README.md": {
+      "id": "patalaorg:constitution",
+      "owner": "all",
+      "role": "the constitution + one rule",
+      "validator": "check.py --refs"
+    },
+    "AXIOMS.md": {
+      "id": "patalaorg:axioms",
+      "owner": "all",
+      "role": "strict rules: naming, file org, axioms, ladders, banned words",
+      "validator": "check.py --naming"
+    },
+    "OBJECT-MODEL.md": {
+      "id": "patalaorg:object-model",
+      "owner": "all",
+      "role": "the canonical DAG + object/registry contracts",
+      "validator": "check.py --refs"
+    },
+    "MANIFEST.json": {
+      "id": "patalaorg:manifest",
+      "owner": "all",
+      "role": "this machine pointer",
+      "validator": "check.py --manifest"
+    },
+    "performance/README.md": {
+      "id": "patalaorg:perf",
+      "owner": "all",
+      "role": "perf doctrine + budgets + references",
+      "validator": "check.py --refs"
+    },
+    "domains/translation/README.md": {
+      "id": "patalaorg:domain:translation",
+      "owner": "agentpatala",
+      "role": "layer index + completion protocol + state",
+      "validator": "pipeline/test_canonical_translate.py + test_factory_scheduler.py"
+    },
+    "domains/translation/reference.md": {
+      "id": "patalaorg:domain:translation:reference",
+      "owner": "agentpatala",
+      "role": "wire mechanics: factory CLI, generator CLI, API, MCP, env, gates",
+      "validator": "check.py --refs"
+    },
+    "domains/translation/model.md": {
+      "id": "patalaorg:domain:translation:model",
+      "owner": "agentpatala",
+      "role": "semantics: DAG, object shapes, JSONL, registry, authority, tracking",
+      "validator": "check.py --refs"
+    },
+    "domains/translation/recipes.md": {
+      "id": "patalaorg:domain:translation:recipes",
+      "owner": "agentpatala",
+      "role": "how-to: run, monitor, recover, validate, use API/MCP",
+      "validator": "check.py --refs"
+    },
+    "domains/translation/agentic.md": {
+      "id": "patalaorg:domain:translation:agentic",
+      "owner": "agentpatala",
+      "role": "how agents drive it: Hermes calling, skills, JSONL, safety",
+      "validator": "check.py --refs"
+    },
+    "domains/translation/extension.md": {
+      "id": "patalaorg:domain:translation:extension",
+      "owner": "agentpatala",
+      "role": "extensions + NOT-IMPLEMENTED roadmap + git-clone patterns to borrow",
+      "validator": "check.py --refs"
+    },
+    "domains/translation/DEV-PLAN.md": {
+      "id": "patalaorg:domain:translation:devplan",
+      "owner": "agentpatala",
+      "role": "the build order (phases 0-3, each gated)",
+      "validator": "check.py --refs"
+    },
+    "domains/translation/ORCHESTRATION.md": {
+      "id": "patalaorg:domain:translation:orchestration",
+      "owner": "agentpatala",
+      "role": "the agent runbook: see state, advance, stay safe, track (the one page agents read)",
+      "validator": "check.py --refs"
+    },
+    "domains/openpatala/README.md": {
+      "id": "patalaorg:domain:openpatala",
+      "owner": "agentpatala",
+      "role": "the OpenAlex-of-Sanskrit surface index + integration seam",
+      "validator": "check.py --refs"
+    },
+    "domains/openpatala/api-reference.md": {
+      "id": "patalaorg:domain:openpatala:api",
+      "owner": "agentpatala",
+      "role": "wire mechanics: OpenAlex query grammar + endpoints",
+      "validator": "check.py --refs"
+    },
+    "domains/openpatala/entity-model.md": {
+      "id": "patalaorg:domain:openpatala:model",
+      "owner": "agentpatala",
+      "role": "semantics: PT* identity, crosswalks, rights",
+      "validator": "check.py --refs"
+    },
+    "domains/openpatala/errors.md": {
+      "id": "patalaorg:domain:openpatala:errors",
+      "owner": "agentpatala",
+      "role": "failure modes + error JSON + retryability",
+      "validator": "check.py --refs"
+    },
+    "domains/openpatala/llm-guide.md": {
+      "id": "patalaorg:domain:openpatala:llm",
+      "owner": "agentpatala",
+      "role": "one page for agents using the API",
+      "validator": "check.py --refs"
+    },
+    "domains/factory/README.md": {
+      "id": "patalaorg:domain:factory",
+      "owner": "agentpatala",
+      "role": "the production translation factory reference",
+      "validator": "check.py --refs"
+    },
+    "domains/read-plane/README.md": {
+      "id": "patalaorg:domain:readplane",
+      "owner": "agentgraph",
+      "role": "the compiled read plane reference",
+      "validator": "check.py --refs"
+    },
+    "domains/epistemic/README.md": {
+      "id": "patalaorg:domain:epistemic",
+      "owner": "agentgraph",
+      "role": "the epistemic/validation layer index (14 product engines)",
+      "validator": "check_epistemic.py --refs"
+    },
+    "domains/epistemic/compatibility-matrix.md": {
+      "id": "patalaorg:domain:epistemic:matrix",
+      "owner": "agentgraph",
+      "role": "each product -> canonical layer / PT* ID / authority / validator",
+      "validator": "check_epistemic.py --counts"
+    },
+    "domains/epistemic/model.md": {
+      "id": "patalaorg:domain:epistemic:model",
+      "owner": "agentgraph",
+      "role": "object contracts + authority, canonical naming",
+      "validator": "check_epistemic.py --refs"
+    },
+    "domains/epistemic/reference.md": {
+      "id": "patalaorg:domain:epistemic:reference",
+      "owner": "agentgraph",
+      "role": "wire mechanics: CLI / API / MCP / env / gates",
+      "validator": "check_epistemic.py --refs"
+    },
+    "domains/epistemic/recipes.md": {
+      "id": "patalaorg:domain:epistemic:recipes",
+      "owner": "agentgraph",
+      "role": "how-to: run, validate, live-test each product",
+      "validator": "check_epistemic.py --refs"
+    },
+    "domains/epistemic/agentic.md": {
+      "id": "patalaorg:domain:epistemic:agentic",
+      "owner": "agentgraph",
+      "role": "how agents drive the epistemic layer (Hermes -> .py)",
+      "validator": "check_epistemic.py --refs"
+    },
+    "domains/epistemic/validation.md": {
+      "id": "patalaorg:domain:epistemic:validation",
+      "owner": "agentgraph",
+      "role": "the gates + the live monitored run evidence",
+      "validator": "check_epistemic.py --status"
+    },
+    "domains/epistemic/GENIUS-PINCHES.md": {
+      "id": "patalaorg:domain:epistemic:pinches",
+      "owner": "agentgraph",
+      "role": "genius processes worth adopting from live docs + similar repos",
+      "validator": "check_epistemic.py --refs"
+    }
   },
   "implementation": {
-    "pipeline/translation_gate.py": { "id": "patala:translation:gate", "owner": "agentpatala", "role": "the live deterministic quality gate (verifiable reward; dgm/TranslationProof pattern)", "validator": "pipeline/test_translation_gate.py" },
-    "pipeline/patala_orchestration.py": { "id": "patala:translation:orchestration", "owner": "agentpatala", "role": "the deterministic agent-orchestration brain", "validator": "pipeline/test_patala_orchestration.py" },
-    "pipeline/translation_supervisor.py": { "id": "patala:translation:supervisor", "owner": "agentpatala", "role": "the self-driving autonomous loop (one command, PROPOSE-only)", "validator": "pipeline/test_patala_orchestration.py" },
-    "pipeline/translation_state.py": { "id": "patala:translation:state", "owner": "agentpatala", "role": "derived next_action + auto ledger/bibliography refresh (track everything, no duplication)", "validator": "pipeline/test_translation_state.py" },
-    "pipeline/build_plan.py": { "id": "patala:build:plan", "owner": "agentpatala", "role": "the checkpoint-DAG engine (structured graph operation with validated deterministic checkpoints)", "validator": "pipeline/test_build_plan.py" },
-    "pipeline/ops_status.py": { "id": "patala:ops:status", "owner": "agentpatala", "role": "the live status board (processes + layers + queue + plan + logs)", "validator": "pipeline/test_build_plan.py" },
-    "pipeline/trace_log.py": { "id": "patala:ops:trace", "owner": "agentpatala", "role": "the real observability trace layer (herdr/self-healing: per-op traces, failure-class mapping, recovery+verify, replay)", "validator": "pipeline/test_build_plan.py" },
-    "ip-graph/scripts/score-vs-gold.py": { "id": "patala:gold:score", "owner": "agentgraph", "role": "score committed T1/L2 vs karika-level gold (closes the anti-theatre loop)", "validator": "python3 /mnt/HC_Volume_106427611/ip-graph/scripts/score-vs-gold.py --work kramasadbhava" },
-    "pipeline/whole_chain.py": { "id": "patala:build1:wholechain", "owner": "agentpatala", "role": "Build-1 prototype: whole-chain single-pass (RAW->T1/L0/ARGMAP/L2/L200/C1 in one 1M-context call)", "validator": "pipeline/test_whole_chain.py" }
+    "pipeline/translation_gate.py": {
+      "id": "patala:translation:gate",
+      "owner": "agentpatala",
+      "role": "the live deterministic quality gate (verifiable reward; dgm/TranslationProof pattern)",
+      "validator": "pipeline/test_translation_gate.py"
+    },
+    "pipeline/patala_orchestration.py": {
+      "id": "patala:translation:orchestration",
+      "owner": "agentpatala",
+      "role": "the deterministic agent-orchestration brain",
+      "validator": "pipeline/test_patala_orchestration.py"
+    },
+    "pipeline/translation_supervisor.py": {
+      "id": "patala:translation:supervisor",
+      "owner": "agentpatala",
+      "role": "the self-driving autonomous loop (one command, PROPOSE-only)",
+      "validator": "pipeline/test_patala_orchestration.py"
+    },
+    "pipeline/translation_state.py": {
+      "id": "patala:translation:state",
+      "owner": "agentpatala",
+      "role": "derived next_action + auto ledger/bibliography refresh (track everything, no duplication)",
+      "validator": "pipeline/test_translation_state.py"
+    },
+    "pipeline/build_plan.py": {
+      "id": "patala:build:plan",
+      "owner": "agentpatala",
+      "role": "the checkpoint-DAG engine (structured graph operation with validated deterministic checkpoints)",
+      "validator": "pipeline/test_build_plan.py"
+    },
+    "pipeline/ops_status.py": {
+      "id": "patala:ops:status",
+      "owner": "agentpatala",
+      "role": "the live status board (processes + layers + queue + plan + logs)",
+      "validator": "pipeline/test_build_plan.py"
+    },
+    "pipeline/trace_log.py": {
+      "id": "patala:ops:trace",
+      "owner": "agentpatala",
+      "role": "the real observability trace layer (herdr/self-healing: per-op traces, failure-class mapping, recovery+verify, replay)",
+      "validator": "pipeline/test_build_plan.py"
+    },
+    "ip-graph/scripts/score-vs-gold.py": {
+      "id": "patala:gold:score",
+      "owner": "agentgraph",
+      "role": "score committed T1/L2 vs karika-level gold (closes the anti-theatre loop)",
+      "validator": "python3 /mnt/HC_Volume_106427611/ip-graph/scripts/score-vs-gold.py --work kramasadbhava"
+    },
+    "pipeline/whole_chain.py": {
+      "id": "patala:build1:wholechain",
+      "owner": "agentpatala",
+      "role": "Build-1 prototype: whole-chain single-pass (RAW->T1/L0/ARGMAP/L2/L200/C1 in one 1M-context call)",
+      "validator": "pipeline/test_whole_chain.py"
+    },
+    "ip-graph/scripts/ingest-ipvv-grounded.py": {
+      "id": "server2:ipvv:grounded",
+      "owner": "server2",
+      "role": "ingest real IPVV C1s as grounded floor (fixes G1)",
+      "validator": "python3 /root/fuck-off/scripts/validate-ipvv-grounded-arg.py"
+    },
+    "ip-graph/scripts/validate-ipvv-grounded-arg.py": {
+      "id": "server2:ipvv:grounded-arg",
+      "owner": "server2",
+      "role": "grounded ARGUMENTs with verbatim evidence_quote (P2/P3)",
+      "validator": "python3 /root/fuck-off/scripts/validate-ipvv-grounded-arg.py"
+    },
+    "ip-graph/scripts/validate-signed-attestation.py": {
+      "id": "server2:attestation",
+      "owner": "server2",
+      "role": "Ed25519 attestation + tamper-detect (Gap E)",
+      "validator": "python3 /root/fuck-off/scripts/validate-signed-attestation.py"
+    },
+    "ip-graph/scripts/validate-quality-gate.py": {
+      "id": "server2:quality-gate",
+      "owner": "server2",
+      "role": "live verifiable-reward quality gate (PASS/BLOCK)",
+      "validator": "python3 /root/fuck-off/scripts/validate-quality-gate.py"
+    },
+    "ip-graph/scripts/emit-openpatala-entities.py": {
+      "id": "server2:openpatala-entities",
+      "owner": "server2",
+      "role": "emit grounded spine as PTPROP/PTARG/PTPASS",
+      "validator": "python3 /root/fuck-off/scripts/emit-openpatala-entities.py"
+    },
+    "ip-graph/scripts/validate-nyaya-gate.py": {
+      "id": "server2:nyaya-gate",
+      "owner": "server2",
+      "role": "Nyaya 5-hetvabhasa gate (verify_claim_semantic) on grounded args",
+      "validator": "python3 /root/fuck-off/scripts/validate-nyaya-gate.py"
+    },
+    "ip-graph/scripts/detect-synthesis-tensions.py": {
+      "id": "server2:tensions",
+      "owner": "server2",
+      "role": "vada contradiction_finder pattern: cross-argument tensions for SYNTHESIS",
+      "validator": "python3 /root/fuck-off/scripts/detect-synthesis-tensions.py"
+    },
+    "ip-graph/scripts/validate-blind-assessor.py": {
+      "id": "server2:blind-assessor",
+      "owner": "server2",
+      "role": "engram blind rubric-grader for EDUCATION",
+      "validator": "python3 /root/fuck-off/scripts/validate-blind-assessor.py"
+    },
+    "serveragent3/scripts/link-derivation-chain.py": {
+      "id": "sa3:derivation-linker",
+      "owner": "server3",
+      "role": "backfill input_refs on SOURCE\u2192L200\u2192C1 (the audit trail)",
+      "validator": "python3 /root/serveragent3/scripts/audit-resolve.py"
+    },
+    "serveragent3/scripts/audit-resolve.py": {
+      "id": "sa3:audit-resolve",
+      "owner": "server3",
+      "role": "trace any object to SOURCE (the audit resolver)",
+      "validator": "python3 /root/serveragent3/scripts/audit-resolve.py"
+    },
+    "serveragent3/scripts/compile-education.py": {
+      "id": "sa3:compile-education",
+      "owner": "server3",
+      "role": "education projection compiler (compute-on-write)",
+      "validator": "python3 /root/serveragent3/scripts/compile-education.py"
+    },
+    "serveragent3/scripts/tutor-agent.py": {
+      "id": "sa3:tutor",
+      "owner": "server3",
+      "role": "AI tutor (serves LearningPackets + blind-grade)",
+      "validator": "python3 /root/serveragent3/scripts/tutor-agent.py"
+    },
+    "serveragent3/scripts/test-e2e.py": {
+      "id": "sa3:e2e",
+      "owner": "server3",
+      "role": "end-to-end audit trail test (source\u2192customer)",
+      "validator": "python3 /root/serveragent3/scripts/test-e2e.py"
+    },
+    "patalacheckpoints/pipeline/products/education_organism/README.md": {
+      "id": "patala:product:education-organism",
+      "owner": "server3",
+      "role": "the audited education-serving organism (index)",
+      "validator": "check.py --refs"
+    },
+    "patalacheckpoints/pipeline/products/education_organism/AGENT-GUIDE.md": {
+      "id": "patala:product:education-organism:guide",
+      "owner": "server3",
+      "role": "how to use the organism end-to-end",
+      "validator": "check.py --refs"
+    },
+    "patalacheckpoints/pipeline/products/education_organism/VISION.md": {
+      "id": "patala:product:education-organism:vision",
+      "owner": "server3",
+      "role": "the cohesive endgame (one organism)",
+      "validator": "check.py --refs"
+    },
+    "serveragent3/kernels/segment_key.py": {
+      "id": "sa3:segment-key",
+      "owner": "server3",
+      "role": "GEM-A segmentId:field provenance spine",
+      "validator": "python3 /root/serveragent3/scripts/test-gems-integration.py"
+    },
+    "serveragent3/kernels/reconciliation.py": {
+      "id": "sa3:reconciliation",
+      "owner": "server3",
+      "role": "GEM-C source-preservation gate",
+      "validator": "python3 /root/serveragent3/scripts/test-gems-integration.py"
+    }
   },
   "performance": {
     "doctrine": "performance/ip-graph-perf-doctrine.md",
@@ -55,8 +370,20 @@
     "one_taxonomy": "patala/migration/v2/LAYERS.yaml",
     "dag_manifest": "patala/contracts/CANONICAL-DAG.yaml",
     "status_ladders": "MACHINE_PROPOSED->ENGINEERING_VALIDATED->SCHOLARLY_CORROBORATED->INDEPENDENT_REVIEWED->ADJUDICATED; GENERATED->ENGINEERING_VALIDATED->SPECIALIST_REVIEWED; DISCOVERED<PROTOTYPED<VALIDATED<INTEGRATED<PRODUCTION",
-    "authority_axes": ["generation", "evidence", "review", "publication"],
-    "banned_words": ["PROVED", "TRUTH", "CORRECT", "EDITOR APPROVED", "BEST", "WINS"]
+    "authority_axes": [
+      "generation",
+      "evidence",
+      "review",
+      "publication"
+    ],
+    "banned_words": [
+      "PROVED",
+      "TRUTH",
+      "CORRECT",
+      "EDITOR APPROVED",
+      "BEST",
+      "WINS"
+    ]
   },
   "live_truth": {
     "registry": "/root/projects/patala/data/corpus/registries",
@@ -66,5 +393,12 @@
   "proofs": {
     "canonical_tests": "/root/projects/patala/pipeline/test_canonical_translate.py",
     "scheduler_tests": "/root/projects/patala/pipeline/test_factory_scheduler.py"
+  },
+  "runs": {
+    "education-organism-run-4": {
+      "id": "patalaorg:run:education-organism",
+      "role": "the education-serving organism run (audit trail + tutor + logging)",
+      "validator": "check.py --refs"
+    }
   }
 }

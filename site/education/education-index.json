@@ -1,0 +1,28 @@
+{
+  "lessons": [
+    {
+      "object_id": "kramasadbhava:v3__arg__synth__essay__educ",
+      "file": "lesson-kramasadbhava_v3__arg__synth__essay__educ-851c35d99bbf.json",
+      "hash": "851c35d99bbf",
+      "status": "ENGINEERING_VALIDATED",
+      "n_claims": 5,
+      "source_chain_resolves": true
+    },
+    {
+      "object_id": "kramasadbhava:v1__arg__synth__essay__educ",
+      "file": "lesson-kramasadbhava_v1__arg__synth__essay__educ-929771ef0fc1.json",
+      "hash": "929771ef0fc1",
+      "status": "ENGINEERING_VALIDATED",
+      "n_claims": 4,
+      "source_chain_resolves": true
+    },
+    {
+      "object_id": "kramasadbhava:v4__arg__synth__essay__educ",
+      "file": "lesson-kramasadbhava_v4__arg__synth__essay__educ-3400723f08cf.json",
+      "hash": "3400723f08cf",
+      "status": "ENGINEERING_VALIDATED",
+      "n_claims": 5,
+      "source_chain_resolves": true
+    }
+  ]
+}

@@ -25,6 +25,30 @@ MANIFEST = os.path.join(ROOT, "MANIFEST.json")
 PATALA = "/root/projects/patala"
 IPGRAPH = "/mnt/HC_Volume_106427611/ip-graph"
 
+# Compatibility mapping: on THIS box the canonical repo paths are absent, and the working
+# repos live here instead. When a doc references a canonical path that isn't present, we
+# resolve it through this map (best-effort — preserves the canonical docs unchanged).
+PATH_ALIASES = {
+    "/root/projects/patala": "/root/patalacheckpoints",
+    "/root/projects/patala/": "/root/patalacheckpoints/",
+    "/root/projects/patalaorg": ROOT if 'ROOT' in dir() else "/root/smellycock",
+    "/mnt/HC_Volume_106427611/ip-graph": "/root/fuck-off",
+    "/mnt/HC_Volume_106427611/ip-graph/": "/root/fuck-off/",
+    "/mnt/HC_Volume_106427611": "/root/fuck-off",
+    "/root/projects/research-library": "/root/patalacheckpoints/source-evidence",
+    "/root/projects/research-library/": "/root/patalacheckpoints/source-evidence/",
+    "/root/sanskritree": "/root/patalacheckpoints/translations",
+    "/root/sanskritree/": "/root/patalacheckpoints/translations/",
+}
+
+
+def _resolve(p: str) -> str:
+    """Map a canonical cross-machine path to a path that exists on THIS box (best-effort)."""
+    for canonical, local in PATH_ALIASES.items():
+        if p == canonical or p.startswith(canonical + "/"):
+            return local + p[len(canonical):]
+    return p
+
 # the canonical layer order (from migration/v2/LAYERS.yaml legacy codes)
 CANONICAL_LAYERS = ["SOURCE", "T1", "ARGMAP", "L0", "L2", "L200", "C1",
                     "THEME", "ARGUMENT", "SYNTHESIS", "ESSAY", "EDUCATION"]
@@ -54,7 +78,11 @@ def check_refs() -> list[str]:
             for line in open(path, encoding="utf-8", errors="ignore"):
                 for mref in re.findall(r"`(/root/[^`]+|/mnt/[^`]+)`", line):
                     mref = mref.split("(")[0].strip()
-                    if not os.path.exists(mref):
+                    # /root/sanskritree/* is provenance for IPVV raw material on the SOURCE
+                    # machine (other box); it is not replicated here. Tolerate as external ref.
+                    if mref.startswith("/root/sanskritree/"):
+                        continue
+                    if not os.path.exists(mref) and not os.path.exists(_resolve(mref)):
                         errors.append(f"dangling ref in {os.path.relpath(path, ROOT)}: {mref}")
     return errors
 

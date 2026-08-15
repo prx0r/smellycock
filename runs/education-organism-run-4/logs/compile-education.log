@@ -1,0 +1,8 @@
+committed education objects: 3
+
+compiled 3 lessons -> /root/smellycock/site/education
+  kramasadbhava:v3__arg__synth__essay__educ: 5 claims, source_chain=True
+  kramasadbhava:v1__arg__synth__essay__educ: 4 claims, source_chain=True
+  kramasadbhava:v4__arg__synth__essay__educ: 5 claims, source_chain=True
+
+compute-on-write: these are immutable static bytes (ETag/304), no per-request LLM

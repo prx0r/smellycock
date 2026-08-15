@@ -33,7 +33,17 @@ curl "http://localhost:8787/works?filter=translation_status:complete"     # AND
 curl "http://localhost:8787/works?filter=verified:true"                    # equality
 curl "http://localhost:8787/works?filter=translation_status:!complete"     # NOT
 curl "http://localhost:8787/works?filter=edition_count:>0"                 # numeric > / <
+curl "http://localhost:8787/works?filter=tradition:krama|trika"             # OR (pipe, any value)
+curl "http://localhost:8787/works?filter=tradition:krama+trika"             # AND within one attribute (plus)
+curl "http://localhost:8787/works?filter=openalex_id:W123|W456|W789"        # batch ID lookup (pipe, up to 50)
 ```
+The filter grammar mirrors OpenAlex exactly:
+- **AND** between filters: comma (`,`).
+- **OR** within one filter: pipe (`|`) — "any of these values".
+- **AND** within one attribute: plus (`+`) — "all of these values".
+- **NOT**: `!` prefix.
+- **Numeric**: `<` / `>` / ranges.
+- **OR works WITHIN a filter, never BETWEEN filters** (a single filter arg is one AND-group).
 
 ### search= (folded, diacritic-insensitive)
 
