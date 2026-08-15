@@ -46,16 +46,25 @@ python3 pipeline/canonical_translate.py --work kramasadbhava --verses kramasadbh
 python3 pipeline/canonical_translate.py --work kramasadbhava --verses kramasadbhava:v2 --dry-run  # no model
 ```
 
-### 2.2 The factory (autonomous, low-RAM, one pass)
+### 2.2 THE CANONICAL low-RAM driver — `translate_work.py` (the live-run-5-proven path)
 ```bash
 cd /root/projects/patala
-setsid nohup env PATALA_COMPILE_ON_COMMIT=1 FACTORY_PARALLEL=3 \
-  python3 pipeline/factory_scheduler.py --works <work> --max-model-calls 6 --throttle 1 \
-  > /tmp/opencode/factory-pass.log 2>&1 &
+# one work, grinding the next T1-verse → C1, unlimited rounds (background, low-RAM):
+setsid nohup python3 -u pipeline/translate_work.py --work kramasadbhava --rounds 0 \
+  > /tmp/opencode/log5long.log 2>&1 &
+# brain-picked eligible works:
+python3 -u pipeline/translate_work.py --queue --limit 5
+# plan only, no model:
+python3 -u pipeline/translate_work.py --work kramasadbhava --dry-run
 ```
-- **ONE owner at a time** — never run a second scheduler while one is running (or the overnight loop).
-- Backgrounded (`setsid … &`) per the no-timeout doctrine; poll the log, never block.
-- `PATALA_COMPILE_ON_COMMIT=1` makes progress live to all agents after the pass.
+- **Low-RAM:** streams the SOURCE registry via `current_streamed` — the **4.5GB OOM is `R._load("SOURCE")`**
+  (a full registry dict), which `factory_scheduler`/`_source_objects` still hit. `translate_work.py` avoids it.
+- **Proven:** mirrors live-run-5 exactly (T1→L0→L1→ARGMAP→L2→L200→C1, current_streamed, chain_ok).
+- Machine-readable trace appended to `/tmp/opencode/translate-trace.jsonl`; ledger refreshed after each round.
+- **ONE owner at a time** — never run a second driver while one is running. Backgrounded (`setsid … &`).
+- ⚠️ `factory_scheduler.py --works …` (the DAG controller) is still the efficient multi-work backlog path, but
+  it OOMs at scale because `factory_batch._source_objects` does `R._load("SOURCE")` (~4.5GB). Fix that
+  `_load` → stream, then it is safe for the whole queue; until then, `translate_work.py` is the safe driver.
 
 ### 2.3 The overnight loop (fully autonomous)
 ```bash

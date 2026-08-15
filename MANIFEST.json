@@ -480,6 +480,12 @@
       "owner": "server3",
       "role": "GEM-C source-preservation gate",
       "validator": "python3 /root/smellycock/education-organism/scripts/test-gems-integration.py"
+    },
+    "pipeline/translate_work.py": {
+      "id": "patala:translation:translate_work",
+      "owner": "agentgraph",
+      "role": "the canonical low-RAM RAW->C1 translate driver (current_streamed, no _load(SOURCE) OOM; mirrors live-run-5; brain-picked works; trace+ledger refresh)",
+      "validator": "pipeline/translate_work.py --dry-run"
     }
   },
   "performance": {
