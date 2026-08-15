@@ -34,6 +34,7 @@ per-domain references — no research bloat.*
 | `domains/read-plane/` | the compiled read plane |
 | **`domains/epistemic/`** | **the epistemic product layer — 26 engines, Hermes-MCP, scholar workflow, manuscript pipeline, serve-time guard** |
 | `runs/` | the official logged + monitored autonomous runs |
+| `infra-deepdive/` | the deep-dive + plan index (agent resolver): orientation (00-04) → frontier plan (05-11) → benchmark/product (12-13) |
 | `openpatala/` | the OpenAlex-of-Sanskrit API docs + OpenAPI spec |
 | `web/` | the Astro static-site source + build |
 | `site/` | the compiled read-plane (works/concepts/openpatala projections, search, sitemap) |

@@ -322,6 +322,18 @@
       "owner": "agentgraph",
       "role": "the full thesis: translation projector (estimator) + the benchmark surface (model leaderboard, regression, cost/cache, quality, sourcing) \u2014 for the other agent",
       "validator": "check.py --refs"
+    },
+    "infra-deepdive/README.md": {
+      "id": "patalaorg:deepdive:index",
+      "owner": "agentgraph",
+      "role": "the agent resolver for the deep-dive/plan docs (orientation -> plan -> benchmark)",
+      "validator": "check.py --refs"
+    },
+    "infra-deepdive/12-MODEL-COMPARISON.md": {
+      "id": "patalaorg:deepdive:model-comparison",
+      "owner": "agentgraph",
+      "role": "run different models on the same Sanskrit pipeline + compare quality/speed (the model leaderboard design)",
+      "validator": "check.py --refs"
     }
   },
   "implementation": {
