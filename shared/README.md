@@ -7,7 +7,9 @@ shared gates green.*
 | File | What |
 |---|---|
 | `frontier-actions/SHARED-PLAN.md` | **the plan**: Agent A = surface guards (FoJin port), Agent B = learning kernels + measured-learning eval, with checkpoints + gates |
-| `AGENTS-SPLIT.md` | the lane ownership map (who builds what) — see below |
+| `frontier-actions/AGENT-1-ASSIGNMENT.md` | **Agent 1 (this lane) assignment**: scholar + serving surface — the guards, `verify_quote`, rankers, regression; responsibilities + deliverables + checkpoints |
+| `frontier-actions/AGENT-2-ASSIGNMENT.md` | **Agent 2 assignment**: organism + flywheel + data — pyBKT, RKA, DML, learner-store legitimacy stack, OpenEvolve, the measured-learning eval; responsibilities + deliverables + checkpoints |
+| `AGENTS-SPLIT.md` | the lane ownership map (who builds what) |
 
 ## The lane ownership (from HANDOVER-DEVPLAN v2 + FRONTIER-REVIEW)
 
