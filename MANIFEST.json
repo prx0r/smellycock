@@ -498,6 +498,12 @@
       "owner": "agentgraph",
       "role": "super-granular translation benchmark: per-verse time, model calls, cost ($ cache-miss vs cache-hit), per-work/per-layer",
       "validator": "check.py --refs"
+    },
+    "pipeline/translation_db.py": {
+      "id": "patala:translation:progress-db",
+      "owner": "agentgraph",
+      "role": "formal SQLite progress DB: every translation tagged to model + per-layer + cost; --progress/--by-model (the model-comparison surface)",
+      "validator": "check.py --refs"
     }
   },
   "performance": {
