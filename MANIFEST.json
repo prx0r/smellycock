@@ -310,6 +310,12 @@
       "owner": "both",
       "role": "integration gates vs REAL IPVV gold (guard+learner_gate+retrieval)",
       "validator": "integration-ipvv.py (12/12) "
+    },
+    "infra-deepdive/11-BRAINSTORM-INTEGRATION.md": {
+      "id": "patalaorg:deepdive:brainstorm-integration",
+      "owner": "agentgraph",
+      "role": "the integration brainstorm + live-experiment plan: tool-to-layer mapping (guard->ESSAY/LESSON, GEM-C->L200, gold->T1/L2/C1), depth-first strategy, E1-E5 experiment queue",
+      "validator": "check.py --refs"
     }
   },
   "implementation": {
