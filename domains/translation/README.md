@@ -31,6 +31,7 @@ A layer is NOT complete until 1-7 all hold. **Do not advance to the next layer u
 |---|---|---|
 | **this README** | the layer index + completion protocol + state | orienting |
 | **`ORCHESTRATION.md`** | **the agent runbook** — see state, advance, stay safe, track (the one page agents read) | driving it as an agent |
+| **`BUILDS.md`** | **the build review** — the kanban build (best/production) + the full comparison | deciding which build |
 | `reference.md` | the wire mechanics — factory scheduler CLI, canonical generator, Atlas API endpoints, MCP tools, env, gates | you're calling it |
 | `model.md` | the semantics — the DAG, object shapes, JSONL contract, registry/ledger, authority, tracking | you need to know what an object/field means |
 | `recipes.md` | concrete how-to — run, monitor, recover, validate, use the API/MCP | you want a "do this" recipe |
