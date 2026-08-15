@@ -1,8 +1,10 @@
 # translation — BUILD REVIEW (the canonical comparison + the best)
 
-*2026-08-15 · the canonical, agent-readable review of every translation build. One rule: **the kanban build
-is the production architecture** — a durable, resumable, auditable work queue. The others are proof/benchmark
-tools or building blocks it uses. Read `layers/` for the per-layer contracts + `ORCHESTRATION.md` for ops.*
+*2026-08-15 · the canonical, agent-readable review of every translation build. **STATUS: the KANBAN build is
+the ACTIVE/CANONICAL translation build.** The others are `SUPERSEDED` (kept for reference/proof, per AXIOM 6:
+archive, don't delete) or are building blocks the kanban build uses. One rule: the kanban build is the
+production architecture — a durable, resumable, auditable work queue. Read `layers/` for the per-layer
+contracts + `ORCHESTRATION.md` for ops.*
 
 ---
 
@@ -18,14 +20,14 @@ DAG eligibility ──feed()──▶ kanban board (BUILD_<LAYER>: <work> cards)
 - **Current (logged):** daemon running, 32 ready / 1 done; gated by T1 generation speed + verse recovery.
 
 ## THE COMPARISON (all builds)
-| # | Build | File | Role | Verdict |
+| # | Build | File | Role | Status |
 |---|---|---|---|---|
-| 1 | E2E harness | `test_full_chain_timing.py` | 1-verse RAW→C1 proof | prove the chain (live-run-5) |
-| 2 | translate_work | `translate_work.py` | 1-verse + logged benchmark | benchmark/proof |
-| 3 | factory_scheduler | `factory_scheduler.py` | DAG backlog, chunk 50, parallel 4 | **most proven at committing** |
-| 4 | per-layer agents | `layer_agent.py` | independent worker per layer, 90%-context | the building block |
-| 5 | streaming worker | `stream_worker.py` + `chat_stream` | commit-per-verse as model generates | responsive infra |
-| 6 | **KANBAN** ⭐ | `kanban_translation.py` | durable work queue, agents claim/complete/chain | **THE PRODUCTION BUILD** |
+| 6 | **KANBAN** ⭐ | `kanban_translation.py` | durable work queue, agents claim/complete/chain | **ACTIVE / CANONICAL** |
+| 3 | factory_scheduler | `factory_scheduler.py` | DAG backlog, chunk 50, parallel 4 | SUPERSEDED (kanban uses its generators) |
+| 4 | per-layer agents | `layer_agent.py` | independent worker per layer, 90%-context | BUILDING BLOCK (used by kanban) |
+| 5 | streaming worker | `stream_worker.py` + `chat_stream` | commit-per-verse as model generates | BUILDING BLOCK (used by kanban) |
+| 1 | E2E harness | `test_full_chain_timing.py` | 1-verse RAW→C1 proof | SUPERSEDED (proof only) |
+| 2 | translate_work | `translate_work.py` | 1-verse + logged benchmark | SUPERSEDED (benchmark only) |
 
 ## THE VERDICT
 - **Best = #6 (kanban)** — the only durable/resumable/auditable work queue; subsumes #4 (workers) + #5

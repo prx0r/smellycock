@@ -30,6 +30,11 @@ are bugs.*
 | content-address | `sha256:<hex>` | `sha256:9e7b6be0…` |
 
 ### 1.3 The ONE canonical layer taxonomy
+
+> **CANONICAL TRANSLATION BUILD (2026-08-15):** the KANBAN build (`pipeline/kanban_translation.py` +
+> `layer_agent.py`) — a durable, resumable, auditable work queue driven by per-layer agents (90%-context
+> Hermes calls, per-model per layer). It is the ACTIVE build; the E2E harness, translate_work, and
+> factory_scheduler are SUPERSEDED (proof/benchmark/build-blocks). See `domains/translation/BUILDS.md`.
 **Source of truth: `patala/migration/v2/LAYERS.yaml`.** The production DAG (clear name · legacy · pos):
 ```text
  0 source           (SOURCE)

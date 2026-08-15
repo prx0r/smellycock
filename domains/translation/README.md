@@ -6,6 +6,10 @@ like Hermes's own documentation. Every doc reflects the **current working implem
 real code + live gates), and everything not yet implemented is specced precisely in `extension.md`.
 Production code lives in `/root/projects/patala/`.*
 
+> **ACTIVE TRANSLATION BUILD = the KANBAN build** (`pipeline/kanban_translation.py` + `layer_agent.py`) — a
+> durable, resumable, auditable work queue driven by per-layer agents. **Read `BUILDS.md` for the canonical
+> comparison + why the kanban build is best (the others are SUPERSEDED / building blocks).**
+
 ---
 
 ## 0. LAYER-COMPLETION PROTOCOL (what "comprehensive" means — this is the bar for EVERY layer)
