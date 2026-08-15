@@ -12,7 +12,7 @@ per-domain references — no research bloat.*
   `MANIFEST.json` (the machine resolver), `check.py` (the drift gate), `performance/`, and `domains/`
   (translation · openpatala · factory · read-plane · **epistemic**).
 - **The epistemic product layer** — `domains/epistemic/` documents the **25 product engines** (proof,
-  scholar workflow, manuscript pipeline) whose code lives in `/root/patalacheckpoints`. **This is the
+  scholar workflow, manuscript pipeline) whose code lives in `/root/projects/patala`. **This is the
   highest-value new build.** See the section below.
 - **The official runs** — `runs/` holds every logged, monitored autonomous run (Run 1, Run 2, the
   experiments, the 3-build comparison, the brainstorm) — the evidence that the system is real.
@@ -42,7 +42,7 @@ per-domain references — no research bloat.*
 
 ## The epistemic product layer (the high-value build — read this)
 
-**The code lives in `/root/patalacheckpoints`** (the working repo, `prx0r/patalacheckpoints`); this
+**The code lives in `/root/projects/patala`** (the working repo, `prx0r/patalacheckpoints`); this
 repo documents it. The products are the **epistemic + scholar + manuscript engines** — the validation
 layer above the translation factory. Everything is **CPU-only, deterministic, 150/150 PASS**, exposed
 to **humans (UI)** and **agents (Hermes MCP, 61 tools)**.

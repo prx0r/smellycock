@@ -1,7 +1,7 @@
 # BUILD PLAN — INTEGRATE INTO THE PRODUCTION REPO (patalaorg) + TEST LIKE THEY DO
 
 *2026-08-15. How to integrate our server2 POST-C1 work + server3 products into the production-grade
-canonical reference (`/root/smellycock`), and validate it EXACTLY like the production repo validates
+canonical reference (`/root/projects/patalaorg`), and validate it EXACTLY like the production repo validates
 (per-layer deterministic gates + live-monitored runs + drift validators).*
 
 ---
@@ -65,7 +65,7 @@ CORRECT · BEST · WINS`.
 ## 3. HOW WE TEST (exactly like production)
 
 ```bash
-cd /root/smellycock
+cd /root/projects/patalaorg
 python3 check.py --status          # docs drift gate
 python3 check_epistemic.py         # counts reconcile to live registries
 # per-layer gates (deterministic, on real data):

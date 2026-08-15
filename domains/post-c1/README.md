@@ -4,7 +4,7 @@
 spine ABOVE C1: THEME → ARGUMENT → SYNTHESIS → ESSAY → LESSON(EDUCATION), driven by Hermes kanban and
 gated deterministically. This domain documents the integrated build: the grounded IPVV C1 floor, the
 Hermes-driven layer generation, and the gates (Nyāya, cite-contract, quality, blind-assessor, tension).
-Reference is the code at `/root/fuck-off/scripts/` + the registries at `/root/projects/patala/`
+Reference is the code at `/mnt/HC_Volume_106427611/ip-graph/scripts/` + the registries at `/root/projects/patala/`
 (works locally; canonical deployment is the working patala repo).*
 
 > **Why this domain exists:** `OBJECT-MODEL.md` names the DAG (`... → theme/argument → synthesis →
@@ -57,5 +57,5 @@ EDUCATION (learning claims, blind-assessor graded)
 | `recipes.md` | how-to: run, gate, validate, use the API |
 | `validation.md` | the gates + the evidence + the drift validator |
 
-*This is a projection of the real build at `/root/fuck-off/scripts/` + `/root/projects/patala/`. Run
+*This is a projection of the real build at `/mnt/HC_Volume_106427611/ip-graph/scripts/` + `/root/projects/patala/`. Run
 the gates after any change; never present DESIGN as BUILT.*
