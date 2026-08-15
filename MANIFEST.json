@@ -382,6 +382,12 @@
       "owner": "agentgraph",
       "role": "the per-layer stage contract (LC1): its queue, Hermes call, generator, validator, productivity signal",
       "validator": "check.py --refs"
+    },
+    "infra-deepdive/14-TRANSLATION-BUILDS.md": {
+      "id": "patalaorg:translation:builds",
+      "owner": "agentgraph",
+      "role": "the kanban translation build (saved as the production architecture) + the full comparison of all 6 builds + which is best (kanban: durable/resumable/auditable work queue)",
+      "validator": "check.py --refs"
     }
   },
   "implementation": {
