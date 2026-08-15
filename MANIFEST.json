@@ -190,6 +190,12 @@
       "owner": "agentgraph",
       "role": "genius processes worth adopting from live docs + similar repos",
       "validator": "check_epistemic.py --refs"
+    },
+    "domains/post-c1/README.md": {
+      "id": "patalaorg:domain:post-c1",
+      "owner": "server2-agent",
+      "role": "the post-C1 scholarship layers (THEME->ARGUMENT->SYNTHESIS->ESSAY->LESSON) driven by Hermes kanban + gates",
+      "validator": "check.py --refs"
     }
   },
   "implementation": {
