@@ -304,6 +304,12 @@
       "owner": "A",
       "role": "hard guard stress (20 assertions)",
       "validator": "run-tests subprocess gate"
+    },
+    "education-organism/scripts/integration-ipvv.py": {
+      "id": "patalaorg:script:integration_ipvv",
+      "owner": "both",
+      "role": "integration gates vs REAL IPVV gold (guard+learner_gate+retrieval)",
+      "validator": "integration-ipvv.py (12/12) "
     }
   },
   "implementation": {

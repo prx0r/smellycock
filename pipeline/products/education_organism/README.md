@@ -17,6 +17,8 @@ education_organism/
     memory.py            procedural memory (dream-cycle consolidation)
     segment_key.py       GEM-A: segmentId:field provenance keying (from Bilara)
     reconciliation.py    GEM-C: the source-preservation gate (from Ambuda)
+    guard.py             the anti-hallucination guards (fojin): quote_verifier + citation_whitelist
+    learner_gate.py      the authority-gated learner store (graphiti temporal + MKG 2-tier + MemOS guards)
   README.md              (this index)
   AGENT-GUIDE.md         how to use the organism end-to-end
   VISION.md              the cohesive endgame (one organism: site + products + chain)
