@@ -250,6 +250,12 @@
       "owner": "agentgraph",
       "role": "the full factorial acquisition->translation pipeline (acquire/assess/OCR/tag/R2/reconcile/verse-recovery/queue -> confirmed RAW->C1 -> post-C1 -> openpatala)",
       "validator": "check.py --refs"
+    },
+    "infra-deepdive/08-CANONICAL-ASSESS-FLOW.md": {
+      "id": "patalaorg:deepdive:canonical-assess-flow",
+      "owner": "agentgraph",
+      "role": "the deterministic decision engine for every Sanskrit work (tag/state/format/verse/identity/priority/route) + routing table + queue entry + division of labor",
+      "validator": "check.py --refs"
     }
   },
   "implementation": {
