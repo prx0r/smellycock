@@ -256,6 +256,18 @@
       "owner": "agentgraph",
       "role": "the deterministic decision engine for every Sanskrit work (tag/state/format/verse/identity/priority/route) + routing table + queue entry + division of labor",
       "validator": "check.py --refs"
+    },
+    "infra-deepdive/09-MAKE-IT-NOT-BS-PLAN.md": {
+      "id": "patalaorg:deepdive:make-not-bs",
+      "owner": "agentgraph",
+      "role": "master plan to make the claimed stack real (remediate BS, verse recovery, rebuild post-C1 on real C1, gold/human/lineage, E2E benchmark); aligns handover+dev-plan",
+      "validator": "check.py --refs"
+    },
+    "infra-deepdive/10-QUICKEST-BUILD.md": {
+      "id": "patalaorg:deepdive:quickest-build",
+      "owner": "agentgraph",
+      "role": "the fastest gated path to the first real RAW->EDUCATION object (~10-14h), dense agent+human table, perf-doctrine",
+      "validator": "check.py --refs"
     }
   },
   "implementation": {
