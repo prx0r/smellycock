@@ -25,7 +25,7 @@ A **generic checkpoint-DAG engine**, not a layer-specific spine. Loads a JSON pl
 from `prereqs`, runs each checkpoint's `action` then its `validator`, and marks **DONE only if the
 validator exits 0** (91-137). It shells out; not wired directly to the layer registry.
 
-The layer DAG is declared in `pipeline/object_registry.py:93`:
+The layer DAG is declared in `pipeline/object_registry.py` (LAYERS list):
 `SOURCE, T1, ARGMAP, L0, L1L2, L1, L2, L200, C1, THEME, ARGUMENT, SYNTHESIS, ESSAY, EDUCATION`.
 
 The **definitive two-lane split** is in `/root/projects/patala/migration/shared/HANDOFF-POST-C1.md`:
@@ -56,7 +56,7 @@ code under those names.** Real gate code:
 | **THEME gate** | `theme_worker.py:137` `theme_validator()` | deterministic: status==MACHINE_PROPOSED, has members, each member has strength+role, member resolves to a committed C1, boundary present. |
 | **ESSAY gate** | `essay_worker.py:139` `essay_validator()` + reused `verify_essay` (SentenceEvidenceAudit) | every sentence has claims, claims present, `_audit_ok==True` (independent audit, fail-closed on certainty-inflation / boundary-erasure / orphan sentences). |
 | **EDUCATION gate** | `education_worker.py:94` `education_validator()` | derived from a committed essay, has summary, <1500 chars (distill not re-run), no overreach lexicon (line 27 `_OVERREACH`). |
-| **Cite-check** | `ip-graph/lib/scholar_review.py:33` `verify_citations()` | citation resolves to a known ref → else PHANTOM. Plus `ReviewPanel.anti_groupthink()` (56) + verdict (66). |
+| **Cite-check** | `ip-graph/lib/scholar_review.py` `verify_citations()` | citation resolves to a known ref → else PHANTOM. Plus `ReviewPanel.anti_groupthink()` (56) + verdict (66). |
 | **cite-contract / blind-assessor / tension** | **Do not exist as code** | Planned (DEV-PLAN Phases 1.1, 4.3). `tension_id` is only a data field in `patala_ml/argument.py:87`. |
 
 **Critical caveat:** these are **structure/lexicon gates, NOT content/gold gates.** `notes/GOLD-VALIDATION-NOTES.md`
@@ -170,13 +170,13 @@ and the blind-assessor/cite-contract/tension gates not built.**
 
 ## 8. KEY PATHS
 - Spine driver: `/root/projects/patala/pipeline/build_plan.py`
-- Layer DAG: `/root/projects/patala/pipeline/object_registry.py:93`
+- Layer DAG: `/root/projects/patala/pipeline/object_registry.py`
 - Post-C1 handoff: `/root/projects/patala/migration/shared/HANDOFF-POST-C1.md`
 - Dev plan (gates/kanban): `/root/projects/patala/migration/shared/DEV-PLAN-NEXT-AGENT.md`
-- Workers: `/root/projects/patala/pipeline/{theme_worker,essay_worker,education_worker,epistemic_worker,generative_worker}.py`; wiring `autonomy.py:107-216`
+- Workers: `theme_worker.py`, `essay_worker.py`, `education_worker.py`, `epistemic_worker.py`, `generative_worker.py` (in `/root/projects/patala/pipeline`); wiring `autonomy.py`
 - Nyāya gate: `/root/projects/patala/machinelearning/research/patala_ml/nyayagate.py`
-- Citecheck: `/mnt/HC_Volume_106427611/ip-graph/lib/scholar_review.py:33`
-- Hermes exec: `/mnt/HC_Volume_106427611/ip-graph/lib/hermes_exec.py:50`
-- E2E + site: `/mnt/HC_Volume_106427611/ip-graph/scripts/{run-tantraloka-e2e.py, build-static-site.py}`
-- Education organism: `/mnt/HC_Volume_106427611/ip-graph/lib/{education,organism,misconception,pedagogy}.py`, `specs/SPEC-20-EDUCATION-ORGANISM.md`
+- Citecheck: `/mnt/HC_Volume_106427611/ip-graph/lib/scholar_review.py`
+- Hermes exec: `/mnt/HC_Volume_106427611/ip-graph/lib/hermes_exec.py`
+- E2E + site: `run-tantraloka-e2e.py` + `build-static-site.py` (in `/mnt/HC_Volume_106427611/ip-graph/scripts`)
+- Education organism: `education.py`, `organism.py`, `misconception.py`, `pedagogy.py` (in `/mnt/HC_Volume_106427611/ip-graph/lib`), `specs/SPEC-20-EDUCATION-ORGANISM.md`
 - Honest gold audit: `/mnt/HC_Volume_106427611/ip-graph/notes/GOLD-VALIDATION-NOTES.md`

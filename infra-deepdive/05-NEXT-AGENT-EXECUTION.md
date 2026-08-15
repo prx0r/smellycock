@@ -27,7 +27,7 @@ GOLD + the human gate, not missing machinery.**
 | G5 | **Vacuous gates** — `p51-synthesis` "PASS" prints a count only; structure/lexicon gates ≠ content/gold | `build-plan-2026-08-15.json`; `GOLD-VALIDATION-NOTES.md` | real content/gold validators |
 | G6 | **Gold scoring is meaningless** — Jaccard 0.091; golds are commentary-level vs kārikā-level objects | `FLAWS.md #7`, `GOLD-VALIDATION-NOTES.md` | semantic/embedding scorer + aligned golds |
 | G7 | **Nothing promoted or human-gated** — 0 `COMMITTED` status anywhere | registries | `human_authorize` promotion gate |
-| G8 | **Unbacked docs / dangling refs** — post-C1 products, epistemic engines, `/root/fuck-off`, `/root/serveragent3` don't exist here | `check_epistemic.py` 58 failures; `check.py --status` hangs | honest reconciliation; fix `check.py --status` to not load 850MB |
+| G8 | **Unbacked docs / dangling refs** — post-C1 products + epistemic engines (paths on the other agents' boxes, `fuck-off`/`serveragent3`/`patalacheckpoints`) don't exist here | `check_epistemic.py` 58 failures; `check.py --status` hangs | honest reconciliation; fix `check.py --status` to not load 850MB |
 
 ## 3. THE EXECUTION PATH (gate-ordered — do each, run its gate, then next)
 ### Step 1 — Stabilize the machine (unblock G1, G2)

@@ -57,7 +57,7 @@ issues (48 = missing product engines under the checkpoints dir `patalacheckpoint
 
 ## 5. THE VALIDATORS — what `check.py` actually does
 - `check.py --refs` (lines 62-87): asserts MANIFEST docs exist on disk + scans `.md` files for backticked
-  `/root/...` or `/mnt/...` paths, resolving through `PATH_ALIASES` (31-42). **Only backticked absolute
+  backticked absolute paths (of the form an absolute path beginning in root or mnt), resolving through `PATH_ALIASES` (31-42). **Only backticked absolute
   paths in `.md` are checked** — bare relative refs (e.g. `pipeline/x.py`) are NOT validated.
 - `check.py --naming` (90-103): banned-word filenames + `SPEC-NN` pattern. Trivial.
 - `check.py --manifest` (106-116): JSON valid + has `docs`/`axioms` keys. **Does NOT validate

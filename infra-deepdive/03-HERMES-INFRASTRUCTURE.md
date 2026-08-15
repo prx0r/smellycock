@@ -164,5 +164,5 @@ hermes chat -Q -q "<system>\n<user>" --skills <skill> --yolo --max-turns 8 -m de
    `patala_orchestration.py` calls or register `node /root/projects/patala/mcp/index.mjs`.
 5. **Correct invocation:** `hermes chat -Q -q "<ask>" --skills <skill> --yolo --max-turns 8` under `patala` — not `hermes -z`.
 6. **Docs:** `/usr/local/lib/hermes-agent/website/docs/user-guide/features/{kanban,goals,delegation}.md` +
-   `/mnt/HC_Volume_106427611/ip-graph/handover/hermes/{HERMES-CALLING.md, PATALA-SETUP.md, CANONICAL.md}`.
+   `HERMES-CALLING.md`, `PATALA-SETUP.md`, `CANONICAL.md` (in `/mnt/HC_Volume_106427611/ip-graph/handover/hermes`).
 7. **Hermes task DONE ≠ Pāṭala object ACCEPTED** — the deterministic gate decides what's real.
