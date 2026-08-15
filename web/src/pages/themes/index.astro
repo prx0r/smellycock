@@ -3,7 +3,7 @@
 import Layout from '../../layouts/Layout.astro';
 import fs from 'node:fs';
 import path from 'node:path';
-const ROOT = process.env.PATALA_WEB_ROOT ?? '/root/projects/patala/web';
+const ROOT = process.env.PATALA_WEB_ROOT ?? '/root/patalacheckpoints/web';
 const cl = JSON.parse(fs.readFileSync(path.join(ROOT, 'static', 'clusters.json'), 'utf-8'));
 const clusters = (cl.clusters || []).slice().sort((a, b) => (b.size || 0) - (a.size || 0));
 ---

@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import fs from 'node:fs';
 import path from 'node:path';
 
-const ROOT = process.env.PATALA_WEB_ROOT ?? '/root/projects/patala/web';
+const ROOT = process.env.PATALA_WEB_ROOT ?? '/root/patalacheckpoints/web';
 const manifestPath = path.join(ROOT, 'static', 'index.json');
 const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
 const { works, clusters, passages, terms } = manifest.counts;

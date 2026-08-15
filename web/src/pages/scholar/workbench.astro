@@ -1,0 +1,55 @@
+---
+// scholar/workbench.astro — the scholar login + review surface (the human gate)
+import Layout from '../../layouts/Layout.astro';
+const API = 'http://127.0.0.1:8788';
+---
+<Layout title="Pāṭala — Scholar Workbench" description="The scholar login: review, adjudicate, attest, publish — the human gate of the organism.">
+  <h1>Scholar Workbench</h1>
+  <p>The human gate of the organism: log in as a scholar, review the prioritized queue, adjudicate
+  (ACCEPT/REVISE/REJECT), and publish citable records. A scholar's adjudication promotes the graph.</p>
+
+  <section>
+    <h2>Login</h2>
+    <p>Scholar identity (Ed25519-attested): <a href={`${API}/scholar/login`}>view scholars</a></p>
+    <pre id="login"></pre>
+  </section>
+
+  <section>
+    <h2>The review queue (what to review next)</h2>
+    <p>Prioritized by <code>uncertainty × blast-radius × centrality / cost</code>.</p>
+    <pre id="queue"></pre>
+  </section>
+
+  <section>
+    <h2>Adjudicate</h2>
+    <form id="adj">
+      <input name="object" placeholder="object_id (e.g. gold:v1a__education)" />
+      <select name="verdict"><option>ACCEPT</option><option>REVISE</option><option>REJECT</option></select>
+      <button type="submit">adjudicate</button>
+    </form>
+    <pre id="result"></pre>
+  </section>
+
+  <section>
+    <h2>Publish (citable record)</h2>
+    <pre id="publish"></pre>
+  </section>
+
+  <script is:inline>
+    const API = 'http://127.0.0.1:8788';
+    document.addEventListener('DOMContentLoaded', async () => {
+      document.getElementById('login').textContent = JSON.stringify(await (await fetch(`${API}/scholar/login`)).json(), null, 2);
+      document.getElementById('queue').textContent = JSON.stringify(await (await fetch(`${API}/scholar/scholar-A/queue`)).json(), null, 2);
+      document.getElementById('publish').textContent = JSON.stringify(await (await fetch(`${API}/scholar/scholar-A/publish`)).json(), null, 2);
+      document.getElementById('adj').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const f = new FormData(e.target);
+        const r = await fetch(`${API}/scholar/scholar-A/adjudicate`, {
+          method: 'POST', headers: {'Content-Type':'application/json'},
+          body: JSON.stringify({object_id: f.get('object'), verdict: f.get('verdict')})
+        });
+        document.getElementById('result').textContent = JSON.stringify(await r.json(), null, 2);
+      });
+    });
+  </script>
+</Layout>

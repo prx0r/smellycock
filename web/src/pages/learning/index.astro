@@ -1,0 +1,36 @@
+---
+// learning/index.astro — the audited endgame learning surface (schools, foundations, timeline)
+import Layout from '../../layouts/Layout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+const LD = process.env.PATALA_LEARNING ?? '/root/smellycock/site/learning';
+const data = JSON.parse(fs.readFileSync(path.join(LD, 'learning-index.json'), 'utf-8'));
+const schools = data.schools || [];
+const foundations = data.foundations || [];
+const timeline = data.timeline || [];
+---
+<Layout title="Pāṭala — Learn: the tradition" description="Schools, foundations and timeline — every claim audited to source." jsonLd={{ "@context":"https://schema.org","@type":"LearningResource", name:"Pāṭala Learning" }}>
+  <h1>Learn — the tradition</h1>
+  <p>A school-by-school introduction built from shared foundations upward. Every claim here is <strong>audited</strong>: it carries an epistemic ceiling and resolves to its source.</p>
+
+  <h2>The schools</h2>
+  <ul>
+    {schools.map(s => <li><a href={`/learning/${s.id}/`}>{s.name}</a></li>)}
+  </ul>
+
+  <h2>The shared foundations</h2>
+  <div class="foundations">
+    {foundations.map((f, i) => (
+      <div class="foundation">
+        <p><strong>{i+1}. {f.title}</strong> <span class="ceiling">[{f.epistemic_ceiling}]</span></p>
+        <p>{f.concepts.map(c => ` ${c}`)}</p>
+        <p class="note">{f.note}</p>
+      </div>
+    ))}
+  </div>
+
+  <h2>The timeline</h2>
+  <ol>
+    {timeline.map(t => <li><span class="period">{t.period}</span> {t.label} <em>({t.kind})</em></li>)}
+  </ol>
+</Layout>
