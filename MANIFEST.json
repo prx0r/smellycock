@@ -334,6 +334,54 @@
       "owner": "agentgraph",
       "role": "run different models on the same Sanskrit pipeline + compare quality/speed (the model leaderboard design)",
       "validator": "check.py --refs"
+    },
+    "domains/translation/layers/README.md": {
+      "id": "patalaorg:translation:layer-readme",
+      "owner": "agentgraph",
+      "role": "the per-layer stage contract (Layers-index): its queue, Hermes call, generator, validator, productivity signal",
+      "validator": "check.py --refs"
+    },
+    "domains/translation/layers/L0.md": {
+      "id": "patalaorg:translation:layer-l0",
+      "owner": "agentgraph",
+      "role": "the per-layer stage contract (LL0): its queue, Hermes call, generator, validator, productivity signal",
+      "validator": "check.py --refs"
+    },
+    "domains/translation/layers/L1.md": {
+      "id": "patalaorg:translation:layer-l1",
+      "owner": "agentgraph",
+      "role": "the per-layer stage contract (LL1): its queue, Hermes call, generator, validator, productivity signal",
+      "validator": "check.py --refs"
+    },
+    "domains/translation/layers/T1.md": {
+      "id": "patalaorg:translation:layer-t1",
+      "owner": "agentgraph",
+      "role": "the per-layer stage contract (LT1): its queue, Hermes call, generator, validator, productivity signal",
+      "validator": "check.py --refs"
+    },
+    "domains/translation/layers/ARGMAP.md": {
+      "id": "patalaorg:translation:layer-argmap",
+      "owner": "agentgraph",
+      "role": "the per-layer stage contract (LARGMAP): its queue, Hermes call, generator, validator, productivity signal",
+      "validator": "check.py --refs"
+    },
+    "domains/translation/layers/L2.md": {
+      "id": "patalaorg:translation:layer-l2",
+      "owner": "agentgraph",
+      "role": "the per-layer stage contract (LL2): its queue, Hermes call, generator, validator, productivity signal",
+      "validator": "check.py --refs"
+    },
+    "domains/translation/layers/L200.md": {
+      "id": "patalaorg:translation:layer-l200",
+      "owner": "agentgraph",
+      "role": "the per-layer stage contract (LL200): its queue, Hermes call, generator, validator, productivity signal",
+      "validator": "check.py --refs"
+    },
+    "domains/translation/layers/C1.md": {
+      "id": "patalaorg:translation:layer-c1",
+      "owner": "agentgraph",
+      "role": "the per-layer stage contract (LC1): its queue, Hermes call, generator, validator, productivity signal",
+      "validator": "check.py --refs"
     }
   },
   "implementation": {
