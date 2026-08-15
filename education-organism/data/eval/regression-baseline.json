@@ -1,0 +1,8 @@
+{
+  "total": 8,
+  "correct": 8,
+  "pass_rate": 1.0,
+  "recall": 1.0,
+  "precision": 1.0,
+  "note": "SciFact COVID claims.txt as grounded source text; hand-authored expected_trust labels (offline gold labels unavailable under no-network rule)."
+}

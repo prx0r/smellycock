@@ -18,6 +18,52 @@ from __future__ import annotations
 
 from staleness import build_dependency_index, blast_radius
 
+# ── RKA weighted propagation (adopted from infinitywings_rka/rka/services/graph.py) ──
+# The frontier deep-dive (§2 / §8): an unweighted blast_radius treats every dependency equally, but a
+# `derived_from` correction should stale harder than a `cites`. These relation-type weights mirror
+# RKA's DEFAULT_EDGE_WEIGHTS (justified_by/derived_from=1.0, cites=0.7, supersedes=0.3) + our
+# `contradicts`=1.1 (a corrected contradiction propagates hardest).
+EDGE_WEIGHTS = {"derived_from": 1.0, "evidence_for": 1.0, "justified_by": 1.0,
+                "contradicts": 1.1, "cites": 0.7, "supersedes": 0.3}
+
+
+def weighted_propagate(depends_on: dict, changed: set, weights: dict | None = None,
+                       impact_threshold: float = 0.5) -> dict:
+    """RKA-weighted blast radius: walk downstream, accumulating a decayed impact score per node.
+
+    depends_on  — {upstream: {downstream}} (from staleness.build_dependency_index)
+    changed     — the set of corrected source nodes
+    weights     — per-edge-relation weights (default EDGE_WEIGHTS); the DAG nodes may carry a
+                  'relation' hint, else a default of 1.0.
+    impact_threshold — nodes whose accumulated impact < threshold are dropped (not considered stale).
+
+    Returns {node: impact_score} for every node with impact >= threshold. A corrected contradiction
+    (weight 1.1) propagates harder and reaches further than a mere citation (0.7).
+    """
+    weights = weights or EDGE_WEIGHTS
+    impact = {c: 1.0 for c in changed}
+    frontier = set(changed)
+    # relation hints: depends_on values may be node-ids; if a node id encodes its relation (e.g.
+    # "arg__derived_from_c1") we can pick the weight; else default 1.0.
+    def _weight(parent, child):
+        rel = None
+        if isinstance(child, tuple):
+            child, rel = child
+        # if the caller stored (child, relation) pairs in the depends_on set, rel is set; else default
+        return weights.get(rel or "", 1.0)
+    while frontier:
+        nxt = set()
+        for f in frontier:
+            for dep in depends_on.get(f, set()):
+                child = dep[0] if isinstance(dep, tuple) else dep
+                w = _weight(f, dep)
+                child_impact = impact.get(f, 1.0) * w
+                if child_impact >= impact_threshold and child_impact > impact.get(child, 0.0):
+                    impact[child] = child_impact
+                    nxt.add(child)
+        frontier = nxt
+    return impact
+
 
 def misconception_likelihood(cluster_size, persistence, ambiguity_signal, novice_rate,
                              w=(0.3, 0.3, 0.2, 0.2)):
@@ -65,13 +111,14 @@ class MisconceptionRepairCascade:
     measured as the confusion's likelihood dropping below threshold after re-exposure.
     """
 
-    def __init__(self, dag=None, threshold=0.7):
+    def __init__(self, dag=None, threshold=0.7, *, weighted: bool = True):
         # dag: {claim/layer_id: {'requires': [upstream_ids]}} — the canonical DAG shape.
         # The index is built via staleness.build_dependency_index (upstream -> downstream) so that
         # blast_radius can walk downstream. Reuse, don't rebuild.
         self.dag = dag or {}
         self.depends_on = build_dependency_index(self.dag)
         self.threshold = threshold
+        self.weighted = weighted
         self.misconceptions = {}
         self.propagated_stale = set()
         self.dissolved = []
@@ -88,9 +135,16 @@ class MisconceptionRepairCascade:
 
     def propagate_fix(self, source_claim_id):
         """After the source is corrected, propagate staleness to every downstream dependent
-        (RKA blast-radius). Returns the set of now-stale dependent ids."""
-        # blast_radius(depends_on, changed) walks downstream from the changed node
-        stale = blast_radius(self.depends_on, {source_claim_id})
+        (RKA blast-radius). Returns the set of now-stale dependent ids.
+
+        When `weighted=True`, uses RKA weighted propagation (a corrected contradiction stales harder
+        than a citation) and only marks nodes whose accumulated impact crosses the threshold stale;
+        otherwise uses the unweighted blast_radius (all transitive dependents)."""
+        if self.weighted:
+            impact = weighted_propagate(self.depends_on, {source_claim_id})
+            stale = set(impact.keys())
+        else:
+            stale = blast_radius(self.depends_on, {source_claim_id})
         stale.discard(source_claim_id)
         self.propagated_stale |= stale
         return stale

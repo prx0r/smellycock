@@ -174,5 +174,23 @@ MACHINE-PROPOSED · REVIEWED BY.
 
 ---
 
-*This is the handover. Agent A builds the human gate + surface depth; Agent B builds the data + flywheel
-depth. They meet on the audit trail. The whole thing is live in smellycock, ready to push.*
+## 10. BUILT THIS SESSION (the frontier adoptions, live + tested)
+
+*The frontier-review's top adoptions are now REAL CODE in smellycock, verified 39/39 tests + all gates
+green. The FRONTIER-REVIEW §11 is the authoritative "what's built."*
+
+- **`kernels/guard.py`** — fojin's quote_verifier + citation_whitelist, Sanskrit-adapted (stdlib, no
+  OpenCC), wired into `serve-education.py` `/guard` + `/answer`. The enforcement our UNANCHORED→reject
+  rule lacked. Idempotent; invented quotes downgraded to prose, fabricated citations stripped.
+- **`kernels/learner_gate.py`** — the learner-store legitimacy stack (graphiti temporal + MKG 2-tier
+  authority gate + MemOS correction guards) as one stdlib kernel. Time-bounded beliefs, machine veto/
+  reinforce/accept, human review queue stamped `reviewed_by`.
+- **`kernels/misconception.py`** — `weighted_propagate` (RKA: derived_from=1.0, contradicts=1.1,
+  cites=0.7, supersedes=0.3) replaces the unweighted blast-radius in the repair cascade.
+- **`kernels/staleness.py`** — graphiti `TemporalFact.episode` provenance + `facts_to_context` time-aware
+  read-plane compiler.
+- Product engines mirrored (`engines/guard.py`, `engines/learner_gate.py`, misconception/staleness
+  synced), MANIFEST updated, FRONTIER-REVIEW §11 + this HANDOVER record the build.
+
+**Remaining (Agent A/B next):** measured-learning eval (§6 of FRONTIER-REVIEW), OpenEvolve retain-loop,
+GFM-RAG rankers + RoG path-utils in retrieval, SciFact gold + eval regression harness.

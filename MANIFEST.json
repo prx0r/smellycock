@@ -268,6 +268,42 @@
       "owner": "agentgraph",
       "role": "the fastest gated path to the first real RAW->EDUCATION object (~10-14h), dense agent+human table, perf-doctrine",
       "validator": "check.py --refs"
+    },
+    "education-organism/FRONTIER-REVIEW.md": {
+      "id": "patalaorg:review:frontier",
+      "owner": "all",
+      "role": "current-vs-frontier gap analysis (fojin + ecosystem adoption map)",
+      "validator": "check.py --refs"
+    },
+    "education-organism/kernels/guard.py": {
+      "id": "patalaorg:kernel:guard",
+      "owner": "B",
+      "role": "anti-hallucination guards (fojin quote_verifier + citation_whitelist)",
+      "validator": "run-tests test_guard_kernel"
+    },
+    "education-organism/kernels/learner_gate.py": {
+      "id": "patalaorg:kernel:learner_gate",
+      "owner": "B",
+      "role": "authority-gated learner store (graphiti+MKG+MemOS)",
+      "validator": "run-tests test_learner_gate_kernel"
+    },
+    "education-organism/kernels/retrieval.py": {
+      "id": "patalaorg:kernel:retrieval",
+      "owner": "B",
+      "role": "GFM-RAG ranker + RoG path-sampling lift (stdlib)",
+      "validator": "run-tests test_retrieval_lift"
+    },
+    "education-organism/scripts/eval-regression.py": {
+      "id": "patalaorg:script:eval_regression",
+      "owner": "A",
+      "role": "fojin-style eval regression gate (baseline-compare, exits 1 on regression)",
+      "validator": "eval-regression.py (no regression) "
+    },
+    "education-organism/scripts/test-guards.py": {
+      "id": "patalaorg:test:guards_hard",
+      "owner": "A",
+      "role": "hard guard stress (20 assertions)",
+      "validator": "run-tests subprocess gate"
     }
   },
   "implementation": {

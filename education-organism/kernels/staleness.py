@@ -73,11 +73,15 @@ def incremental_rebuild_order(dag: dict, changed: set) -> list:
 # answers "what was true at time t" and auto-expires superseded facts — interval-based fact truth.
 @dataclass
 class TemporalFact:
-    """A fact/edge with a validity interval [valid_at, invalid_at). invalid_at=None = currently valid."""
+    """A fact/edge with a validity interval [valid_at, invalid_at). invalid_at=None = currently valid.
+
+    `episode` is the graphiti provenance root — which learner/session/correction produced this fact —
+    so a corrected misconception is time-bounded AND traceable to its producing episode."""
     fact_id: str
     valid_at: float
     invalid_at: Optional[float] = None
     payload: dict = field(default_factory=dict)
+    episode: str = ""
 
     def is_active_at(self, t):
         return self.valid_at <= t and (self.invalid_at is None or t < self.invalid_at)
@@ -102,3 +106,41 @@ def fact_as_of(facts, fact_id, t):
         if f.fact_id == fact_id and f.is_active_at(t):
             return f.payload
     return None
+
+
+# ---- graphiti-style read-plane context compiler (search_helpers.search_results_to_context_string) ----
+# A materialized, time-aware context bundle: render edges-as-facts with their validity window + episode,
+# so a reader/agent gets "what was believed, and when" in one token-bounded prompt-ready string.
+def facts_to_context(facts, t=None, *, max_facts: int = 200) -> str:
+    """Render the active facts (as_of `t`, default now) as a compact, time-aware context string.
+
+    The graphiti read-plane compiler turns a fact store into a prompt-ready bundle. Each fact renders
+    as `• <fact_id>: <payload summary> [valid <valid_at>→<invalid_at>] (episode <episode>)`. The
+    validity window is load-bearing: 'invalid_at=None' means currently valid; a corrected fact shows
+    its full interval so an agent doesn't mistake an expired belief for current truth."""
+    now = t if t is not None else float(__import__("time").time())
+    lines = []
+    for f in facts:
+        if not f.is_active_at(now):
+            continue
+        body = str(f.payload) if not isinstance(f.payload, dict) else \
+            json_dumps_sorted(f.payload)
+        span = f"valid {_fmt(f.valid_at)}→{_fmt(f.invalid_at) if f.invalid_at is not None else 'present'}"
+        ep = f" (episode {f.episode})" if f.episode else ""
+        lines.append(f"• {f.fact_id}: {body[:160]} [{span}]{ep}")
+        if len(lines) >= max_facts:
+            break
+    return "\n".join(lines)
+
+
+def json_dumps_sorted(d: dict) -> str:
+    import json
+    return json.dumps(d, sort_keys=True, ensure_ascii=False, default=str)
+
+
+def _fmt(t: float) -> str:
+    try:
+        import datetime
+        return datetime.datetime.fromtimestamp(t, datetime.timezone.utc).strftime("%Y-%m-%d")
+    except Exception:
+        return str(round(t, 2))

@@ -20,6 +20,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "kernels"))
 from gates import blind_grade  # noqa: E402
+from guard import guard_answer  # noqa: E402
 
 ED_DIR = Path("/root/smellycock/site/education")
 REG = Path("/root/patalacheckpoints/data/corpus/registries")
@@ -97,6 +98,121 @@ def _resolve_to_source(object_id):
     return chain
 
 
+def _guard_payload(lesson_id, answer):
+    """Run the anti-hallucination guards (quote_verifier + citation_whitelist) on a submitted answer
+    against the lesson's retrieved source context. Deterministic, stdlib, no LLM.
+
+    The retrieved-context sources map is built from the lesson's learning-claim source_refs resolved
+    down to their SOURCE passage text — the same provenance the /resolve endpoint walks. The whitelist
+    is the set of source titles in that context (so a fabricated citation is stripped, an invented
+    quote is downgraded)."""
+    lesson = _load_lesson(lesson_id)
+    if not lesson:
+        return {"error": "lesson not found"}, 404
+    sources = {}
+    retrieved_titles = []
+    for claim in lesson.get("learning_claims", []):
+        for ref in (claim.get("source_refs") or []) + (claim.get("depends_on") or []):
+            base = _resolve_base(ref, set())
+            if not base:
+                continue
+            for layer in ["C1", "L200", "L2", "L1", "L0", "T1", "SOURCE"]:
+                p = REG / f"{layer.lower()}-registry.jsonl"
+                if not p.exists():
+                    continue
+                for line in p.open(encoding="utf-8"):
+                    try:
+                        r = json.loads(line)
+                    except Exception:
+                        continue
+                    if r.get("object_id") == base and not r.get("superseded"):
+                        txt = _first_text(r.get("payload", {}))
+                        if txt:
+                            # index the source under its object_id AND any readable work-title alias
+                            # (work prefix of the object_id), so a real answer citing 《Tantraloka》 or
+                            # the object_id both resolve. Title comparison is diacritic-folded in guard.
+                            titles = _source_titles(r, base)
+                            for title in titles:
+                                sources[title] = txt
+                                retrieved_titles.append(title)
+                        break
+    result = guard_answer(answer or "", sources, retrieved_titles)
+    return {
+        "lesson": lesson_id,
+        "guarded_answer": result["answer"],
+        "quote_mutations": [m.__dict__ for m in result["quote_mutations"]],
+        "citation_mutations": result["citation_mutations"],
+        "quotes_checked": result["quotes_checked"],
+        "trust": result["trust"],
+    }, 200
+
+
+def _resolve_base(object_id, seen):
+    """Walk down to the bare source segment id (like _resolve_to_source's find_base)."""
+    if object_id in seen:
+        return None
+    seen.add(object_id)
+    if "__" not in object_id:
+        return object_id
+    for layer in ["EDUCATION", "ESSAY", "SYNTHESIS", "ARGUMENT", "THEME"]:
+        p = REG / f"{layer.lower()}-registry.jsonl"
+        if not p.exists():
+            continue
+        for line in p.open(encoding="utf-8"):
+            try:
+                r = json.loads(line)
+            except Exception:
+                continue
+            if r.get("object_id") != object_id or r.get("superseded"):
+                continue
+            refs = list(r.get("input_refs") or [])
+            for ref in refs:
+                b = _resolve_base(ref, seen)
+                if b:
+                    return b
+    return None
+
+
+def _source_titles(r: dict, base: str) -> list[str]:
+    """The title aliases a source should be indexed under, so a real answer can cite it.
+
+    Returns [object_id, work-prefix, explicit-title (if any)] deduped. The work-prefix is the
+    human-readable part of an object_id like `ipvv:V2L:k22` → `ipvv:V2L:k22` (no clean title, so the
+    object_id IS the title) — we keep the object_id and any explicit payload title. Diacritics are
+    folded at match-time in guard, so `Śiva`/`Siva` both match regardless of which alias is indexed."""
+    titles = [base]
+    payload = r.get("payload", {})
+    for k in ("title", "work_title", "name"):
+        v = payload.get(k) if isinstance(payload, dict) else None
+        if isinstance(v, str) and v.strip():
+            titles.append(v.strip())
+    # dedupe preserving order
+    seen, out = set(), []
+    for t in titles:
+        key = t.strip().lower()
+        if key and key not in seen:
+            seen.add(key)
+            out.append(t.strip())
+    return out
+
+
+def _first_text(payload):
+    """The first substantive string in a payload (source passage text)."""
+    if isinstance(payload, dict):
+        for v in payload.values():
+            if isinstance(v, str) and len(v.split()) >= 3:
+                return v
+            t = _first_text(v) if isinstance(v, (dict, list)) else None
+            if t:
+                return t
+    elif isinstance(payload, list):
+        for v in payload:
+            t = _first_text(v)
+            if t:
+                return t
+    return None
+
+
 def _grade(lesson_id, answer):
     """Deterministic blind-assessor grade (no LLM in path)."""
     lesson = _load_lesson(lesson_id)
@@ -155,6 +271,11 @@ class Handler(BaseHTTPRequestHandler):
             length = int(self.headers.get("Content-Length", 0))
             answer = json.loads(self.rfile.read(length)) if length else {}
             return self._json(*_grade(lesson_id, answer.get("answer", "")))
+        if "/guard" in path:
+            lesson_id = path.split("/education/")[1].split("/guard")[0] if "/education/" in path else ""
+            length = int(self.headers.get("Content-Length", 0))
+            answer = json.loads(self.rfile.read(length)) if length else {}
+            return self._json(*_guard_payload(lesson_id, answer.get("answer", "")))
         return self._json({"error": "not found"}, 404)
 
     def log_message(self, *a):
