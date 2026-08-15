@@ -42,13 +42,20 @@ A layer is NOT complete until 1-7 all hold. **Do not advance to the next layer u
 ## 2. CURRENT STATE (honest, verified)
 
 **WORKS (real + gated):**
-- Factory DAG (T1 608 · L0 796 · ARGMAP 50 · L2 3 · L200 67 · C1 66; 111-work ledger).
+- Factory DAG (T1 597 · L0 796 · ARGMAP 50 · L2 3 · L200 67 · C1 66; 111-work ledger). **Counts are live —
+  stream `pipeline/factory_status.py --all` for the current state.**
+- **THE ASSEMBLY-LINE FACTORY** (the production driver): `factory_scheduler.py` batches into chunks of 50
+  (`PATALA_FACTORY_CHUNK=50`) with `FACTORY_PARALLEL=4` — **~1 model call per 50 verses** (the 1M-context
+  win), per-layer queues, `--retry`. OOM fixed: `factory_batch._source_objects` streams the SOURCE
+  registry (was the 4.5GB `R._load("SOURCE")`). Run via `factory_long.sh` (logged to `log5long.log`).
 - **Canonical T1 generator** (`pipeline/canonical_translate.py` + `t1_jsonl.py`) — JSONL contract,
   adaptive chunking. `test_canonical_translate.py` **10/10 + real-Hermes smoke PASS**.
 - **Low-RAM scheduler** (`pipeline/factory_scheduler.py`) — streamed + bounded, **1.85GB → 124MB**,
   `test_factory_scheduler.py` ALL PASS.
 - **openpatala integration** — `compile_translation_status()` → `translation.json` → served by the Atlas
   API (`/openpatala/translation*`) + MCP (`get_translation_status*`).
+- **Benchmark + projector** — `translation_db.py` (JSONL progress registry, model-tagged) ·
+  `benchmark_translation.py` · `project_translation.py` (the estimator) · `/benchmarks` dashboard.
 
 **NOT-IMPLEMENTED (specced in `extension.md`):** compile-on-commit, translation-*content* surface, live
 validation gate, the three-version flow (R1/T2/R2), the council/adversarial-review pattern, the
