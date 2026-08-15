@@ -504,6 +504,18 @@
       "owner": "agentgraph",
       "role": "formal JSONL translation-progress registry (per AXIOMS, no SQL): every translation tagged to model + per-layer + cost; --progress/--by-model",
       "validator": "check.py --refs"
+    },
+    "scripts/compile_benchmark.py": {
+      "id": "patala:benchmark:compile",
+      "owner": "agentgraph",
+      "role": "compute-on-write projection of translation-progress registry -> benchmark.json (dashboard data)",
+      "validator": "scripts/compile_benchmark.py"
+    },
+    "pipeline/quality_score.py": {
+      "id": "patala:benchmark:quality",
+      "owner": "agentgraph",
+      "role": "semantic quality axis (LLM-judge vs raw-material gold, reference-free fallback) for the model benchmark",
+      "validator": "pipeline/quality_score.py"
     }
   },
   "performance": {
