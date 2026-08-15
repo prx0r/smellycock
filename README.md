@@ -47,3 +47,9 @@ validates the contracts. Both agents work the plan, never skip a validator.
 
 *This is the production repo. Keep it crystal-refined: final docs + official runs only. No research bloat.
 Run `check.py` after any change.*
+
+## The scholarly raw material + essays
+| Path | What |
+|---|---|
+| `raw-material/` | official golds — raw T1 glosses, IPVV C1 commentaries, hand-authored ARGMAP golds |
+| `essays/` | scholarly essays — Ratié literature review + recognition essays |
