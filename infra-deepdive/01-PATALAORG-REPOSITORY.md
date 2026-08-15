@@ -42,7 +42,7 @@ lanes' domain docs, and the run records. The CODE lives elsewhere (patala + ip-g
 
 **THE KEY FACT:** the epistemic/post-C1 lane is **unbacked documentation on this machine** — every
 referenced `engine.py`/`test.py` and 5 of 8 registry files are missing. `check_epistemic.py` FAILS with 58
-issues (48 = missing product engines under `/root/patalacheckpoints`, 8 = empty/missing registries).
+issues (48 = missing product engines under the checkpoints dir `patalacheckpoints`, 8 = empty/missing registries).
 
 ## 4. THE RUNS
 | Run | What it actually proves |
@@ -50,7 +50,7 @@ issues (48 = missing product engines under `/root/patalacheckpoints`, 8 = empty/
 | `live-run-1/` | L0 drain 168→180 (12 commits, ~550MB stable). Real logs (`factory-pass.log`, `fullchain-watchdog.log`, `MONITOR-REPORT`, `samples-30s.jsonl`, `status-constant.jsonl`). Proves L0 — the EASY layer. |
 | `live-run-2/` | L0 198→217, memory stable, "10 passages, plan 2/4". Real logs present. |
 | `live-run-3..5` | ❌ **DO NOT EXIST in patalaorg.** They live in the working patala repo's `data/ops/`. |
-| `education-organism-run-4/` | ❌ **Misleading name.** There is NO "education organism run 4" — that string appears nowhere. (In patala, `live-run-4` is the TRANSLATION lane's RAW→C1 run.) The patalaorg `education-organism-run-4/` has pre-recorded logs (`e2e.log` 5/5, `tests.log` 17/17, `check.log` "PASS") pointing at scripts (`link-derivation-chain.py`, `audit-resolve.py`, `compile-education.py`, `tutor-agent.py`, `test-e2e.py`) that **do not exist here** (`/root/serveragent3/` missing). |
+| `education-organism-run-4/` | ❌ **Misleading name.** There is NO "education organism run 4" — that string appears nowhere. (In patala, `live-run-4` is the TRANSLATION lane's RAW→C1 run.) The patalaorg `education-organism-run-4/` has pre-recorded logs (`e2e.log` 5/5, `tests.log` 17/17, `check.log` "PASS") pointing at scripts (`link-derivation-chain.py`, `audit-resolve.py`, `compile-education.py`, `tutor-agent.py`, `test-e2e.py`) that **do not exist here** (the `serveragent3` dir is missing). |
 | `server2-post-c1-spine/` | Docs only (README + BUILD-PLAN). No executable evidence. |
 | `BRAINSTORM-3-BUILDS.md` | **Design, not build** — a brainstorm for 3 architectures. Violates "no DESIGN as BUILT" if presented as done. |
 | `MONITOR-REPORT`, `OPTIMIZATION-ANALYSIS`, `experiments/` | Real monitoring + analysis. `experiments/EXPERIMENT-COMPARISON.md` honestly records a **POST-RUN CORRECTION**: whole-chain (Build 1) is "UNRELIABLE AT SCALE", per-layer factory (Build 3) is the production path. |
@@ -80,10 +80,10 @@ issues (48 = missing product engines under `/root/patalacheckpoints`, 8 = empty/
 1. All 9 post-C1 gate scripts in `domains/post-c1/README.md:39-47` + `MANIFEST.json:256-303`.
 2. 5 of 6 `domains/post-c1/` doc files.
 3. All 26 epistemic product engines (only the `products/README.md` pointer exists).
-4. `check_epistemic.py` path `/root/patalacheckpoints` doesn't exist → 56 missing-file errors.
+4. `check_epistemic.py`'s checkpoints path (`patalacheckpoints`) doesn't exist → 56 missing-file errors.
 5. Registries synthesis/essay/education missing; argument=10 vs claimed 23; C1=76 vs claimed 42/43.
 6. `runs/live-run-3,4,5` don't exist in patalaorg.
-7. MANIFEST `implementation` paths for `/root/fuck-off`, `/root/serveragent3`, `/root/patalacheckpoints` are dangling (unvalidated).
+7. MANIFEST `implementation` paths for `fuck-off`, `serveragent3`, `patalacheckpoints` (the other agents' boxes) are dangling (unvalidated by `check.py`).
 8. Disk is **90% full** (51G/59G), not "100% full" as AGENTS.md:74 claims.
 
 ## 8. KEY PATHS

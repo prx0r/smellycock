@@ -232,6 +232,18 @@
       "owner": "agentgraph",
       "role": "full-context infra deep-dive (parallel audit of patalaorg+patala+hermes+ip-graph)",
       "validator": "check.py --refs"
+    },
+    "infra-deepdive/06-PEER-REVIEW-FRONTIER.md": {
+      "id": "infra-deepdive:06-PEER-REVIEW-FRONTIER",
+      "owner": "agentgraph",
+      "role": "peer review grounded in LOGGED RUNS: what works (RAW->C1 412s/3 calls chain_ok:true), frontier gaps F1-F6, visionary ideas",
+      "validator": "check.py --refs"
+    },
+    "education-organism/HANDOVER-DEVPLAN.md": {
+      "id": "patalaorg:handover:devplan",
+      "owner": "all",
+      "role": "the full devplan handover (2-agent split)",
+      "validator": "check.py --refs"
     }
   },
   "implementation": {
@@ -341,31 +353,31 @@
       "id": "sa3:derivation-linker",
       "owner": "server3",
       "role": "backfill input_refs on SOURCE\u2192L200\u2192C1 (the audit trail)",
-      "validator": "python3 /root/serveragent3/scripts/audit-resolve.py"
+      "validator": "python3 /root/smellycock/education-organism/scripts/audit-resolve.py"
     },
     "serveragent3/scripts/audit-resolve.py": {
       "id": "sa3:audit-resolve",
       "owner": "server3",
       "role": "trace any object to SOURCE (the audit resolver)",
-      "validator": "python3 /root/serveragent3/scripts/audit-resolve.py"
+      "validator": "python3 /root/smellycock/education-organism/scripts/audit-resolve.py"
     },
     "serveragent3/scripts/compile-education.py": {
       "id": "sa3:compile-education",
       "owner": "server3",
       "role": "education projection compiler (compute-on-write)",
-      "validator": "python3 /root/serveragent3/scripts/compile-education.py"
+      "validator": "python3 /root/smellycock/education-organism/scripts/compile-education.py"
     },
     "serveragent3/scripts/tutor-agent.py": {
       "id": "sa3:tutor",
       "owner": "server3",
       "role": "AI tutor (serves LearningPackets + blind-grade)",
-      "validator": "python3 /root/serveragent3/scripts/tutor-agent.py"
+      "validator": "python3 /root/smellycock/education-organism/scripts/tutor-agent.py"
     },
     "serveragent3/scripts/test-e2e.py": {
       "id": "sa3:e2e",
       "owner": "server3",
       "role": "end-to-end audit trail test (source\u2192customer)",
-      "validator": "python3 /root/serveragent3/scripts/test-e2e.py"
+      "validator": "python3 /root/smellycock/education-organism/scripts/test-e2e.py"
     },
     "patalacheckpoints/pipeline/products/education_organism/README.md": {
       "id": "patala:product:education-organism",
@@ -389,13 +401,13 @@
       "id": "sa3:segment-key",
       "owner": "server3",
       "role": "GEM-A segmentId:field provenance spine",
-      "validator": "python3 /root/serveragent3/scripts/test-gems-integration.py"
+      "validator": "python3 /root/smellycock/education-organism/scripts/test-gems-integration.py"
     },
     "serveragent3/kernels/reconciliation.py": {
       "id": "sa3:reconciliation",
       "owner": "server3",
       "role": "GEM-C source-preservation gate",
-      "validator": "python3 /root/serveragent3/scripts/test-gems-integration.py"
+      "validator": "python3 /root/smellycock/education-organism/scripts/test-gems-integration.py"
     }
   },
   "performance": {

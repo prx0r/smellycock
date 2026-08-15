@@ -20,7 +20,7 @@ GOLD + the human gate, not missing machinery.**
 ## 2. THE GAPS THAT BLOCK "REAL" OUTPUT (each must be closed, in order)
 | # | Gap | Evidence (from 01-04) | Closes |
 |---|---|---|---|
-| G1 | **OOM during ARGMAP** — the E2E cannot complete on this box | live run: 4.5GB RSS → SIGKILL (137) at ARGMAP | reduce batch size / free RAM / stream — must be fixed before any scale |
+| G1 | **OOM during ARGMAP re-run** — a later E2E re-run OOM-killed (4.5GB RSS, RAM-loaded box); the LOGGED run completed (412s/3 calls, chain_ok:true) | `/tmp/opencode/e2e-trace.json` OK vs a re-run SIGKILL(137) | bound batch/RAM so every re-run completes — the mechanism works; make it reliable |
 | G2 | **Provider rate-limit** — `opencode-go` 429, resets ~Aug 15-16 | `~/.hermes/profiles/patala/auth.json` `last_status: exhausted` | wait for reset or add a second credential |
 | G3 | **L1 DAG inconsistency** — L1 in the test DAG but not the manifest/scheduler | `test_full_chain_timing.py:24` vs `CANONICAL-DAG.yaml` + `factory_scheduler.py:43` | pick ONE DAG; align all layers |
 | G4 | **Empty post-C1 layers** — SYNTHESIS/ESSAY/EDUCATION = 0; THEME/ARGUMENT not promoted | live registry counts | run the spine on real committed C1 |
@@ -63,10 +63,11 @@ GOLD + the human gate, not missing machinery.**
 5. **Kanban** drives the queue but is "the task board, not the truth" — `hermes kanban --board translation list`.
 
 ## 5. THE ONE-LINE CARRY-FORWARD
-> **Fix the ARGMAP OOM + provider reset (Step 1), reconcile the DAG + record (Step 2), run the post-C1 spine
-> on real C1 (Step 3), replace vacuous gates with real gold (Step 4), then add the human gate + live
-> benchmarks (Step 5) — so one repeatable command produces a real, promoted, gold-validated, human-signed
-> RAW→EDUCATION object.**
+> **Bound the E2E so every re-run completes (Step 1), reconcile the DAG + record (Step 2), run the post-C1
+> spine on real C1 (Step 3), replace structural gates with real gold (Step 4), then wire the human gate +
+> live lineage-carrying benchmarks (Step 5) — so one repeatable command produces a real, promoted,
+> gold-validated, human-signed RAW→EDUCATION object. The logged runs (e2e-trace.json, chain_ok:true) prove
+> the mechanism works — see `06-PEER-REVIEW-FRONTIER.md`.**
 
 ## 6. INDEX OF THIS DEEP-DIVE
 - `00-OVERVIEW.md` — the big picture + the honest scorecard.
