@@ -388,6 +388,12 @@
       "owner": "agentgraph",
       "role": "the kanban translation build (saved as the production architecture) + the full comparison of all 6 builds + which is best (kanban: durable/resumable/auditable work queue)",
       "validator": "check.py --refs"
+    },
+    "domains/translation/BUILDS.md": {
+      "id": "patalaorg:translation:build-review",
+      "owner": "agentgraph",
+      "role": "CANONICAL translation build review: the kanban build (production architecture, durable/resumable/auditable work queue) + the full comparison of all 6 builds",
+      "validator": "check.py --refs"
     }
   },
   "implementation": {
