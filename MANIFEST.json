@@ -484,8 +484,20 @@
     "pipeline/translate_work.py": {
       "id": "patala:translation:translate_work",
       "owner": "agentgraph",
-      "role": "the canonical low-RAM RAW->C1 translate driver (current_streamed, no _load(SOURCE) OOM; mirrors live-run-5; brain-picked works; trace+ledger refresh)",
-      "validator": "pipeline/translate_work.py --dry-run"
+      "role": "the canonical low-RAM RAW->C1 driver + granular cost telemetry",
+      "validator": "check.py --refs"
+    },
+    "pipeline/deepseek_pricing.py": {
+      "id": "patala:translation:deepseek_pricing",
+      "owner": "agentgraph",
+      "role": "DeepSeek V4 Flash cost model (cache-hit/miss + peak/off-peak, per-1M-token) for translation cost telemetry",
+      "validator": "check.py --refs"
+    },
+    "pipeline/benchmark_translation.py": {
+      "id": "patala:translation:benchmark_translation",
+      "owner": "agentgraph",
+      "role": "super-granular translation benchmark: per-verse time, model calls, cost ($ cache-miss vs cache-hit), per-work/per-layer",
+      "validator": "check.py --refs"
     }
   },
   "performance": {
