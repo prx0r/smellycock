@@ -109,3 +109,16 @@ the acquisition/ingestion pipeline (the other agent's lane).
 *Sources: `pipeline/{project_translation,translation_db,quality_score,deepseek_pricing,translate_work}.py`,
 `scripts/compile_benchmark.py`, `/tmp/opencode/e2e-trace.json`, `data/corpus/registries/*.jsonl`,
 DeepSeek pricing docs, Sāmayik (arXiv 2305.14004) + Itihāsa (Sanskrit MT golds).*
+
+## 4c. DYNAMIC CONTEXT-SATURATING BATCHING + PER-LAYER AGENTS (2026-08-15)
+**The model selection now carries full model data + dynamic batch sizing (no call-spamming → no rate limit).**
+- **`model_registry.py`** holds every model's full data: **context_tokens** (1M), pricing, and a measured
+  **per-verse token estimate**.
+- **`max_verses_per_call()`** computes the largest batch that fills **~90% of the model's context in ONE
+  call** → **~2993 verses/call** for flash/pro (vs the old fixed 50 — a ~60× call reduction).
+- The factory's chunk size **defaults to this dynamic value** (`PATALA_FACTORY_CHUNK` overridable).
+- **Per-layer API agents:** each layer (T1→L0→ARGMAP→L2→L200→C1) is an agent that **processes its own
+  queue** — pulling the next batch (sized to 90% context), running its generator once, committing, handing
+  to the next layer's queue. L0 is the instant deterministic stage; the model layers do one big call each.
+- **Outcome:** far fewer, larger, context-efficient calls per layer — the "1 call for ~3000 verses" the
+  1M context enables — instead of spamming small calls.

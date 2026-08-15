@@ -540,6 +540,12 @@
       "owner": "agentgraph",
       "role": "THE TRANSLATION PROJECTOR: load a stack of works + a model -> estimated cost + time + model calls, backed by the logged benchmark (use in openpatala + ingestion ROI)",
       "validator": "pipeline/project_translation.py --work kramasadbhava"
+    },
+    "pipeline/model_registry.py": {
+      "id": "patala:model:registry",
+      "owner": "agentgraph",
+      "role": "full model data (context/pricing/per-verse tokens) + DYNAMIC 90%-context batch sizing (max_verses_per_call ~2993) for per-layer agents (no call-spam)",
+      "validator": "pipeline/model_registry.py"
     }
   },
   "performance": {
