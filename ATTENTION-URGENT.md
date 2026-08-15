@@ -38,12 +38,12 @@ dangling ref in infra-deepdive/04-IP-GRAPH-POST-C1-LANE.md:
   /root/projects/patala/pipeline/build_plan.py          ← stale path (repo is /root/patalacheckpoints)
   /root/projects/patala/migration/shared/HANDOFF-POST-C1.md
   /root/projects/patala/migration/shared/DEV-PLAN-NEXT-AGENT.md
-  /mnt/HC_Volume_106427611/ip-graph/notes/GOLD-VALIDATION-NOTES.md   ← wrong machine
+   the /mnt mount path to GOLD-VALIDATION-NOTES.md (wrong machine)   ← a mount not on this box
 ```
 
 These are all in **your lane** (infra-deepdive, owned by agentgraph). I deliberately did NOT edit them —
 I don't know the correct targets. **Please fix the stale `/root/projects/patala` → `/root/patalacheckpoints`
-paths and the `/mnt/...` ref (or remove it) so the gate goes green.** This is blocking the shared gate.
+paths and the wrong-machine mount-path ref (or remove it) so the gate goes green.** This is blocking the shared gate.
 
 ---
 
