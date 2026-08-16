@@ -209,3 +209,14 @@ score_vs_gold(produced_text, "IPVV-V2F")   # 0-1 quality vs the gold
   result + report.
 - **Auto-report:** every run auto-writes `data/corpus/experiment-reports/EXP-<id>-report.json` (the
   machine-readable schema) — no manual step.
+
+## THE AUTO-SWEEP (Optuna-style: hypothesis generation linked to results)
+```bash
+python3 pipeline/experiment_lab.py --sweep T1 --trials 3 --target speed
+```
+- **Proposes** configs (batch size, chars, stream, vidyut, model) → **runs each as a Trial** on the fixed
+  control → **scores** by the target (speed/quality) → **prunes** 0-commit/slow trials (burn-conscious) →
+  returns + logs the **BEST**. The `experiments` registry + auto-reports keep the full history, so the study
+  learns from prior trials.
+- The golden process stolen from Optuna: a Study manages Trials, `suggest_*` proposes, `best` tracks the
+  winner — applied to our per-layer translation configs.
