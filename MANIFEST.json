@@ -640,7 +640,7 @@
     "pipeline/experiment_lab.py": {
       "id": "patala:translation:lab",
       "owner": "agentgraph",
-      "role": "the per-layer translation science lab: fixed reproducible test set + config runner (model/batch-mode/vidyut/stream) + results ledger \u2014 test hypotheses per layer, keep the winner",
+      "role": "the per-layer translation science lab: fixed test set + config runner + durable registry/kanban; plan_for_layer() uses the deal-radar + model registry (pricing/context) to decide which models to test + why",
       "validator": "pipeline/experiment_lab.py --list-configs"
     },
     "pipeline/deal_radar.py": {
