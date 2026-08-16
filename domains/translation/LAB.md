@@ -64,5 +64,67 @@ hermes kanban --board experiments list
 > **The science lab makes per-layer optimization reproducible and durable: fixed data, named + labeled
 > experiments, a registry + kanban + logs for the audit trail, and a compare view to keep the winner.**
 
+---
+
+## HOW AN AGENT WORKS WITH THE LAB (the workflow)
+
+The lab is for **deciding the best alternative for a stated end goal**. The agent drives it like this:
+
+### Step 1 — state the end goal
+The user/agent names the outcome, e.g. **"I want the fastest T1 build."** The goal defines WHICH axis to
+optimize (speed, quality, cost) + for WHICH layer.
+
+### Step 2 — review + design the experiment (which variants to test + why)
+1. Look at the layer's profile (`layers/`) + `--plan <LAYER>` (the deal-radar's candidate models + why, and
+   our deepseek baseline + pricing).
+2. Enumerate the **hypotheses** that could change the outcome — the config knobs:
+   - `batch_mode` (verses vs chars) + batch size  ← batching
+   - `stream` (‑z vs agentic)                     ← the 5-10× speedup
+   - `vidyut` (on/off)                            ← drop the Python pre-step
+   - `model` (flash vs pro vs a deal-radar free)  ← model choice
+   - `parallel` (multiple layer agents)           ← wall-clock multiplier
+3. Pick the variants to test (each = one `experiment_lab.py` run).
+
+### Step 3 — run the experiment
+```bash
+python3 pipeline/experiment_lab.py --layer T1 --config t1-batch-chars-500   # one variant
+# or a sweep over the variants — each writes a named experiment + a kanban card + a registry row
+```
+
+### Step 4 — collect the hermes logs + results
+- The **registry** (`experiments.jsonl`) has the strict result per run (time, calls, committed, sec/verse,
+  v/100s).
+- **`hermes logs`** captures the model-call activity (the per-call latency).
+- The **`experiments` kanban board** shows each experiment's card.
+
+### Step 5 — compare + pick the best alternative
+```bash
+python3 pipeline/experiment_lab.py --report   # the side-by-side (same fixed data)
+```
+Pick the winner on the goal's axis; record the decision + why in the layer profile. Re-run with new
+hypotheses to iterate.
+
+### The rule
+> **Every claim ("X is faster") must be backed by a logged experiment on the SAME fixed data — never a
+> feeling. If it isn't in the registry, it isn't decided.**
+
 *Source: `pipeline/experiment_lab.py`, `data/corpus/registries/experiments.jsonl`, the `experiments` kanban
 board.*
+
+## THE GOLD CONTROL (the control variable)
+Every experiment scores against a **FIXED Sanskrit gold test set** (`pipeline/sanskrit_gold.py` — 8 IPVV
+scholarly exemplars, organized by tradition). So results are comparable on the SAME data AND include a
+**quality axis** (LLM-judge vs the gold), not just speed/cost.
+```python
+from sanskrit_gold import exemplars, gold_for, score_vs_gold, traditions
+score_vs_gold(produced_text, "IPVV-V2F")   # 0-1 quality vs the gold
+```
+- **Control variable:** the same 8 exemplars reused for every experiment.
+- **Per-tradition benchmarks (ours):** `TRADITIONS` (Pratyabhijñā/Trika, Krama, Śaiva Siddhānta) — assess
+  frontier-model performance on specialist schools, not just general Sanskrit.
+
+## THE CONTROL-LED WORKFLOW
+1. Pick the **control golds** for the layer (e.g. the IPVV C1 exemplars for C1 quality).
+2. Run the experiment variants on the SAME fixed test set.
+3. Score each variant's output vs the gold (quality) + record speed/cost.
+4. Pick the winner on the goal's axis; add more gold candidates per tradition later.
