@@ -472,6 +472,12 @@
       "owner": "all",
       "role": "the session-notes index (agent-2 lane): coordination notes + pointer to deep research in patalacheckpoints",
       "validator": "check.py --refs"
+    },
+    "infra-deepdive/15-BENCHMARK-VISIONS.md": {
+      "id": "patalaorg:benchmark:visions",
+      "owner": "agentgraph",
+      "role": "the full benchmark visions spec: science lab + fixed gold control + per-tradition specialist benchmarks + the 3-axis model leaderboard + the roadmap",
+      "validator": "check.py --refs"
     }
   },
   "implementation": {
