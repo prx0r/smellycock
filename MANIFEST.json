@@ -394,6 +394,24 @@
       "owner": "agentgraph",
       "role": "CANONICAL translation build review: the kanban build (production architecture, durable/resumable/auditable work queue) + the full comparison of all 6 builds",
       "validator": "check.py --refs"
+    },
+    "domains/translation/LAB.md": {
+      "id": "patalaorg:domains:translation:lab",
+      "owner": "all",
+      "role": "translation science lab / deal-radar per-layer model seam / build plan",
+      "validator": "check.py --refs"
+    },
+    "HANDOVER-ROUTER-INTEGRATION.md": {
+      "id": "patalaorg:handover-router-integration",
+      "owner": "all",
+      "role": "translation science lab / deal-radar per-layer model seam / build plan",
+      "validator": "check.py --refs"
+    },
+    "BUILD-DEV-PLAN.md": {
+      "id": "patalaorg:build-dev-plan",
+      "owner": "all",
+      "role": "translation science lab / deal-radar per-layer model seam / build plan",
+      "validator": "check.py --refs"
     }
   },
   "implementation": {
