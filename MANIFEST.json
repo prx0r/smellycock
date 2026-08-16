@@ -730,7 +730,7 @@
     "pipeline/progress_review.py": {
       "id": "patala:translation:progress-review",
       "owner": "agentgraph",
-      "role": "the LLM-driven progress review: reviews per-layer quality/speed/health + findings/recommendation from the live registries; writes a periodic progress report (the self-reviewing surface)",
+      "role": "the self-optimizing loop + hypothesis ledger: reviews per-layer health, picks the bottleneck, runs a sweep, logs hypothesis/result/takeaway; --takeaways = the organized master summary (the papers surface)",
       "validator": "pipeline/progress_review.py"
     }
   },
