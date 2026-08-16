@@ -412,6 +412,30 @@
       "owner": "all",
       "role": "translation science lab / deal-radar per-layer model seam / build plan",
       "validator": "check.py --refs"
+    },
+    "education-organism/kernels/events.py": {
+      "id": "patalaorg:kernel:events",
+      "owner": "A",
+      "role": "the granular event stream (profile-as-data foundation: learner/game/assessment/media events)",
+      "validator": "run-tests test_event_stream"
+    },
+    "education-organism/kernels/progress.py": {
+      "id": "patalaorg:kernel:progress",
+      "owner": "A",
+      "role": "derived progress reducer (zone_levels/retry/weekly-arc) + Khan-style discrete mastery projection",
+      "validator": "run-tests test_progress_reducer + test_discrete_mastery"
+    },
+    "education-organism/kernels/conductor.py": {
+      "id": "patalaorg:kernel:conductor",
+      "owner": "A",
+      "role": "the closed-loop session conductor (profile \u2192 session \u2192 assess \u2192 re-derive progress)",
+      "validator": "run-tests test_conductor"
+    },
+    "education-organism/LEARNER-PROFILE-RESEARCH.md": {
+      "id": "patalaorg:survey:learner_profile",
+      "owner": "A",
+      "role": "how real platforms model learner profiles (Duolingo/Khan/Anki) + the steal-list; validates event-stream\u2192derived-profile",
+      "validator": "check.py --refs"
     }
   },
   "implementation": {
