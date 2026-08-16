@@ -145,6 +145,41 @@ future decisions.
 - **Comparable:** `control_compared` links each experiment to the ones it beats/ties, building a decision
   graph over time.
 
+---
+
+## THE MINI-AGENT-LAB BEST PRACTICES (how an agent uses it autonomously)
+
+This lab is a **self-driving experiment lab**: an agent states a goal, runs controlled experiments, writes
+validated reports, and updates the factory config to the winner. These rules keep it rigorous + cheap.
+
+### The autonomous loop
+1. **State the goal** (e.g. "fastest T1 build") → the axis to optimize (speed/cost/quality) + the layer.
+2. **Brainstorm the hypotheses** (batch size, stream, Vidyut on/off, model, parallel) — the config knobs.
+3. **Run the control** on the FIXED gold test set (same data → comparable).
+4. **Write the report** (`EXP-<id>-report.json`) — the schema above + `validated`.
+5. **Integrate the winner** — update the factory defaults ONLY if the report justifies it; record the
+   decision + why in the layer profile + `BUILDS.md`.
+6. **Iterate** with the next hypothesis; never change a config without a report.
+
+### The rules (non-negotiable)
+- **Control variable:** every experiment runs on the SAME fixed test set (`sanskrit_gold` exemplars) —
+  one variable changed at a time.
+- **Validated reports:** every report has `validated: true` + a `.py` re-checks the numbers vs the
+  registry. No report = no decision.
+- **The factory reflects the winner:** the current config IS the experiment's winner (documented in
+  `BUILDS.md`); change it only after a new report justifies it.
+- **Burn-conscious:** model calls cost balance. Run ONE focused experiment at a time, on a SMALL test set;
+  don't sweep blindly. Prefer the batch + cache-hit path (cheap).
+- **Per-layer isolation:** you can troubleshoot/experiment on ONE layer without touching the others
+  (independent workers/queues) — the factory keeps grinding.
+- **Compare, don't assert:** "X is faster" only if a report shows it beats the control on the same data.
+- **The report is the proof:** reference `EXP-<id>` in the layer profile + future decisions for fast recall.
+
+### When to use it vs the factory
+- **Use the lab** when deciding a config/model/batch choice (a controlled comparison).
+- **Use the factory** (kanban daemon) to grind production once the config is decided.
+- The lab gates what the factory runs — a config only enters the factory after a validated report.
+
 *Source: `pipeline/experiment_lab.py`, `data/corpus/registries/experiments.jsonl`, the `experiments` kanban
 board.*
 
