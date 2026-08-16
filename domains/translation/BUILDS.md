@@ -41,3 +41,13 @@ python3 pipeline/kanban_translation.py --feed          # mirror the DAG queue in
 python3 pipeline/kanban_translation.py --daemon --calls 2 --model deepseek-v4-flash   # the worker loop
 hermes kanban --board translation list / stats         # the queue
 ```
+
+## CURRENT FACTORY STATE (experiment-driven — the science lab sets the config)
+The factory's config now reflects the **science-lab experiment results** (`EXP-T1-speed-20260816`):
+- **T1 build = `-z` streaming + ONE big context-saturating batch per call + flash** (the winning config,
+  9.0s/verse, 1 call, 5/5 committed). `chunk_size` defaults to `max_verses_per_call()` (~2993) + `PATALA_T1_STREAM=1`.
+- **Bigger batches are faster per-verse** (batch 5 → 22.6s/v, batch 10 → 10.2s/v) — so the factory batches big.
+- **Vidyut OFF was faster** (10.0 vs 22.6s/v @ batch 5) — pending a quality check vs the gold before adoption.
+- The report (`data/corpus/experiment-reports/EXP-T1-speed-20260816-report.json`) records the findings +
+  decision + validation. **The factory's defaults ARE the experiment's winners** — change a config only after a
+  new experiment justifies it (the lab gates it).
