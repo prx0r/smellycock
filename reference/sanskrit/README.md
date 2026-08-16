@@ -15,3 +15,4 @@ ingestion pipeline.*
 - **Science lab** (`domains/translation/LAB.md`) — the quality axis + which models to test (from the benchmarks).
 - **Deal-radar / model router** — measured Sanskrit quality (not assumed) → per-layer model choice.
 - **Ingestion** — GRETIL/Muktabodha TEI e-texts for clean verse recovery; rights firewall per AXIOM 9.
+| `MITRASAMGRAHA.md` | the translation-gate calibration gold (391K bitext, 5,552 post-corrected test pairs) + the chrF + LLM-judge metric + first flash baseline |

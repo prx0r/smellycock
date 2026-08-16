@@ -478,6 +478,12 @@
       "owner": "agentgraph",
       "role": "the full benchmark visions spec: science lab + fixed gold control + per-tradition specialist benchmarks + the 3-axis model leaderboard + the roadmap",
       "validator": "check.py --refs"
+    },
+    "reference/sanskrit/MITRASAMGRAHA.md": {
+      "id": "patalaorg:reference:sanskrit:mitrasamgraha",
+      "owner": "all",
+      "role": "the Mitrasamgraha translation-gate calibration gold spec: 391K bitext / 5,552 post-corrected test pairs, the chrF + LLM-judge metric, error families, first flash baseline",
+      "validator": "check.py --refs"
     }
   },
   "implementation": {
