@@ -108,6 +108,43 @@ hypotheses to iterate.
 > **Every claim ("X is faster") must be backed by a logged experiment on the SAME fixed data — never a
 > feeling. If it isn't in the registry, it isn't decided.**
 
+---
+
+## THE EXPERIMENT REPORT (write one after EVERY experiment — machine-readable)
+
+After every experiment run, the agent MUST write a structured report to `data/corpus/experiment-reports/`
+(`EXP-<id>-report.json`), proving what the experiment showed. This is the fast, validatable reference for
+future decisions.
+
+### The report schema (machine-readable — a human + a validator can read it)
+```json
+{
+  "experiment_id": "EXP-T1-t1-batch-verses-abc123-20260816T...",
+  "layer": "T1",
+  "goal": "fastest T1 build",              // the stated end outcome
+  "config": { "model": "...", "batch_mode": "verses", "stream": true, "vidyut": true },
+  "data": { "test_set": "kramasadbhava x5", "data_hash": "abc123" },
+  "results": { "time_s": 85, "committed": 5, "calls": 1, "sec_per_verse": 17, "quality": 0.8 },
+  "control_compared": ["EXP-T1-t1-batch-verses", "EXP-T1-t1-no-stream"],  // what it's compared to
+  "finding": "bigger batch -> faster per-verse (5:22.6s/v, 10:10.2s/v)",
+  "validated": true,                        // a validator re-checked the numbers
+  "decision": "keep -z + one big batch + flash (fastest, 5/5 committed)"
+}
+```
+
+### The instruction
+1. **After every experiment**, write the report JSON (`experiment_id`, `goal`, `config`, `data`,
+   `results`, `control_compared`, `finding`, `validated`, `decision`).
+2. **Validate** it — a `.py` re-reads the numbers from the registry and confirms the `finding` matches.
+3. Reference the report `id` in the layer profile + future decisions (fast recall).
+
+### Why
+- **Fast reference:** a future agent reads `EXP-<id>-report.json` → the decision + why + the validated
+  numbers, without re-running.
+- **Provable:** the `validated` flag + the registry cross-check mean a claim is reproducible, not a feeling.
+- **Comparable:** `control_compared` links each experiment to the ones it beats/ties, building a decision
+  graph over time.
+
 *Source: `pipeline/experiment_lab.py`, `data/corpus/registries/experiments.jsonl`, the `experiments` kanban
 board.*
 
