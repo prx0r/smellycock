@@ -200,3 +200,12 @@ score_vs_gold(produced_text, "IPVV-V2F")   # 0-1 quality vs the gold
 2. Run the experiment variants on the SAME fixed test set.
 3. Score each variant's output vs the gold (quality) + record speed/cost.
 4. Pick the winner on the goal's axis; add more gold candidates per tradition later.
+
+## THE UPGRADES (multi-work · per-layer · auto-quality · auto-report)
+- **Multi-work + per-layer test sets** (`TEST_WORKS`): each layer uses the works where it has golds/verses
+  (T1 → kramasadbhava+kulasara, C1 → ipvv golds, ...) — a MORE representative control, still the SAME works
+  every run (comparable).
+- **Auto-quality:** each experiment auto-scores its output vs the gold (`sanskrit_gold`) → `quality` in the
+  result + report.
+- **Auto-report:** every run auto-writes `data/corpus/experiment-reports/EXP-<id>-report.json` (the
+  machine-readable schema) — no manual step.
