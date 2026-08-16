@@ -262,6 +262,74 @@ def test_temporal_context():
     t("expired fact excluded from context", "f2" not in ctx_after and "f1" in ctx_after)
 
 
+def test_event_stream():
+    """The granular event stream (the profile-as-data foundation)."""
+    import tempfile as _tf
+    from pathlib import Path as _P
+    from events import EventStream
+    es = EventStream(_P(_tf.mkdtemp()) / "e.db")
+    es.learner_event("u1", skill="vimarśa", content="svācchandya", grade="recalled")
+    es.game_event("u1", game="millionaire", score=100, outcome="correct")
+    es.assessment("u1", zone="kriya", level=1, rubric_score=0.9, passed=True)
+    es.media_event("u1", media_id="ipvv:v3a", type="read")
+    c = es.counts()
+    t("event-stream: all 4 event types recorded", all(c[t] >= 1 for t in c))
+    t("event-stream: learner events readable", len(es.learner_events_for("u1")) >= 1)
+
+
+def test_progress_reducer():
+    """The derived progress (sanskrithelp navigator pattern)."""
+    import tempfile as _tf
+    from pathlib import Path as _P
+    from events import EventStream
+    from progress import ProgressReducer
+    es = EventStream(_P(_tf.mkdtemp()) / "p.db")
+    es.assessment("u1", zone="kriya", level=1, rubric_score=0.9, passed=True)
+    es.assessment("u1", zone="kriya", level=2, rubric_score=0.8, passed=True)
+    es.assessment("u1", zone="kriya", level=3, rubric_score=0.5, passed=False)
+    zones = {"kriya": {"order": 1, "label": "The action-power", "level_count": 5}}
+    prog = ProgressReducer(es).reduce("u1", zones=zones)
+    t("progress: zone_levels derived from passed assessments", prog.zone_levels == {"kriya": 2})
+    t("progress: retry_counts track failures", prog.retry_counts.get("kriya_3", 0) == 1)
+    t("progress: weekly arc plans next advance", len(prog.weekly_arc) >= 1 and prog.weekly_arc[0]["zone"] == "kriya")
+
+
+def test_discrete_mastery():
+    """The Khan-style discrete mastery projection (mastery levels, not raw probabilities)."""
+    import tempfile as _tf
+    from pathlib import Path as _P
+    from events import EventStream
+    from progress import ProgressReducer, mastery_level
+    # the discrete mapping
+    t("mastery: projects continuous mastery to discrete levels",
+      mastery_level(0.2) == "Practiced" and mastery_level(0.6) == "Level 2" and mastery_level(0.9) == "Mastered")
+    # derived from event grades
+    es = EventStream(_P(_tf.mkdtemp()) / "m.db")
+    es.learner_event("u1", skill="vimarśa", grade="recalled")
+    es.learner_event("u1", skill="vimarśa", grade="recalled")
+    es.learner_event("u1", skill="vimarśa", grade="lapsed")
+    prog = ProgressReducer(es).reduce("u1")
+    t("mastery: derives a human-readable level from event grades",
+      prog.mastery_levels.get("vimarśa") in ("Level 1", "Level 2", "Level 3", "Mastered"))
+
+
+def test_conductor():
+    """The closed-loop conductor (profile → session → assess → re-derive progress)."""
+    import tempfile as _tf
+    from pathlib import Path as _P
+    from events import EventStream
+    from progress import ProgressReducer
+    from conductor import Conductor
+    es = EventStream(_P(_tf.mkdtemp()) / "c.db")
+    cond = Conductor(es, ProgressReducer(es))
+    zones = {"kriya": {"order": 1, "label": "The action-power", "level_count": 5}}
+    s = cond.next_session("u1", zones=zones)
+    t("conductor: picks the next session from the arc", hasattr(s, "session_id") and s.zone == "kriya")
+    r = cond.conduct_and_assess(s, "the action-power manifests order", rubric_score=0.85, passed=True)
+    t("conductor: assessment updates zone_levels", r["zone_levels"].get("kriya", 0) >= 1)
+    t("conductor: emits events to the stream", es.counts()["learner_events"] >= 1 and es.counts()["assessments"] >= 1)
+
+
 def test_retrieval_lift():
     """TASK 2: the GFM-RAG sparse entity->doc ranker + RoG negative-path sampler (stdlib)."""
     import retrieval
@@ -330,6 +398,10 @@ def main():
     test_learner_gate_kernel()
     test_weighted_propagation()
     test_temporal_context()
+    test_event_stream()
+    test_progress_reducer()
+    test_discrete_mastery()
+    test_conductor()
     test_retrieval_lift()
     n = sum(RESULTS)
     print(f"\n=== SUMMARY: {n}/{len(RESULTS)} passed ===")
