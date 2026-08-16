@@ -31,7 +31,7 @@ off. Independent per layer — so they run in parallel across works.
 |---|---|---|---|---|---|
 | **L0** | verse → tokens/lemmas (Vidyut, deterministic) | **instant** (free) | 7 works | none | no model — deterministic |
 | **L1** | L0 → controlled segments (deterministic scaffold) | **instant** | — | none | no model |
-| **T1** | verse → word-gloss JSONL (**mostly prompting**: light Vidyut split + "translate to T1 JSONL") | **~12s/verse** (`-z`) | **20,000** | **flash** | biggest + fastest backlog; rough glosses don't need pro; flash's 1M ctx = huge batches |
+| **T1** | verse → word-gloss JSONL (**mostly prompting**: light Vidyut split + "translate to T1 JSONL") | **~9s/verse** (`-z`, ALL verses in ONE call) | **20,000** | **flash** | **FASTEST BUILD (science-lab-confirmed): `-z` stream + one big batch (all verses/call) + flash → 5/5 committed, 1 call, 9s/verse** |
 | **ARGMAP** | SOURCE+L0 → 4-section argument map (skill) | ~60-90s/call | 787 | flash (pro if quality-critical) | needs reasoning + `extract-argmap` skill, not scale |
 | **L2** | L1+ARGMAP → guided philosophical prose (skill) | ~30-60s/call | 0 (blocked) | **flash or pro** | the philosophical frame matters — pro for higher quality, 3× cost |
 | **L200** | L2 vs L1 → bounded 8-section audit (classifier) | ~12-45s/call | 0 (blocked) | **cheap/fast** | bounded classifier (IGNORE default) — doesn't need a big model |
