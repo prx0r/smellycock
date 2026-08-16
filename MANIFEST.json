@@ -412,6 +412,30 @@
       "owner": "all",
       "role": "translation science lab / deal-radar per-layer model seam / build plan",
       "validator": "check.py --refs"
+    },
+    "reference/sanskrit/README.md": {
+      "id": "patalaorg:reference:sanskrit:readme",
+      "owner": "all",
+      "role": "the Sanskrit research reference (README): benchmarks / measured eval-router / source survey \u2014 for the science lab + model router + ingestion",
+      "validator": "check.py --refs"
+    },
+    "reference/sanskrit/SANSKRIT-BENCHMARKS.md": {
+      "id": "patalaorg:reference:sanskrit:sanskrit-benchmarks",
+      "owner": "all",
+      "role": "the Sanskrit research reference (SANSKRIT-BENCHMARKS): benchmarks / measured eval-router / source survey \u2014 for the science lab + model router + ingestion",
+      "validator": "check.py --refs"
+    },
+    "reference/sanskrit/SANSKRIT-EVAL-ROUTER.md": {
+      "id": "patalaorg:reference:sanskrit:sanskrit-eval-router",
+      "owner": "all",
+      "role": "the Sanskrit research reference (SANSKRIT-EVAL-ROUTER): benchmarks / measured eval-router / source survey \u2014 for the science lab + model router + ingestion",
+      "validator": "check.py --refs"
+    },
+    "reference/sanskrit/SANSKRIT-REPOSITORIES-SURVEY.md": {
+      "id": "patalaorg:reference:sanskrit:sanskrit-repositories-survey",
+      "owner": "all",
+      "role": "the Sanskrit research reference (SANSKRIT-REPOSITORIES-SURVEY): benchmarks / measured eval-router / source survey \u2014 for the science lab + model router + ingestion",
+      "validator": "check.py --refs"
     }
   },
   "implementation": {
