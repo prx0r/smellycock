@@ -642,6 +642,12 @@
       "owner": "agentgraph",
       "role": "the per-layer translation science lab: fixed reproducible test set + config runner (model/batch-mode/vidyut/stream) + results ledger \u2014 test hypotheses per layer, keep the winner",
       "validator": "pipeline/experiment_lab.py --list-configs"
+    },
+    "pipeline/deal_radar.py": {
+      "id": "patala:translation:deal-radar-seam",
+      "owner": "agentgraph",
+      "role": "the seam to the deal-radar per-layer model recommender: consume recommend_layer (cost-first/value + why) + prefer per-layer model; closes the LinUCB learning loop",
+      "validator": "pipeline/deal_radar.py"
     }
   },
   "performance": {
