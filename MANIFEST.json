@@ -401,18 +401,6 @@
       "role": "translation science lab / deal-radar per-layer model seam / build plan",
       "validator": "check.py --refs"
     },
-    "HANDOVER-ROUTER-INTEGRATION.md": {
-      "id": "patalaorg:handover-router-integration",
-      "owner": "all",
-      "role": "translation science lab / deal-radar per-layer model seam / build plan",
-      "validator": "check.py --refs"
-    },
-    "BUILD-DEV-PLAN.md": {
-      "id": "patalaorg:build-dev-plan",
-      "owner": "all",
-      "role": "translation science lab / deal-radar per-layer model seam / build plan",
-      "validator": "check.py --refs"
-    },
     "education-organism/kernels/events.py": {
       "id": "patalaorg:kernel:events",
       "owner": "A",
@@ -435,6 +423,30 @@
       "id": "patalaorg:survey:learner_profile",
       "owner": "A",
       "role": "how real platforms model learner profiles (Duolingo/Khan/Anki) + the steal-list; validates event-stream\u2192derived-profile",
+      "validator": "check.py --refs"
+    },
+    "notes/HANDOVER-ROUTER-INTEGRATION.md": {
+      "id": "patalaorg:handover-router-integration",
+      "owner": "all",
+      "role": "translation science lab / deal-radar per-layer model seam / build plan",
+      "validator": "check.py --refs"
+    },
+    "notes/BUILD-DEV-PLAN.md": {
+      "id": "patalaorg:build-dev-plan",
+      "owner": "all",
+      "role": "translation science lab / deal-radar per-layer model seam / build plan",
+      "validator": "check.py --refs"
+    },
+    "notes/contextreviewcock.md": {
+      "id": "patalaorg:session-context-review",
+      "owner": "all",
+      "role": "the consolidated working-context review for the agent-2 lane (what was built + project state)",
+      "validator": "check.py --refs"
+    },
+    "notes/README.md": {
+      "id": "patalaorg:notes-index",
+      "owner": "all",
+      "role": "the session-notes index (agent-2 lane): coordination notes + pointer to deep research in patalacheckpoints",
       "validator": "check.py --refs"
     }
   },
