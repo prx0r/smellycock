@@ -618,6 +618,12 @@
       "owner": "agentgraph",
       "role": "drive translation through the Hermes kanban board (the smart durable queue): feed() mirrors the DAG into per-layer-work cards, work_once()/daemon() claim-drain-complete-chain",
       "validator": "pipeline/kanban_translation.py --feed"
+    },
+    "pipeline/experiment_lab.py": {
+      "id": "patala:translation:lab",
+      "owner": "agentgraph",
+      "role": "the per-layer translation science lab: fixed reproducible test set + config runner (model/batch-mode/vidyut/stream) + results ledger \u2014 test hypotheses per layer, keep the winner",
+      "validator": "pipeline/experiment_lab.py --list-configs"
     }
   },
   "performance": {
